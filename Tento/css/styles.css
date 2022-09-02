@@ -1,0 +1,18 @@
+.RegistrationButton{
+    background-color: #9edcd9;
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.RegistrationButton:hover{
+    background-color: #073763;
+    color:white;
+}
+
+.ChooseLevelDropDown:hover .ChooseLevelDropDownContent {
+    display: block;
+}
+
+h1{
+    color:#3d85c6;
+}
