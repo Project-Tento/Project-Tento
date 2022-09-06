@@ -1,0 +1,9 @@
+/*for the about us page*/
+/*STILL UNDER THE WORKS*/
+/*separate so that the h1 does not get styled by default as defined in styles.css*/
+.about-us-block{
+    padding: 50px;
+    text-align: center;
+    background-color: #073763;
+    color: white;
+}

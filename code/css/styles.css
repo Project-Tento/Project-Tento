@@ -1,0 +1,75 @@
+
+/*all buttons related to signup, login*/
+.RegistrationButton{
+    background-color: #9edcd9;
+    border-radius: 5px;
+    border-color: transparent;
+    padding: 14px 20px;
+    margin: 8px 0;
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    color:#073763;
+}
+
+/*all buttons related to signup, login changes changes when hovered on*/
+.RegistrationButton:hover{
+    background-color: #073763;
+    color:white;
+}
+
+/*Choose O or A level drop down*/
+.ChooseLevelDropDown:hover .ChooseLevelDropDownContent {
+    display: block;
+}
+
+/*Tento header in all pages*/
+h1{
+    color:#3d85c6;
+}
+
+/*the navigation bar */
+.topnav {
+    background-color: #9edcd9;
+    overflow: hidden;
+  }
+
+  /*The links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #073763;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+ /* changes color of the links when hovered on inside the navigation bar */
+.topnav a:hover {
+    background-color: #073763;
+    color: white;
+  }
+
+/*
+--for mobile friendly--
+.topnav .icon {
+    display: none;
+  }
+*/
+
+/*all the input taking block of the login and registration page*/
+.RegistrationContainer{
+    padding:16px;
+    font-size: 15px;
+}
+
+/*all the input text fields of the login and registration page*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
