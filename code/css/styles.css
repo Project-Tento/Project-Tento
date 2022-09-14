@@ -1,21 +1,24 @@
 
+
+
 /*all buttons related to signup, login*/
 .RegistrationButton{
     background-color: #9edcd9;
-    border-radius: 5px;
+    border-radius: 8px;
     border-color: transparent;
-    padding: 14px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
-    width: 100%;
-    border: none;
+    width: 400px;
     font-size: 15px;
     color:#073763;
+    box-shadow: 0 0 9px 0 #9fc5e8;
 }
 
-/*all buttons related to signup, login changes changes when hovered on*/
+/*all buttons related to signup, login changes changes when hovered on after 0.5s*/
 .RegistrationButton:hover{
     background-color: #073763;
-    color:white;
+    color:#FFFFFF;
+    transition: background-color 0.5s;
 }
 
 /*Choose O or A level drop down*/
@@ -23,14 +26,14 @@
     display: block;
 }
 
-/*Tento header in all pages*/
+/*Tento header*/
 h1{
     color:#3d85c6;
 }
 
 /*the navigation bar */
 .topnav {
-    background-color: #9edcd9;
+    background-color: transparent;
     overflow: hidden;
   }
 
@@ -39,15 +42,16 @@ h1{
     float: left;
     color: #073763;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 40px;
     text-decoration: none;
     font-size: 17px;
 }
 
  /* changes color of the links when hovered on inside the navigation bar */
 .topnav a:hover {
-    background-color: #073763;
-    color: white;
+    background-color: #3d85c6;
+    color: #FFFFFF;
+    transition: background-color 0.5s;
   }
 
 /*
@@ -57,19 +61,80 @@ h1{
   }
 */
 
-/*all the input taking block of the login and registration page*/
-.RegistrationContainer{
-    padding:16px;
-    font-size: 15px;
+
+/*for the registration and signup page body */
+.registrationPageBody{
+    background-image: url(../Splash3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
+
+/*all the input taking block of the login and registration page*/
+.RegistrationContainer{
+    border-radius:8px;
+    padding:20px;
+    font-size: 15px;
+    width: 400px;
+    margin: 100px auto;
+    box-shadow: 0 0 9px 0 #9fc5e8;
+    background: #FFFFFF;
+}
+
+/*the entire registration form*/
+.RegistrationContainer form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*the registration form labels saying enter username blah blah*/
+.RegistrationContainer form label{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    color:#3d85c6;
+}
+
+
 /*all the input text fields of the login and registration page*/
-input[type=text] {
+.RegistrationContainer form input[type=text] , .RegistrationContainer form input[type="password"]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 5px;
   }
+
+
+/*login redirect text under sign up and sign up redirect text under login page*/
+.RedirectUnderRegistration{
+    color:#3d85c6;
+    text-align:center;
+}
+
+/*FOR ALL THE HYPERLINKS*/
+  
+/*gets rid of the default underline and focus outline*/
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+
+/* visited link */
+a:visited {
+    color:#073763;
+}
+  
+/* mouse over link */
+a:hover {
+    border-bottom: 1px solid;
+    color:#76c552;
+}
+  
+
+
 
