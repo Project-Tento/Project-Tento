@@ -2,38 +2,41 @@
 /*STILL UNDER THE WORKS*/
 /*separate so that the h1 does not get styled by default as defined in styles.css*/
 .about-us-block{
-    padding: 50px;
-    text-align: center;
-    background-color: #073763;
-    color: white;
+  padding: 50px;
+  text-align: center;
+  background-color: #073763;
+  color: #FFFFFF;
 }
 
-
-/*the navigation bar */
-.topnav {
-    background-color: #9edcd9;
-    overflow: hidden;
-  }
-
-  /*The links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #073763;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
- /* changes color of the links when hovered on inside the navigation bar */
-.topnav a:hover {
-    background-color: #073763;
-    color: white;
-  }
 
 /*
 --for mobile friendly--
 .topnav .icon {
-    display: none;
-  }
+  display: none;
+}
 */
+
+
+
+/*the navigation bar */
+.topnav {
+  background-color: #9edcd9;
+  overflow: hidden;
+}
+
+/*The links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #073763;
+  text-align: center;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* changes color of the links when hovered on inside the navigation bar */
+.topnav a:hover {
+  background-color: #073763;
+  color: #FFFFFF;
+}
+

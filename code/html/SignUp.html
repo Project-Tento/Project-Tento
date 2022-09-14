@@ -8,7 +8,8 @@
     <title>Sign Up</title>
     <!--Sign Up Page-->
 </head>
-<body>
+<div class="registrationPageBody"></div>
+<body class="registrationPageBody">
     <h1>Tento</h1>
 
     <!--the top navigation bar-->
@@ -24,28 +25,28 @@
         -->
     </div>
 
-    <form>
-        <div class="RegistrationContainer">
-
+    
+    <div class="RegistrationContainer">
+        <form>
             <!--contains the input fields-->
             <label for="name"><b>Name</b></label>
-            <input type="text" placeholder="Enter your name" name="name" required>
+            <input type="text" placeholder="Enter your name" name="name" id="name" required>
             <br><br>
 
             <label for="emailAddress"><b>Email Adress</b></label>
-            <input type="text" placeholder="Enter your email address" name="emailAddress" required>
+            <input type="text" placeholder="Enter your email address" name="emailAddress" id="emailAddress" required>
             <br><br>
 
             <label for="username"><b>Username</b></label>
-            <input type="text" placeholder="Enter a username" name="username" required>
+            <input type="text" placeholder="Enter a username" name="username" id="username" required>
             <br><br>
 
-            <label for="confirmPassword"><b>Enter Password</b></label>
-            <input type="text" placeholder="Enter your password" name="confirmPassword" required>
+            <label for="Password"><b>Enter Password</b></label>
+            <input type="password" placeholder="Enter your password" name="password" id="password" required>
             <br><br>
             
             <label for="confirmPassword"><b>Confirm Password</b></label>
-            <input type="text" placeholder="Confirm your password" name="confirmPassword" required>
+            <input type="password" placeholder="Confirm your password" name="confirmPassword" id="confirmPassword" required>
             <br><br>
 
             <!--Choose the level drop down menu-->
@@ -63,22 +64,21 @@
             <button type="submit" class="RegistrationButton">Sign Up</button>
 
 
-            <!--Remember me option-->
+            <!--Remember me option
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
+            </label>-->
 
             <!--Option to get redirected to login page-->
             <p>
-                Already have an account? Login here:
-                
-                    <a href="Login.html">
-                    <button type="button" class="RegistrationButton" href="Login.html">Login</button>
-                    </a>
+                Already have an account? 
+                <a href="Login.html">
+                    Login instead!
+                </a>
             </p>
-
-        </div>
-    </form>
+        </form>
+    </div>
+    
 
 
 </body>
