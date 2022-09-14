@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>Sign Up</title>
+    <!--Sign Up Page-->
+</head>
+<body>
+    <h1>Tento</h1>
+
+    <!--the top navigation bar-->
+    <div class="topnav">
+        <a href="MainHomepage.html">Home</a>
+        <a href="AboutTento.html">About</a>
+
+        <!--for mobiles, hiding navigation bars-->
+        <!--
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        -->
+    </div>
+
+    <form>
+        <div class="RegistrationContainer">
+
+            <!--contains the input fields-->
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter your name" name="name" required>
+            <br><br>
+
+            <label for="emailAddress"><b>Email Adress</b></label>
+            <input type="text" placeholder="Enter your email address" name="emailAddress" required>
+            <br><br>
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter a username" name="username" required>
+            <br><br>
+
+            <label for="confirmPassword"><b>Enter Password</b></label>
+            <input type="text" placeholder="Enter your password" name="confirmPassword" required>
+            <br><br>
+            
+            <label for="confirmPassword"><b>Confirm Password</b></label>
+            <input type="text" placeholder="Confirm your password" name="confirmPassword" required>
+            <br><br>
+
+            <!--Choose the level drop down menu-->
+            <div class="ChooseLevelDropDown">
+                <label for="level"><b>Choose Level: </b></label>
+                &nbsp;
+                <select name="level">  
+                    <option value = "O Level">O Level</option>  
+                    <option value = "A Level">A Level</option>  
+                </select>  
+            </div>
+            <br>
+
+            <!--the submit button of the form-->
+            <button type="submit" class="RegistrationButton">Sign Up</button>
+
+
+            <!--Remember me option-->
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+
+            <!--Option to get redirected to login page-->
+            <p>
+                Already have an account? Login here:
+                
+                    <a href="Login.html">
+                    <button type="button" class="RegistrationButton" href="Login.html">Login</button>
+                    </a>
+            </p>
+
+        </div>
+    </form>
+
+
+</body>
+</html>

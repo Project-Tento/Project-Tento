@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>Login</title>
+    <!--the login page for users-->
+</head>
+<body>
+    <h1>Tento</h1>
+    <!--the top navigation bar-->
+    <div class="topnav">
+        <a href="MainHomepage.html">Home</a>
+        <a href="AboutTento.html">About</a>
+
+        <!--for mobiles, hiding navigation bars-->
+        <!--
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        -->
+    </div>
+    
+    <form>
+
+        <!--the login portion-->
+        <div class="RegistrationContainer">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter your username" name="username" required>
+
+            <label for="Password"><b>Password</b></label>
+            <input type="text" placeholder="Enter your password" name="password" required>
+
+            <button type="submit" class="RegistrationButton">Login</button>
+
+            <!--Option to get redirected to sign up page-->
+            <p>
+                New to Tento? Sign up here:
+                <a href="SignUp.html">
+                    <button type="button" id="signUpButton" class="RegistrationButton" href="SignUp.html">Sign Up</button>
+                </a>
+            </p>
+        </div>
+    </form>
+
+
+</body>
+</html>
