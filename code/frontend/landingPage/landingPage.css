@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    width: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #110033 5%, #07075a 44%, #181887 72%, #342ecc 85%, #716aff 99%);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+}
+
+
+.logo{
+    color: #9EF0FF;
+    font-size:40px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding-left: 70px;
+    float: left;
+    padding-top: 15px;
+    height:40px;
+}
+
+
+button{
+    padding: 1.3em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    float: right;
+    margin-right:40px;
+    margin-top:15px;
+    border: none;
+    border-radius: 45px;
+}
+
+button:hover{
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.primaryButton {
+    
+    background-color: #9EF0FF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .primaryButton:hover {
+    background-color: #716AFF;
+    
+  }
+  
+  .primaryButton:active {
+    transform: translateY(-1px);
+  }
+
+
+
+.secondaryButton{
+    color: #9EF0FF;
+    background-color: transparent;
+}
+
+
+.menu{
+    width: 400px;
+    float: left;
+    height: 50px;
+    
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+    
+}
+
+ul li:hover{
+    color:#716AFF;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #9EF0FF;
+    font-weight: bold;
+    position:relative;
+}
+
+
+
+ul li a:after{
+    content:"";
+    position: absolute;
+    background-color: #E6ECEF;
+    height: 1px;
+    width: 0;
+    left:0;
+    bottom:-10px;
+    transition: 0.3s;
+}
+
+ul li a:hover:after{
+    
+    width: 100%;
+}
+
+ul li a:hover{
+    color:white;
+    font-style:bolder;
+}
+
+
+
+
+
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: black;
+    position: relative;
+    float:center;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    line-height: 30px;
+    color:#E6ECEF;
+}
+
+.content h2{
+    font-size: 50px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+    color: #9EF0FF;
+}
+
+.content span{
+    
+    font-size: 65px;
+    font-weight: bolder;
+}
+
+/*
+.content .getStarted{
+    width: 180px;
+    height: 40px;
+    background: #163a5f;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    
+}
+
+.content .getStarted a{
+    text-decoration: none;
+    color: white;
+    transition: .3s ease;
+}
+
+.getStarted:hover{
+    background-color: black;
+}*/
+
+
+.illustration{
+    height:400px;
+    width:500px;
+    float:right;
+    margin-left: 100px;
+}
+
+
+.searchBar{
+    padding-left: 15px;
+}
+
+.search{
+    padding-left:80px;
+    width: 400px;
+    padding: 12px 24px;
+
+    background-color: transparent;
+    transition: transform 250ms ease-in-out;
+    font-size: 14px;
+    line-height: 18px;
+        
+    background-color: white;
+
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+
+    border-radius: 50px;
+    border: 1px solid #575756;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+
+input[type=text]{
+    color:black;
+}
+
+.search:placeholder{
+    color: #0098C1;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search:hover, .search:focus{
+    
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
+
+
+
+
+
+
+

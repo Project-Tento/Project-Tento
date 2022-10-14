@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration &amp; login</title>
+    <link rel="stylesheet" href="reg-form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--the whole box-->
+    <div class="box">
+
+
+         <!--<div id="tabs">
+            <p id="loginTab" class="tabs" onclick="loginTabFun()">Log in</p>
+            <p id="registerTab" class="tabs" onclick="regTabFun()">Register</p>
+            <div id="clear"></div>
+        </div>-->
+
+
+        <div class="nav">
+            <ul class="links">
+                <li class="signin-active"><a class="btn" onclick="changeForm(this)">Existing User</a></li>
+                <li class="signup-inactive"><a class="btn">New User</a></li>
+            </ul>
+        </div>
+
+
+        <div id="container">
+            <!--for controlling visibility-->
+            <div class="comm">
+                <!--for outline-->
+
+                
+                <div id="login">
+                    <form method="post" autocomplete="off">
+                        
+                        <h3>LOG IN</h3>
+                        <div class="icons">
+                            <iconify-icon icon="el:lock-alt"></iconify-icon>
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <input class="formField" type="email" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="formField" type="password" name="password" id="sPassword" placeholder="Password" aria-describedby="password-info" required>
+                            <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleSignInPasswordVisibility(this)"></i>
+                            <label id="password-info">Password must be between 8 to 20 characters.</label>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="submitButton" type="submit">Log In</button>
+                        </div>
+
+                        
+                        <a href="#" class="forgot" id="forgot">Forgot your email or password?</a>
+                    </form>
+                </div>
+
+                <div id="register">
+                    
+                    <h3>REGISTRATION</h3>
+                    <form action="post" autocomplete="off">
+                        <div class="icons">
+                            <iconify-icon icon="ion:person-circle-sharp" width="120" height="120"></iconify-icon>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="formField" type="text" name="fullName" placeholder="Full Name">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="formField" type="email" name="email" placeholder="Email Address">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="formField" type="password" name="password" id="rPassword" placeholder="Password">
+                            <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleRegisterPasswordVisibility(this)"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="formField" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                            <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleConfirmPasswordVisibility(this)"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="submitButton" type="submit">Sign Up</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="reg-form.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+</body>
+
+</html>
