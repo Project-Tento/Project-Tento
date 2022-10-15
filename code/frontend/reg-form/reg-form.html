@@ -19,55 +19,65 @@
     <div class="box">
 
 
-         <!--<div id="tabs">
-            <p id="loginTab" class="tabs" onclick="loginTabFun()">Log in</p>
-            <p id="registerTab" class="tabs" onclick="regTabFun()">Register</p>
-            <div id="clear"></div>
+         <!--<div class="nav">
+            <ul class="links">
+                <li class="signin-active" id="sign-in"><a class="btn" onclick="changeToLoginForm()">Existing User</a></li>
+                <li class="signup-inactive" id="register"><a class="btn" onclick = "changeToRegisterForm()">New User</a></li>
+            </ul>
         </div>-->
 
 
-        <div class="nav">
-            <ul class="links">
-                <li class="signin-active"><a class="btn" onclick="changeForm(this)">Existing User</a></li>
-                <li class="signup-inactive"><a class="btn">New User</a></li>
-            </ul>
+
+         <div id="tabs">
+            <p id="loginTab" class="tabs" onclick="loginTabFun()"><a href="#login">Log in</a></p>
+            <p id="registerTab" class="tabs" onclick="regTabFun()"><a href="#register">Register</a></p>
+            <div id="clear"></div>
         </div>
+
+        
 
 
         <div id="container">
-            <!--for controlling visibility-->
-            <div class="comm">
-                <!--for outline-->
+            <!--for outline-->
 
+            <div class="comm">
+                <!--for controlling visibility of the forms-->
                 
+
+                <!--login form starts-->
                 <div id="login">
                     <form method="post" autocomplete="off">
                         
+                        <!--header-->
                         <h3>LOG IN</h3>
+
+                        <!--icon-->
                         <div class="icons">
                             <iconify-icon icon="el:lock-alt"></iconify-icon>
                         </div>
                         
-
+                        <!--the fields-->
                         <div class="form-group">
-                            <input class="formField" type="email" name="email" placeholder="Email" required>
+                            <input class="formField" type="email" name="email" placeholder="Email *" required>
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="password" name="password" id="sPassword" placeholder="Password" aria-describedby="password-info" required>
+                            <input class="formField" type="password" name="password" id="sPassword" placeholder="Password *" required>
+                            <!--toggle password option-->
                             <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleSignInPasswordVisibility(this)"></i>
-                            <label id="password-info">Password must be between 8 to 20 characters.</label>
                         </div>
 
                         <div class="form-group">
                             <button class="submitButton" type="submit">Log In</button>
                         </div>
-
+                        
                         
                         <a href="#" class="forgot" id="forgot">Forgot your email or password?</a>
-                    </form>
+                    </form> <!--login form ends-->
                 </div>
+                
 
+                <!--register form begins, same format -->
                 <div id="register">
                     
                     <h3>REGISTRATION</h3>
@@ -77,27 +87,28 @@
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="text" name="fullName" placeholder="Full Name">
+                            <input class="formField" type="text" name="fullName" placeholder="Full Name *">
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="email" name="email" placeholder="Email Address">
+                            <input class="formField" type="email" name="email" placeholder="Email Address *">
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="password" name="password" id="rPassword" placeholder="Password">
+                            <input class="formField" type="password" name="password" id="rPassword" placeholder="Password *" aria-describedby="password-info">
                             <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleRegisterPasswordVisibility(this)"></i>
+                            <label id="password-info">Password must be between 8 to 20 characters.</label>
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+                            <input class="formField" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password *" >
                             <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleConfirmPasswordVisibility(this)"></i>
                         </div>
 
                         <div class="form-group">
                             <button class="submitButton" type="submit">Sign Up</button>
                         </div>
-                    </form>
+                    </form>   <!--register form ends-->
 
                 </div>
             </div>

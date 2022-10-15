@@ -1,47 +1,66 @@
 
 
-var loginBox = document.getElementById("login");
-var regBox = document.getElementById("register");
-var regTab = document.getElementById("registerTab");
-var loginTab = document.getElementById("loginTab");
-var forgetBox = document.getElementById("forgot");
-var loginTab = document.getElementById("login");
-var regTab = document.getElementById("registration");
-var hidePassword = document.getElementById('togglePasswordHide');
-var showPassword = document.getElementById('togglePasswordShow');
+var loginBox = document.getElementById('login');
+var regBox = document.getElementById('register');
+var forgetBox = document.getElementById('forgot');
+var loginTab = document.getElementById('loginTab');
+var regTab = document.getElementById('registerTab');
+// var hidePassword = document.getElementById('togglePasswordHide');
+// var showPassword = document.getElementById('togglePasswordShow');
 var togglePassword = document.getElementById('togglePassword');
 const signInPassword = document.getElementById('sPassword');
 const registerPassword = document.getElementById('rPassword');
 const confirmPassword = document.getElementById('confirmPassword');
 var container = document.getElementById('container');
+// var signIn = document.getElementById ('sign-in');
+// var register = document.getElementById ('register');
 
 
 
 
-
-function changeForm(x) {
-    $(".form-signin").toggleClass("form-signin-left");
-    $(".form-signup").toggleClass("form-signup-left");
-    $(".signup-inactive").toggleClass("signup-active");
-    $(".signin-active").toggleClass("signin-inactive");
-    $(".container").style.height = "580px";
-    $(".register").style.visibility = "visible";
-    $("login").style.visibility = "hidden";
-    $("forgot").style.visibility = "hidden";
-}
+// function changeToRegisterForm() {
+//     signIn.className = "signin-inactive";
+//     register.className= "signup-active";
+//     container.style.height = "580px";
+//     regBox.style.visibility = "visible";
+//     loginBox.style.visibility = "hidden";
+//     forgetBox.style.visibility = "hidden";
+// }
 
 
+// function changeToLoginForm() {
+//     register.className = "signup-inactive";
+//     signIn.className = "signin-active";
+//     container.style.height = "500px";
+//     regBox.style.visibility = "visible";
+//     loginBox.style.visibility = "hidden";
+//     forgetBox.style.visibility = "hidden";
+// }
 
-function loginTabFun(x) {
+
+
+function loginTabFun() {
     event.preventDefault();
     container.style.height = "500px";
     regBox.style.visibility = "hidden";
     loginBox.style.visibility = "visible";
     forgetBox.style.visibility = "visible";
-    loginTab.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-    regBar.style.borderBottomColor = "transparent";
+    loginTab.style.backgroundColor = "#F8F8FF";
+    regTab.style.backgroundColor = "transparent";
+    regTab.style.borderBottomColor = "transparent";
 }
 
+
+function regTabFun() {
+    event.preventDefault();
+    container.style.height = "600px";
+    regBox.style.visibility = "visible";
+    loginBox.style.visibility = "hidden";
+    forgetBox.style.visibility = "hidden";
+    regTab.style.backgroundColor = "#F8F8FF";
+    loginTab.style.backgroundColor = "transparent";
+    loginTab.style.borderBottomColor = "transparent";
+}
 
 
 function toggleSignInPasswordVisibility(x) {

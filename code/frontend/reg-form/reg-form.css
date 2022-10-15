@@ -45,12 +45,14 @@ for the glass effect*/
 
 
 
-/*selection of login and register sections
+/*selection of login and register sections*/
 .tabs {
     display: table-cell;
     width: 45%;
     background-color: transparent;
-    padding-bottom: 10px;
+    padding-top:10px;
+    padding-bottom: 18px;
+    margin-bottom:-10px;
     float: left;
     text-align: center;
     vertical-align: middle;
@@ -61,25 +63,30 @@ for the glass effect*/
     color: #181887;
     transition: all 0.4s ease 0s;
     outline: black;
+    border-radius: 5px;
 }
 
 .tabs:hover, p {
     cursor: pointer;
     border-bottom: 1px solid #181887;
-}*/
+}
+
+#loginTab{
+    background-color: #F8F8FF;
+}
 
 
-.nav {
+/*.nav {
     width: 100%;
     height: 100px;
     padding-top: 40px;
     opacity: 1;
-    transition: all .5s ease
+    transition: all .5s ease;
 }
 
 .nav-up {
     transform: translateY(-100px);
-    opacity: 0
+    opacity: 0;
 }
 
 
@@ -125,7 +132,7 @@ li {
     color: rgba(255, 255, 255, .3);
     text-decoration: none;
     transition: all .25s ease
-}
+}*/
 
 
 
@@ -141,7 +148,7 @@ h3{
 .icons {
     text-align: center;
     /*top right bottom left*/
-    padding: 15px 0 10px;
+    padding: 15px 0 20px;
     font-size: 100px;
     color: #181887;
     
@@ -186,7 +193,7 @@ h3{
     outline: none;
     color: inherit;
     width: 100%;
-    padding-bottom: 5px;
+    padding-bottom:5px;
 }
 
 
@@ -203,6 +210,7 @@ h3{
     font-size: 12px;
     color:black;
     opacity: 0.7;
+    margin:0;
 }
 
 
