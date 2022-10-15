@@ -2,19 +2,25 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>T E N T O</title>
     <link rel="stylesheet" href="landingPage.css">
-    
+
 </head>
+
 <body>
 
+
     <div class="main">
+
+        <!--navigation bar-->
         <div class="navbar">
 
+            <!--logo-->
             <div class="logo">TENTO</div>
 
-
+            <!--navbar links-->
             <div class="menu">
                 <ul>
                     <li><a href="#home">HOME</a></li>
@@ -23,44 +29,48 @@
                 </ul>
             </div>
 
-            <button class="primaryButton">Get Started &nbsp;
-                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
-                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
-                </svg>
+            <!--buttons for sign in and register-->
+            <button class="primaryButton">
+                <a href ="../reg-form/reg-form.html">
+                    Get Started &nbsp;
+                    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg"
+                        id="arrow-horizontal">
+                        <path transform="translate(30)"
+                            d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10"
+                            id="Path_10"></path>
+                    </svg>
+                </a>
             </button>
 
             <button class="secondaryButton" onclick="openForm()">Sign in</button>
 
-        </div> 
-        
-        
-        
-    <section id="home">
-
-        <div class="content">
-            <img src="home-illustration.png" class ="illustration">
-
-            <h2>Free online <br><span>Cambridge</span> <br>courses</h2>
-
-            <p class="par">Prepare for exams at the comfort of your own home <br> 
-                free of any cost. Practice materials and timed exams for <br> 
-                each topic with solutions to help you understand better.</p>
-            
-            <div class="searchBar">
-                <input class="search" type="text" placeholder="Search courses or topics">
-            </div>
-        
         </div>
-
-        
-
-    </section>
+        <!--navigation bar ends here-->
 
 
-        
+        <!--home section starts-->
+        <section id="home">
+
+            <div class="content">
+                <!--homepage illustration-->
+                <img src="home-illustration.png" class="illustration">
+
+                <h2>Free online <br><span>Cambridge</span> <br>courses</h2>
+
+                <p class="par">Prepare for exams at the comfort of your own home <br>
+                    free of any cost. Practice materials and timed exams for <br>
+                    each topic with solutions to help you understand better.</p>
+
+                <div class="searchBar">
+                    <input class="search" type="text" placeholder="Search courses or topics">
+                </div>
+            </div>
+        </section>
+        <!--home section ends-->
 
     </div>
-    
+
 
 </body>
+
 </html>
