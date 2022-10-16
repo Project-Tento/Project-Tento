@@ -43,7 +43,7 @@
 /*all buttons*/
 button{
     padding: 1.3em 2em;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
     color: #000;
@@ -58,20 +58,12 @@ button{
 }
 
 button:hover{
-    color: white;
+    color: #fff;
     transform: translateY(-5px);
 }
 
-button a{
-    text-decoration: none;
-}
-
-button a:hover{
-    color: white;
-    transform: translateY(-5px);
-}
-
-.primaryButton { 
+.primaryButton {
+    
     background-color: #9EF0FF;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     
@@ -89,8 +81,14 @@ button a:hover{
 
 
 .secondaryButton{
+    font-size: 14px;
+    font-weight: bold;
     color: #9EF0FF;
     background-color: transparent;
+}
+
+.secondaryButton:hover{
+    transform: translateY(-1px);
 }
 
 
@@ -216,8 +214,8 @@ ul li a:hover{
 
 /*home section image*/
 .illustration{
-    height:400px;
-    width:500px;
+    height:500px;
+    width:600px;
     float:right;
     margin-left: 100px;
 }

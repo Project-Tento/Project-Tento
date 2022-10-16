@@ -53,7 +53,7 @@ function loginTabFun() {
 
 function regTabFun() {
     event.preventDefault();
-    container.style.height = "600px";
+    container.style.height = "590px";
     regBox.style.visibility = "visible";
     loginBox.style.visibility = "hidden";
     forgetBox.style.visibility = "hidden";
@@ -99,6 +99,9 @@ function toggleConfirmPasswordVisibility(x) {
     // Toggle the eye and bi-eye icon
     x.classList.toggle('bi-eye');
 };
+
+
+
 
 
 
