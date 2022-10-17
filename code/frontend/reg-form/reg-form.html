@@ -46,7 +46,7 @@
                 <!--for controlling visibility of the forms-->
                 <!--login form starts-->
                 <div id="login">
-                    <form  method="post" autocomplete="off">
+                    <form method="post"  autocomplete="off">
                         
                         <!--header-->
                         <h3>LOG IN</h3>
@@ -81,29 +81,28 @@
                 <div id="register">
                     
                     <h3>REGISTRATION</h3>
-                    <form autocomplete="off" method="post" action="register-student.php" >
+                    <form autocomplete="off">
                         <div class="icons">
                             <iconify-icon icon="ion:person-circle-sharp" width="120" height="120"></iconify-icon>
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="text" name="fullName" id="fullName" placeholder="Full Name *">
+                            <input class="formField" type="text" name="fullName" id="fullName" placeholder="Full Name *" required>
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="email" name="email" id="email" placeholder="Email Address *">
+                            <input class="formField" type="email" name="email" id="email" placeholder="Email Address *" required>
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="password" name="rPassword" id="rPassword" placeholder="Password *" >
+                            <input class="formField" type="password" name="rPassword" id="rPassword" placeholder="Password *" aria-describedby="password-info" required>
                             <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleRegisterPasswordVisibility(this)"></i>
-                            
+                            <label id="password-info">Password must have 8 to 20 characters, at least one uppercase, one number and one special character.</label>
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password *" aria-describedby="password-info">
+                            <input class="formField" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password *" required>
                             <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleConfirmPasswordVisibility(this)"></i>
-                            <label id="password-info">Password must have 8 to 20 characters, at least one uppercase, one number and one special character (!, @, #, $, %, ^, &, *, -).</label>
                         </div>
 
                         <div class="form-group">
