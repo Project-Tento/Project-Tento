@@ -13,10 +13,11 @@ if ($conn->connect_error) {
 
 // sql to create table
 $sql = "CREATE TABLE students (
-Username VARCHAR(30) PRIMARY KEY NOT NULL,
+UserID INT PRIMARY KEY NOT NULL,
 Name VARCHAR(30) NOT NULL,
 Email VARCHAR(30) NOT NULL,
-Password VARCHAR(30) NOT NULL
+Password VARCHAR(100) NOT NULL,
+ProfilePicture LONGBLOB
 )";
 
 if ($conn->query($sql) === TRUE) {
