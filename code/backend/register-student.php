@@ -1,5 +1,5 @@
 <?php
-require "formValidation.php";
+require "form-validation.php";
 $name=$_POST['name'];
 $emailAddress=$_POST['emailAddress'];
 $username=$_POST['username'];
@@ -24,15 +24,15 @@ if(!isNameValid($name))
 {
   echo "Name format invalid.\n";
 }
-if(!isUsernameValid($username))
+/*if(!isUsernameValid($username))
 {
   echo "Username format invalid.\n";
-}
+}*/
 if(!isPasswordValid($password))
 {
   echo "Password format invalid.\n";
 }
-if($bothPasswordsValid && isEmailValid($emailAddress) && isNameValid($name) && isUsernameValid($username) && isPasswordValid($password))
+if($bothPasswordsValid && isEmailValid($emailAddress) && isNameValid($name) && /*isUsernameValid($username) &&*/ isPasswordValid($password))
 {
    $servername = "localhost";
    $user = "root";
@@ -43,8 +43,8 @@ if($bothPasswordsValid && isEmailValid($emailAddress) && isNameValid($name) && i
        die("Connection failed: " . $conn->connect_error);
     }
 
-    $query =  $conn->prepare( "INSERT INTO students (Username, Name, Email, Password) VALUES (?, ?, ?, ?)");
-    $query->bind_param("ssss",$username, $name, $emailAddress, $hashedPassword);
+    $query =  $conn->prepare( "INSERT INTO students (Name, Email, Password) VALUES (?, ?, ?)");
+    $query->bind_param("sss", $name, $emailAddress, $hashedPassword);
     $query->execute();
     $query->close();
 }
