@@ -95,14 +95,15 @@
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="password" name="rPassword" id="rPassword" placeholder="Password *" aria-describedby="password-info" required>
+                            <input class="formField" type="password" name="rPassword" id="rPassword" placeholder="Password *"  required>
                             <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleRegisterPasswordVisibility(this)"></i>
-                            <label id="password-info">Password must have 8 to 20 characters, at least one uppercase, one number and one special character.</label>
+                            
                         </div>
 
                         <div class="form-group">
-                            <input class="formField" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password *" required>
+                            <input class="formField" type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password *" aria-describedby="password-info" required>
                             <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleConfirmPasswordVisibility(this)"></i>
+                            <label id="password-info">Password must have 8 to 20 characters, at least one uppercase, one number and one special character (!, @, #, $, %, ^, &, *, -).</label>
                         </div>
 
                         <div class="form-group">
