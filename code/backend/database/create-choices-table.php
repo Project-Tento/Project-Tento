@@ -12,16 +12,21 @@ if ($conn->connect_error) {
 }
 
 // sql to create table
-$sql = "CREATE TABLE questions (
-QuestionID INT PRIMARY KEY NOT NULL,
-QuestionText LONGTEXT NOT NULL,
-QuestionPicture LONGBLOB,
-TopicID INT,
-FOREIGN KEY (TopicID) REFERENCES topics(TopicID)
+$sql = "CREATE TABLE choices (
+QuestionID INT NOT NULL,
+ChoiceAText LONGTEXT,
+ChoiceBText LONGTEXT,
+ChoiceCText LONGTEXT,
+ChoiceDText LONGTEXT,
+ChoiceAPic LONGBLOB,
+ChoiceBPic LONGBLOB,
+ChoiceCPic LONGBLOB,
+ChoiceDPic LONGBLOB,
+FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
 )";
 
 if ($conn->query($sql) === TRUE) {
-  echo "Table questions created successfully";
+  echo "Table choices created successfully";
 } else {
   echo "Error creating table: " . $conn->error;
 }
