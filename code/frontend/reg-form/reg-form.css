@@ -33,7 +33,7 @@ body {
 for the glass effect*/
 #container {
     width: 100%;
-    height: 590px;
+    height: 500px;
     background: white;
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -66,20 +66,15 @@ for the glass effect*/
     border-radius: 5px;
 }
 
-p, .tabs:hover{
-    cursor:pointer;
-}
 
-.tabs:hover {
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+
+.tabs:hover, p {
+    cursor: pointer;
 }
 
 
 
-#registerTab{
+#loginTab{
     background-color: #F8F8FF;
 }
 
@@ -171,18 +166,18 @@ h3{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 85%;
+    width: 80%;
 }
 
 
 
 
-/*only the register will be visible*/
+/*only the login will be visible*/
 .comm {
     visibility: hidden;
 }
 
-#register {
+#login {
     visibility: visible;
 }
 
@@ -230,9 +225,12 @@ h3{
     font-size: 12px;
     opacity: 0.9;
     text-decoration: none;
-    margin-bottom: 10px;
+    
 }
 
+.forgot:hover{
+    color:#181887;
+}
 
 
 
@@ -249,8 +247,8 @@ h3{
     background-color: #9EF0FF;
     margin-left: 28%;
     margin-right: 28%;
-    margin-top: 25px;
-    margin-bottom:15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     /*top right bottom left*/
     padding: 10px 40px 10px 40px;
     text-align: center;
@@ -265,10 +263,6 @@ h3{
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-.redirect-link-text{
-    font-size: 12px;
-}
 
 
 

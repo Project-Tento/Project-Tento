@@ -38,6 +38,15 @@ var container = document.getElementById('container');
 // }
 
 
+function onload(){
+    var option = window.location.hash.substring(1);
+    if(option == 'login')
+        loginTabFun();
+    
+    else if(option == 'register')
+        regTabFun();
+}
+
 
 function loginTabFun() {
     event.preventDefault();
@@ -53,7 +62,7 @@ function loginTabFun() {
 
 function regTabFun() {
     event.preventDefault();
-    container.style.height = "590px";
+    container.style.height = "600px";
     regBox.style.visibility = "visible";
     loginBox.style.visibility = "hidden";
     forgetBox.style.visibility = "hidden";
@@ -99,9 +108,6 @@ function toggleConfirmPasswordVisibility(x) {
     // Toggle the eye and bi-eye icon
     x.classList.toggle('bi-eye');
 };
-
-
-
 
 
 
