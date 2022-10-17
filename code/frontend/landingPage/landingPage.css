@@ -19,7 +19,7 @@
 }
 
 /*navigation bar*/
-.navbar{
+.nav-bar{
     width: 100%;
     height: 60px;
     margin: auto;
@@ -29,10 +29,11 @@
 }
 
 
+
 .logo{
     color: #9EF0FF;
     font-size:40px;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bolder;
     padding-left: 70px;
     float: left;
@@ -40,8 +41,8 @@
     height:40px;
 }
 
-/*all buttons*/
-button{
+
+.primaryButton, .secondaryButton{
     padding: 1.3em 2em;
     font-size: 14px;
     text-transform: uppercase;
@@ -57,7 +58,7 @@ button{
     border-radius: 45px;
 }
 
-button:hover{
+.primaryButton:hover, .secondaryButton:hover{
     color: #fff;
     transform: translateY(-5px);
 }
@@ -100,14 +101,14 @@ button:hover{
     
 }
 
-ul{
+.nav-bar ul{
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li{
+.nav-bar ul li{
     list-style: none;
     margin-left: 62px;
     margin-top: 27px;
@@ -115,11 +116,11 @@ ul li{
     
 }
 
-ul li:hover{
+.nav-bar ul li:hover{
     color:#716AFF;
 }
 
-ul li a{
+.nav-bar ul li a{
     text-decoration: none;
     color: #9EF0FF;
     font-weight: bold;
@@ -128,7 +129,7 @@ ul li a{
 
 
 
-ul li a:after{
+.nav-bar ul li a:after{
     content:"";
     position: absolute;
     background-color: #E6ECEF;
@@ -139,7 +140,7 @@ ul li a:after{
     transition: 0.3s;
 }
 
-ul li a:hover:after{
+.nav-bar ul li a:hover:after{
     
     width: 100%;
 }
@@ -151,8 +152,11 @@ ul li a:hover{
 
 
 
-
 /*home section*/
+
+#home{  
+    height: 500px; 
+}
 
 .content{
     width: 1200px;
@@ -181,35 +185,11 @@ ul li a:hover{
 }
 
 .content span{
-    
+    color:#fff;
     font-size: 65px;
     font-weight: bolder;
 }
 
-/*
-.content .getStarted{
-    width: 180px;
-    height: 40px;
-    background: #163a5f;
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s ease;
-    
-}
-
-.content .getStarted a{
-    text-decoration: none;
-    color: white;
-    transition: .3s ease;
-}
-
-.getStarted:hover{
-    background-color: black;
-}*/
 
 
 /*home section image*/
@@ -273,7 +253,198 @@ input[type=text]{
 
 
 
+.heading{
+    text-align: center;
+    float:middle;
+    font-size: 50px;
+    padding:20px;
+}
+
+.heading span{
+    color: #716AFF;
+}
 
 
+
+#courses .heading{
+    padding-bottom:40px;
+}
+
+
+
+#about-us, #courses{
+    background: white;
+    padding-top:40px;
+}
+
+
+
+
+/*
+
+
+
+.course-list .box{
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding:3rem 2rem;
+    outline-offset: -1rem;
+    outline: 1rem solid rgba(0,0,0,.1);
+    box-shadow: var(--box-shadow);
+    transition: .2s linear;
+}
+
+.course-list .box:hover{
+    outline-offset: 0rem;
+    outline: 2rem solid black;
+}
+
+.course-list .box img{
+    height:20rem;
+}
+
+.course-list .box h3{
+    font-size: 2.5rem;
+    color:black;
+}*/
+
+.swiper {
+    width: 95%;
+    height: 100%;
+    padding-top:50px;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically
+    Webkit is the browser engine used by Chrome and Safari
+    Mozilla is the engine used by Firefox
+    -ms is for IE and 
+    -o is for Opera. */
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.swiper-button-prev{
+    float:left;
+}
+
+
+
+#courses{
+    padding-bottom:60px;
+}
+
+.card{
+    height: 300px;
+    width:300px;
+    border-radius:18px;
+}
+
+.card-title{
+    padding-top: 50px;
+    font-size: 25px;
+}
+
+.card-body{
+    text-align:left;
+}
+
+.card-text{
+    font-size: 15px;
+    padding-top: 5px;
+    padding-left:5px;
+}
+
+.card a, .card img{
+    bottom:10px;
+    position:absolute;
+}
+
+.card a{
+    bottom:20px;
+}
+.card a:hover{
+    color:#716AFF;
+}
+
+.card img{
+    background: transparent;
+    width: 60px;
+    height:60px;
+    float:right;
+    right:10px;
+}
+
+
+#about-us{
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #110033 5%, #07075a 44%, #181887 72%, #342ecc 85%, #716aff 99%);
+    background-position: center;
+    background-size: cover;
+    height:500px;
+}
+
+
+#about-us .heading{
+    color:#716AFF;
+}
+
+#about-us span{
+    color:#E6ECEF;
+}
+
+.box{
+    padding:20px;
+    border-radius: 18px;
+    background:#fff;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: .2s linear;
+    width:330px;
+}
+
+.meet-team{
+    display: grid;
+    padding:30px;
+    padding-bottom: 8%;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap:10px;
+    height:180px;
+}
+
+
+/*
+#about-us .box:hover{
+    backdrop-filter: blur(5px);
+    border: 2px solid #181887;
+    transform: translateY(-5px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+}*/
+
+#about-us .box .icons{
+    text-align: center;
+    /*top right bottom left*/
+    height: 150px;
+    color: #181887;
+}
+
+
+.box h3{
+   font-size: 16px;
+   color:black;
+   line-height: 1.8;
+   text-align: center;
+}
 
 
