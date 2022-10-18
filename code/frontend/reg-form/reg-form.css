@@ -272,6 +272,35 @@ h3{
     clear: both;
 }
 
+/*
+    //Title: Validation while typing
+    //Author: Shanta Maria
+    //Date: 18/10/2022
+*/
 
+#form.valid #register-email:before
+{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(valid.png);
+    background-size: cover;
+    z-index: 1000;
+}
 
+#form.valid #register-email:before
+{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: url(valid.png);
+    background-size: cover;
+    z-index: 1000;
+}
 
