@@ -67,7 +67,7 @@
 
 
 function redirectToScorePage() {
-    window.location.href = 'score.html';
+    window.location.href = 'score.php';
 }
 
 
