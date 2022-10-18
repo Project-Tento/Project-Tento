@@ -10,7 +10,7 @@
 <?php
 
 function isEmailValid($email) {
-        return (!filter_var($email, FILTER_VALIDATE_EMAIL)) ? FALSE : TRUE;
+        return (!preg_match("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", $email)) ? FALSE : TRUE;
 }
 
 ?>
@@ -21,20 +21,6 @@ function isEmailValid($email) {
 
 function isNameValid($name) {
         return (!preg_match("/^[a-zA-Z-' ]*$/",$name)) ? FALSE : TRUE;
-}
-
-?>
-
-//Username Validation
-//Checks if username is between 7 to 20 characters long,
-//starts with lowercase/uppercase alphabet,
-//does not end with '_',
-//contains alphabets or numbers or '_',
-//case sensitive
-<?php
-
-function isUsernameValid($userName) {
-        return (!preg_match('/^[a-z]\w{7,20}[^_]$/i', $userName)) ? FALSE : TRUE;
 }
 
 ?>
