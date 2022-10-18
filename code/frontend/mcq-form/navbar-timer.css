@@ -1,0 +1,29 @@
+.navbar {
+    width: 100%;
+    height: max-content;
+    margin: auto;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position:sticky; 
+    border: none;
+    top: 0px;
+    height:max-content;
+}
+
+
+
+
+.logo {
+    color: #003458;
+    font-size: 30px;
+    font-weight: bolder;
+    float: left;
+    padding: 10px;
+}
+
+#timer {
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    color: #181887;
+}
