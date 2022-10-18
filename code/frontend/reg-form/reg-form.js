@@ -1,3 +1,7 @@
+// .js file for registration page
+//password toggling function
+// switch tab function 
+//conditional page load (to register or login tab) from another page
 
 
 var loginBox = document.getElementById('login');
@@ -40,13 +44,14 @@ var container = document.getElementById('container');
 
 function onload() {
     var option = window.location.hash.substring(1);
-    if (option == 'login'){
+    if (option == 'register'){
+        regTabFun();
+    }
+
+    else{
         loginTabFun();
     }
 
-    else if (option == 'register'){
-        regTabFun();
-    }
         
 }
 
