@@ -1,3 +1,7 @@
+//  Title: functional timer .js file
+//  Author: Nafisa Maliyat
+
+
 (function workingTimer() {
     var countTo = 30; //specifies the total time in seconds
     var min = Math.floor(countTo / 60); //calculating minute

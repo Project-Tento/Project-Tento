@@ -1,4 +1,7 @@
 
+//  Title: .js file for swiper of course list
+//  Author: Nafisa Maliyat
+
 
 var swiper = new Swiper(".course-list", {
     slidesPerView: 4,
