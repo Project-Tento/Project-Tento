@@ -38,18 +38,20 @@ var container = document.getElementById('container');
 // }
 
 
-function onload(){
+function onload() {
     var option = window.location.hash.substring(1);
-    if(option == 'login')
+    if (option == 'login'){
         loginTabFun();
-    
-    else if(option == 'register')
+    }
+
+    else if (option == 'register'){
         regTabFun();
+    }
+        
 }
 
 
 function loginTabFun() {
-    event.preventDefault();
     container.style.height = "500px";
     regBox.style.visibility = "hidden";
     loginBox.style.visibility = "visible";
@@ -57,11 +59,12 @@ function loginTabFun() {
     loginTab.style.backgroundColor = "#F8F8FF";
     regTab.style.backgroundColor = "transparent";
     regTab.style.borderBottomColor = "transparent";
+    document.title="Tento | Log in";
+    window.location.href="reg-form.html#login";
 }
 
 
 function regTabFun() {
-    event.preventDefault();
     container.style.height = "600px";
     regBox.style.visibility = "visible";
     loginBox.style.visibility = "hidden";
@@ -69,6 +72,8 @@ function regTabFun() {
     regTab.style.backgroundColor = "#F8F8FF";
     loginTab.style.backgroundColor = "transparent";
     loginTab.style.borderBottomColor = "transparent";
+    document.title="Tento | Register";
+    window.location.href="reg-form.html#register";
 }
 
 

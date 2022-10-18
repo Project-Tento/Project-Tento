@@ -1,0 +1,108 @@
+body {
+    background: rgb(99, 39, 120)
+}
+
+
+.nav-bar{
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+}
+
+
+
+.logo{
+    color: #9EF0FF;
+    font-size:40px;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    padding-left: 70px;
+    float: left;
+    padding-top: 15px;
+    height:40px;
+}
+
+
+.primaryButton, .submitButton{
+    padding: 1.3em 2em;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    float: right;
+    margin-right:40px;
+    margin-top:15px;
+    border: none;
+    border-radius: 45px;
+}
+
+.primaryButton:hover, .submitButton:hover{
+    color: #fff;
+    transform: translateY(-5px); 
+    background-color: #716AFF;
+}
+
+.primaryButton {
+    
+    background-color: #9EF0FF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);    
+}
+  
+ 
+.primaryButton:active, .submitButton:active {
+    transform: translateY(-1px);
+}
+
+.submitButton{
+    border:0;
+}
+
+
+
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
