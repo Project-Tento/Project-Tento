@@ -70,7 +70,7 @@ function loginTabFun() {
 
 
 function regTabFun() {
-    container.style.height = "600px";
+    container.style.height = "700px";
     regBox.style.visibility = "visible";
     loginBox.style.visibility = "hidden";
     forgetBox.style.visibility = "hidden";
