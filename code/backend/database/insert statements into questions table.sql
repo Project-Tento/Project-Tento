@@ -1,0 +1,3 @@
+INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240101', 'Write 0.07164 correct to 2 significant figures.', '402401');
+INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240102', 'Find the lowest common multiple ( LCM) of 36 and 48.', '402401');
+INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240103', 'A lake has an area of 63 800 000 000 square metres. Write this area in square kilometres, correct to 2 significant figures.', '402401');

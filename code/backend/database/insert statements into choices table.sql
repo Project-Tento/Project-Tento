@@ -1,0 +1,3 @@
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240101', '0.071', '0.072', '0.07', '0.0');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240102', '24', '16', '12', '144');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240103', '64000', '63800', '64000000', '63800000');
