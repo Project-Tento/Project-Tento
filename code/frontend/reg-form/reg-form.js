@@ -2,44 +2,19 @@
 //password toggling function
 // switch tab function 
 //conditional page load (to register or login tab) from another page
-
+//Author: Nafisa Maliyat
 
 var loginBox = document.getElementById('login');
 var regBox = document.getElementById('register');
 var forgetBox = document.getElementById('forgot');
 var loginTab = document.getElementById('loginTab');
 var regTab = document.getElementById('registerTab');
-// var hidePassword = document.getElementById('togglePasswordHide');
-// var showPassword = document.getElementById('togglePasswordShow');
+
 var togglePassword = document.getElementById('togglePassword');
 const signInPassword = document.getElementById('sPassword');
 const registerPassword = document.getElementById('rPassword');
 const confirmPassword = document.getElementById('confirmPassword');
 var container = document.getElementById('container');
-// var signIn = document.getElementById ('sign-in');
-// var register = document.getElementById ('register');
-
-
-
-
-// function changeToRegisterForm() {
-//     signIn.className = "signin-inactive";
-//     register.className= "signup-active";
-//     container.style.height = "580px";
-//     regBox.style.visibility = "visible";
-//     loginBox.style.visibility = "hidden";
-//     forgetBox.style.visibility = "hidden";
-// }
-
-
-// function changeToLoginForm() {
-//     register.className = "signup-inactive";
-//     signIn.className = "signin-active";
-//     container.style.height = "500px";
-//     regBox.style.visibility = "visible";
-//     loginBox.style.visibility = "hidden";
-//     forgetBox.style.visibility = "hidden";
-// }
 
 
 function onload() {
@@ -123,3 +98,7 @@ function toggleConfirmPasswordVisibility(x) {
 
 
 
+var closeFormButton = document.getElementById('exit-login-button');
+function closeForm(){
+    window.location.href="../landingPage/landingPage.html";
+}

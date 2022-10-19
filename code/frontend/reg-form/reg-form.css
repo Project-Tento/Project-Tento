@@ -49,6 +49,23 @@ for the glass effect*/
     display: flex;
 }
 
+#exit-login-button{
+    height: 30px;
+    width:30px;
+    outline:none;
+    right:10%;
+    float:right;
+    top:10%;
+    border-radius:50%;
+    outline:grey;
+    padding:10px;
+}
+
+#exit-login-button:hover{
+    color:black;
+}
+
+
 
 
 /*selection of login and register sections*/
