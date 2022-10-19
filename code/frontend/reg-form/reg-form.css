@@ -290,7 +290,6 @@ h3{
     top: 12px;
     width: 24px;
     height: 24px;
-    background: url(valid.png);
     background-size: cover;
     z-index: 1000;
 }
@@ -303,8 +302,31 @@ h3{
     top: 12px;
     width: 24px;
     height: 24px;
-    background: url(valid.png);
     background-size: cover;
     z-index: 1000;
 }
 
+.control-label {
+    text-align: left !important;
+    padding-bottom: 4px;
+}
+.progress {
+    height: 3px !important;
+}
+
+.progress-bar-danger {
+    background-color: #e90f10;
+}
+.progress-bar-warning{
+    background-color: #ffad00;
+}
+.progress-bar-success{
+    background-color: #02b502;
+}
+
+.fa-circle{
+    font-size: 6px;  
+}
+.fa-check{
+    color: #02b502;
+}
