@@ -174,10 +174,10 @@
                     </p>
                     </p>
                     <div>
-                        <input type="radio" name="box" id="one-one">
-                        <input type="radio" name="box" id="one-two">
-                        <input type="radio" name="box" id="one-three">
-                        <input type="radio" name="box" id="one-four">
+                        <input type="radio" name="box-1" id="one-one" value="0.071">
+                        <input type="radio" name="box-1" id="one-two" value="0.072">
+                        <input type="radio" name="box-1" id="one-three" value="0.07">
+                        <input type="radio" name="box-1" id="one-four" value="0.0">
 
                         <label for="one-one" class="box one-one">
                             <div class="course">
@@ -1192,6 +1192,23 @@
 
             </form>
         </div>
+        <?php 
+            $total = 0;
+
+            $q1 = $_POST["box-1 one-two"];
+            $q2 = $_POST["box-1 two-four"];
+            $q3 = $_POST["box-1 three-one"];
+            if ($q1 == '0.072' ) {
+                $total++;
+            };
+            if ($q2 == '144' ) {
+                $total++;
+            };
+            if ($q3 == '64000' ) {
+                $total++;
+            };
+            echo $total;
+        ?>
 
 
 
