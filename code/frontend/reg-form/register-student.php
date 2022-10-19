@@ -1,7 +1,7 @@
 /*
-    //Title: Validation and Checking Functions for Login Form Data
-    //Author: Shanta Maria, Kazi Jawadul Islam Jishan
-    //Date: 12/10/2022, 18/10/2022
+//Title: Validation and Checking Functions for Login Form Data
+//Author: Shanta Maria, Kazi Jawadul Islam Jishan
+//Date: 12/10/2022, 18/10/2022
 */
 
 <?php
@@ -16,20 +16,24 @@ if ($password == $confirmPassword) {
   $bothPasswordsValid = true;
 } else {
   $bothPasswordsValid = false;
-  echo "Passwords do not match.\n";
+  header('Location: reg-form.html#register');
+  exit();
 }
 if (!isEmailValid($email)) {
-  echo "Email invalid.\n";
+  header('Location: reg-form.html#register');
+  exit();
 }
 if (!isNameValid($fullName)) {
-  echo "Name format invalid.\n";
+  header('Location: reg-form.html#register');
+  exit();
 }
 /*if(!isUsernameValid($username))
 {
   echo "Username format invalid.\n";
 }*/
 if (!isPasswordValid($password)) {
-  echo "Password format invalid.\n";
+  header('Location: reg-form.html#register');
+  exit();
 }
 if ($bothPasswordsValid && isEmailValid($email) && isNameValid($fullName) && /*isUsernameValid($username) &&*/ isPasswordValid($password)) {
   $servername = "localhost";
@@ -41,32 +45,30 @@ if ($bothPasswordsValid && isEmailValid($email) && isNameValid($fullName) && /*i
   $conn = new mysqli($servername, $user, $dbpassword, $dbname);
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-  } 
-  else {
-    $INSERT="INSERT INTO students (UserID, Name, Email, Password, ProfilePicture) VALUES (default, ?, ?, ?, NULL)";
-    $SELECT="SELECT Email FROM students WHERE Email=? LIMIT 1";
+  } else {
+    $INSERT = "INSERT INTO students (UserID, Name, Email, Password, ProfilePicture) VALUES (default, ?, ?, ?, NULL)";
+    $SELECT = "SELECT Email FROM students WHERE Email=? LIMIT 1";
 
     $query =  $conn->prepare($SELECT);
     $query->bind_param("s", $email);
     $query->execute();
     $query->bind_result($email);
     $query->store_result();
-    $rnum=$query->num_rows();
+    $rnum = $query->num_rows();
 
-    if($rnum==0)
-    {
+    if ($rnum == 0) {
       $query->close();
       $query =  $conn->prepare($INSERT);
       $query->bind_param("sss", $fullName, $email, $hashedPassword);
       $query->execute();
 
-      echo "New record inserted successfully!";
+      header('Location: reg-form.html#login');
+      exit();
+    } else {
+      header('Location: reg-form.html#register');
+      exit();
     }
-    else
-    {
-      echo "Email has already been used!";
-    }
-    
+
     $query->close();
     $conn->close();
   }
