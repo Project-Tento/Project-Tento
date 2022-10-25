@@ -14,7 +14,7 @@
 <body>
     <h1>You did it!</h1>
     <div class="score">
-        <p>Score: <span id ="score">your score</span> / <span id="total-score">total score</span></p>
+        <p>Score: <span id ="score">your score = 0</span> / <span id="total-score">total score = 10</span></p>
     </div>
 </body>
 </html>
