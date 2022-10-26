@@ -1,0 +1,10 @@
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240101', 'The second significant figure is 1, and there is a 6 after that, so we round up 1. Anser is 0.072', 'Leading zeros are not significant', '0.072');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240102', '36 x 4 = 144. 48 x 3 = 144. 3 is a prime number.', 'Prime factorise the two numbers', '144');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240103', 'Divide by 1 000 000 to get 63 800. 63 800 correct to 2 significant figures is 64 000. ', '1 sq km = 1 000 000 sq m.', '64000');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240104', 'The prime numbers addition = 2+3+5+7+11+13+17+19 = 77', '2 is a prime number', '77');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240105', 'The common factors are 4, 2 and 1. 4 is the highest.', 'Prime factorise the numbers', '4');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240106', 'Multiply 1/5 with 30 to get 6, which is the estimated frequency of rainy days.', 'Probability id given in reduced form', '6');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240107', 'Additional value = 0.12 x 105 = 12.6. 105 + 12.6 = 117.6', 'Percentage/100= added value', '117.6');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240108', '250 x (1 - 0.08)^10 = 108', 'depreciation= percentage x value', '108');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240109', '1500 ml / 330 ml = 4.5. but we must round down to ensure complete number of bottles.', '1 litre = 1000 ml', '4');
+INSERT INTO `tentodatabase`.`solutions` (`QuestionID`, `SolutionText`, `Hint`, `AnswerText`) VALUES ('40240110', '5/9 x 45 981 = 25 545', 'Find fraction of the given value', '25545');

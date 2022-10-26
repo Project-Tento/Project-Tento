@@ -1,3 +1,10 @@
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240101', '0.071', '0.072', '0.07', '0.0');
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240102', '24', '16', '12', '144');
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240103', '64000', '63800', '64000000', '63800000');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240104', '75', '86', '77', '92');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240105', '4', '2', '1', '5');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240106', '5', '6', '15', '12');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240107', '112', '117', '117.6', '115.6');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240108', '106', '107', '108', '109');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240109', '3', '4', '5', '6');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240110', '20400', '25540', '20436', '25545');
