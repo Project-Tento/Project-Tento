@@ -7,4 +7,6 @@ INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`
 INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240107', 'Increase $105 by 12%.', '402401');
 INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240108', 'Priya buys a bicycle for $250. Each year the value of the bicycle decreases by 8% of its value at the beginning of that year. Calculate the value of Priya’s bicycle after 10 years. ', '402401');
 INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240109', 'One bottle contains 1.5 litres of fruit juice. Calculate the number of 330 ml glasses that can be filled completely from one bottle.', '402401');
-INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240110', '5/9 of 45981 bottles are recycled. Find the number of bottles that are recycled.ss', '402401');
+INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240110', '5/9 of 45981 bottles are recycled. Find the number of bottles that are recycled.', '402401');
+INSERT INTO `tentodatabase`.`questions` (`QuestionID`, `QuestionText`, `TopicID`) VALUES ('40240111', 'Jason receives some money for his birthday. He spends <math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mfrac><mn>11</mn><mn>15</mn></mfrac></math> of the money and has $14.40 left. Calculate how much money he received for his birthday', '402401');
+

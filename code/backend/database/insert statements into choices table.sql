@@ -8,3 +8,4 @@ INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240108', '106', '107', '108', '109');
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240109', '3', '4', '5', '6');
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240110', '20400', '25540', '20436', '25545');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240111', '$10.56', '$19.63', '$3.84', '$54.00');
