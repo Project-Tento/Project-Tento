@@ -26,6 +26,12 @@
     padding: 10px;
 }
 
+.logo img{
+    height:40px;
+    width:40px;
+}
+
+
 #timer {
     float: right;
     font-size: 40px;
