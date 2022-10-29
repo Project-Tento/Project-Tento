@@ -9,3 +9,17 @@ INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240109', '3', '4', '5', '6');
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240110', '20400', '25540', '20436', '25545');
 INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240111', '$10.56', '$19.63', '$3.84', '$54.00');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240112', '$19', '$38', '$35', '$12');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240113', '168g', '70g', '72g', '170g');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240114', '0.072 sq cm', '720 sq cm', '48 sq cm', '0.0048 sq cm');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240115', '70 mins', '156 mins', '144 mins', '72 mins');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240116', '180g', '90g', '360g', '150g');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240117', '0.27', '0.54', '54 000', '27 000');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240118', '1:1.5', '1:3.375', '1:3 375 000', '1:150');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240119', '34.4', '344', '0.00344', '0.344');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240120', '350', '38', '19', '31');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240121', '$18858.85', '$19858.85', '$18958.85', '$28858.85');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240122', '36.6%', '26.7%', '0.267%', '0.366%');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240123', '99/280', '2475/7000', '990/2800', '198/560');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240124', '9605', '9650', '9500', '9550');
+INSERT INTO `tentodatabase`.`choices` (`QuestionID`, `ChoiceAText`, `ChoiceBText`, `ChoiceCText`, `ChoiceDText`) VALUES ('40240125', '28.05 cm', '28 cm', '28.2 cm', '28.35 cm');
