@@ -28,9 +28,15 @@
     width: 100%;
     height: 80px;
     margin: auto;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: none;
+}
+.nav-bar.scrolled{
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #110033 5%, #07075a 44%, #181887 72%, #342ecc 85%, #716aff 99%);
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -42,7 +48,7 @@
     font-weight: bolder;
     padding-left: 70px;
     float: left;
-    padding-top: 15px;
+    padding-top: 18px;
     height:40px;
 }
 
@@ -105,7 +111,7 @@
 
 /*navbar links*/
 .menu{
-    width: 400px;
+    max-width: 600px;
     float: left;
     height: 50px;
     
@@ -168,14 +174,17 @@ ul li a:hover{
     height: 500px; 
 }
 
-.content{
+.content, .mission-content{
     width: 1200px;
     height: auto;
     margin: auto;
     color: black;
     position: relative;
     float:center;
+    text-align: justify;
 }
+
+
 
 /*the paragraph*/
 .content .par{
@@ -185,7 +194,7 @@ ul li a:hover{
     color:#E6ECEF;
 }
 
-.content h2{
+.content h2, .mission-content h2{
     font-size: 50px;
     padding-left: 20px;
     padding-bottom: 20px;
@@ -290,34 +299,6 @@ input[type=text]{
 
 
 
-/*
-
-
-
-.course-list .box{
-    background: #fff;
-    border-radius: .5rem;
-    text-align: center;
-    padding:3rem 2rem;
-    outline-offset: -1rem;
-    outline: 1rem solid rgba(0,0,0,.1);
-    box-shadow: var(--box-shadow);
-    transition: .2s linear;
-}
-
-.course-list .box:hover{
-    outline-offset: 0rem;
-    outline: 2rem solid black;
-}
-
-.course-list .box img{
-    height:20rem;
-}
-
-.course-list .box h3{
-    font-size: 2.5rem;
-    color:black;
-}*/
 
 .swiper {
     width: 95%;
@@ -354,7 +335,7 @@ input[type=text]{
 .card{
     height: 300px;
     width:300px;
-    border-radius:18px;
+    border-radius:18px !important;
 }
 
 .card-title{
@@ -393,11 +374,54 @@ input[type=text]{
 }
 
 
-#about-us{
+
+#our-mission, #about-us{
     background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #110033 5%, #07075a 44%, #181887 72%, #342ecc 85%, #716aff 99%);
+    background-image: linear-gradient(315deg, #000000 0%, #110033 5%, #07075a 54%, #181887 73%, #342ecc 85%, #716aff 99%);
     background-position: center;
     background-size: cover;
+}
+
+#our-mission{
+    height:650px;
+    display: grid;
+}
+
+#our-mission .illustration{
+    margin-top:40px;
+    padding-left: 40px;
+}
+
+
+
+
+.list-style{
+    display: list-item;
+    font-size: 18px;
+    list-style-type: square; 
+    list-style-position: inside;
+    color:white;
+
+}
+
+.mission-content{
+    margin-left: 12%;
+}
+
+.mission-par{
+    color: white;
+    font-size: 18px;
+}
+
+.change-color{
+    color:#716AFF;
+    font-weight: bold;
+}
+
+
+
+
+#about-us{
     height:500px;
 }
 
