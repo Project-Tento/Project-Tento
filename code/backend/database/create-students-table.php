@@ -21,6 +21,8 @@ ProfilePicture LONGTEXT,
 Bio LONGTEXT,
 Institution VARCHAR(30),
 Level VARCHAR(30),
+Status TINYINT NOT NULL,
+Code INT NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
