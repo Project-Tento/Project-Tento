@@ -17,7 +17,12 @@ UserID INT PRIMARY KEY NOT NULL,
 Name VARCHAR(30) NOT NULL,
 Email VARCHAR(30) NOT NULL,
 Password VARCHAR(100) NOT NULL,
-ProfilePicture LONGBLOB
+ProfilePicture LONGTEXT,
+Bio LONGTEXT,
+Institution VARCHAR(30),
+Level VARCHAR(30),
+Status TINYINT NOT NULL,
+Code INT NOT NULL
 )";
 
 if ($conn->query($sql) === TRUE) {
