@@ -1,0 +1,134 @@
+.avatar {
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+    height: 60px;
+    width: 60px;
+    transition: all .2s ease-in-out;
+    border-radius: 50%;
+}
+
+.card {
+    border-radius: 1.5rem !important;
+}
+
+
+.shadow-blur {
+    box-shadow: inset 0 0px 1px 1px rgba(254, 254, 254, 0.9), 0 20px 27px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+
+.blur {
+    box-shadow: inset 0px 0px 2px #fefefed1;
+    -webkit-backdrop-filter: saturate(200%) blur(30px) !important;
+    backdrop-filter: saturate(200%) blur(30px) !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+
+.user-profile-card {
+    margin-top: 120px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.card-body {
+    margin-top: -50px !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.border-radius-xl {
+    border-radius: 1rem;
+}
+
+.page-header {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-image: url('gradient-sky-3.jpg');
+    background-size: cover;
+    background-position: 50%;
+    padding-right: 8%;
+    padding-left: 8%;
+    min-height: 200px;
+    max-height: 200px;
+    background-size: cover;
+    background-position-y: 50%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.profile-card-buttons {
+    float: right;
+}
+
+.profile-card-buttons .nav-item {
+    min-width: 120px;
+    max-width: 120px;
+    margin-right: 20px;
+}
+
+.profile-card-buttons .nav-item button:hover{
+    color:#181887;
+}
+
+
+.profile-details {
+    margin-top: 40px;
+}
+
+
+.profile-details h3 {
+    color: #181887;
+}
+
+.profile-details-header {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.profile-details-header i {
+    margin-left: 10px;
+    color:grey
+}
+
+.profile-details-header i:hover, .profile-details-header i:focus {
+    margin-left: 10px;
+    color:#181887;
+}
+/*
+.profile-information-list {
+    padding: 10px;
+}
+
+.profile-information-list .list-group-item{
+    display: flex;
+}
+
+.profile-information-list .list-group-item .profile-detail-title{
+    min-width: max-content;
+}
+*/
+
+
+.profile-info label{
+    font-size: 14px;
+}
+
+.profile-info .bio-limit-warning{
+    font-size: 10px;
+    float:right;
+}
+
+.profile-info textarea{
+    min-height: 200px !important;
+    max-height:200px !important;
+}
