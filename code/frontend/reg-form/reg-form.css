@@ -14,23 +14,61 @@
 
 }
 
-body {
+html, body{
+    top:0;
+    bottom:0;
+    left:0;
+    bottom:0;
+}
+
+.fix-background{
+    margin: 0 auto;
     background-image: linear-gradient(315deg, #A6B2FC 0%, white 98%);
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    width: 500px;
-    margin: 0 auto;
+    min-height: inherit;
+}
+
+
+.nav-bar{
+    height: 80px;
+    margin: auto;
+    border: none;
+}
+
+.logo{
+    color: #181887;
+    font-size:40px;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    padding-left: 70px;
+    float: left;
+    padding-top: 18px;
+    height:40px;
+}
+.logo:hover{
+    cursor: pointer;
+}
+
+.logo img{
+    height:40px;
+    width:40px;
 }
 
 
 
-/*for centering the whole box in the middle of the page*/
-.box {
+.register-box {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top:5%;
+    left:38%;
+    right:30%;
+    width: 400px;
+}
+
+.login-box{
+    position: absolute;
+    left: 35%;
+    top: 15%;
     width: 400px;
 }
 
@@ -49,23 +87,44 @@ for the glass effect*/
     display: flex;
 }
 
-#exit-login-button{
+#register-container {
+    width: 100%;
+    height: 680px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+}
+
+#exit-form-button{
     height: 30px;
     width:30px;
-    outline:none;
-    right:10%;
-    float:right;
-    top:10%;
-    border-radius:50%;
-    outline:grey;
-    padding:10px;
+    border-radius: 50%;
+    font-size: 35px;
+    border: 1px solid #181887;
 }
 
-#exit-login-button:hover{
+
+#exit-form-button:hover{
     color:black;
+    cursor:pointer !important;
+    background-color: #9EF0FF;
 }
 
+.fix-the-damn-close-button{
+    max-height: 30px;
+    border-radius: 50%;
+}
 
+.close-button {
+    height: 24px;
+    width: 24px;
+    float:right;
+  }
+  
 
 
 /*selection of login and register sections*/
@@ -189,13 +248,13 @@ h3{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 86%;
 }
 
 
 
 
-/*only the login will be visible*/
+/*only the login will be visible
 .comm {
     visibility: hidden;
 }
@@ -203,7 +262,7 @@ h3{
 #login {
     visibility: visible;
 }
-
+*/
 
 
 
@@ -346,4 +405,27 @@ h3{
 }
 .fa-check{
     color: #02b502;
+}
+
+
+
+.toggle-login-register{
+    font-size:16px !important;
+    display: flex !important;
+    padding-left:12%;
+    padding-top:10px;
+}
+
+.toggle-login-register a{
+    font-size:16px !important;
+}
+
+.toggle-register-login{
+    font-size:16px !important;
+    display: flex !important;
+    padding-left:3%;
+}
+
+.toggle-register-login a{
+    font-size:16px !important;
 }
