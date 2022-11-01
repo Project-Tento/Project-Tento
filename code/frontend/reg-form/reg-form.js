@@ -17,46 +17,6 @@ const confirmPassword = document.getElementById('confirmPassword');
 var container = document.getElementById('container');
 
 
-function onload() {
-    var option = window.location.hash.substring(1);
-    if (option == 'register'){
-        regTabFun();
-    }
-
-    else{
-        loginTabFun();
-    }
-
-        
-}
-
-
-function loginTabFun() {
-    container.style.height = "500px";
-    regBox.style.visibility = "hidden";
-    loginBox.style.visibility = "visible";
-    forgetBox.style.visibility = "visible";
-    loginTab.style.backgroundColor = "#F8F8FF";
-    regTab.style.backgroundColor = "transparent";
-    regTab.style.borderBottomColor = "transparent";
-    document.title="Tento | Log in";
-    window.location.href="reg-form.html#login";
-}
-
-
-function regTabFun() {
-    container.style.height = "640px";
-    regBox.style.visibility = "visible";
-    loginBox.style.visibility = "hidden";
-    forgetBox.style.visibility = "hidden";
-    regTab.style.backgroundColor = "#F8F8FF";
-    loginTab.style.backgroundColor = "transparent";
-    loginTab.style.borderBottomColor = "transparent";
-    document.title="Tento | Register";
-    window.location.href="reg-form.html#register";
-}
-
-
 function toggleSignInPasswordVisibility(x) {
     // Toggle the type attribute using
     // getAttribure() method
@@ -94,11 +54,3 @@ function toggleConfirmPasswordVisibility(x) {
     x.classList.toggle('bi-eye');
 };
 
-
-
-
-
-var closeFormButton = document.getElementById('exit-login-button');
-function closeForm(){
-    window.location.href="../landingPage/landingPage.html";
-}
