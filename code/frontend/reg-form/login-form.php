@@ -3,6 +3,10 @@
     Author: Nafisa Maliyat
 -->
 
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +73,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="submitButton" type="submit">Log In</button>
+                                <input class="submitButton" type="submit" name="signin" value="Log In"/>
                             </div>
 
 

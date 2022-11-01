@@ -1,10 +1,12 @@
+
+<?php  
+
 /*
     //Title: Database Connection
     //Author: Shanta Maria
     //Date: 18/10/2022
 */
 
-<?php      
     $host = "localhost";  
     $user = "root";  
     $password = "";  
