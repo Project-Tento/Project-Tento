@@ -67,19 +67,27 @@
 
 
         <div class="container-fluid">
+
+            
             <div class="page-header">
                 <!-----------------the image is in css------------------>
+                
+            </div>
+            <div class="profile-pic-div">
+                <img src="../default-profile.png" id="photo">
+                <input type="file" id="file" accept="image/*" >
+                <label for="file" id="uploadBtn">Choose Photo</label>
             </div>
             <div class="card card-body user-profile-card blur shadow-blur mx-4 mt-n6 overflow-hidden">
                 <div class="row gx-4">
-                    <div class="col-auto">
+                    <!--<div class="col-auto">
                         <div class="avatar avatar-xl position-relative">
                             <img src="../course.png" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
                         </div>
-                    </div>
-                    <div class="col-auto my-auto">
-                        <div class="h-100">
-                            <h5 class="mb-1 user-name">
+                    </div>-->
+                    <div class="col-auto my-auto user-name">
+                        <div class="h-100 ">
+                            <h5 class="mb-1">
                                 Alec Thompson
                             </h5>
                         </div>
@@ -147,12 +155,7 @@
                                         <div class="col-md-12">
                                             <label class="labels" id="get-name" name="get-name">Bio<span class="bio-word-limit"> (Max 200 characters)</span></label>
                                             
-                                            <textarea type="text" class="form-control" readonly>Alec is cool person! This is all to check if the fields can handle multiple 
-                                                lines of text. It would be really disappointing if it didn't! 
-                                                Life is full of pain 
-                                                I dont know what im writing at this point
-    
-                                                </textarea>
+                                            <textarea type="text" class="form-control" readonly>Alec is cool person!</textarea>
                                         </div>
     
                                         <div class="col-md-8">
@@ -229,6 +232,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
     <script src="../user-dashboard.js"></script>
+    <script src="profile.js"></script>
 </body>
 
 </html>

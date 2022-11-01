@@ -82,7 +82,7 @@
 								<div class="user-area dropdown">
 									<a href="#" class="dropdown-toggle active" data-toggle="dropdown"
 										aria-haspopup="true" aria-expanded="false">
-										<img class="user-avatar rounded-circle" src="course.png" alt="User Avatar">
+										<img class="user-avatar rounded-circle" src="default-profile.png" alt="User Avatar">
 									</a>
 
 									<div class="user-menu dropdown-menu">
