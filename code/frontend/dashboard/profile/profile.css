@@ -5,10 +5,47 @@
     justify-content: center;
     font-size: 1rem;
     border-radius: 0.75rem;
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     transition: all .2s ease-in-out;
     border-radius: 50%;
+}
+
+.profile-pic-div{
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: transparent;
+    margin-top:-160px;
+    margin-left: 50px;
+    z-index: 99999;
+    background-color: white;
+}
+
+#photo{
+    height: 100%;
+    width: 100%;
+}
+
+#file{
+    display: none; 
+}
+
+#uploadBtn{
+    height: 50px;
+    width: 100%;
+    bottom:0;
+    text-align: center;
+    background: #181887;
+    line-height: 30px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    display: none;
+    margin-top:-40px;
+    transform: translateX(0%);
 }
 
 .card {
@@ -34,6 +71,7 @@
     margin-top: 120px;
     min-height: 100px;
     max-height: 100px;
+    z-index: -1;
 }
 
 .card-body {
@@ -47,6 +85,12 @@ a {
 .border-radius-xl {
     border-radius: 1rem;
 }
+
+.user-name{
+    margin-left:40px;
+    padding-top:40px
+}
+
 
 .page-header {
     position: relative;
@@ -64,6 +108,7 @@ a {
     background-position-y: 50%;
     border-radius: 10px;
     margin-top: 10px;
+    z-index: -9999;
 }
 
 .profile-card-buttons {
@@ -74,6 +119,7 @@ a {
     min-width: 120px;
     max-width: 120px;
     margin-right: 20px;
+    margin-top: -5px;
 }
 
 .profile-card-buttons .nav-item button:hover{
