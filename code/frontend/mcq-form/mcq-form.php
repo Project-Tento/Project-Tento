@@ -19,7 +19,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="shortcut icon" href="../favicon.ico">
 </head>
-
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <body>
 
     <!--
@@ -113,7 +113,7 @@
            if ($conn->connect_error) {
                  die("Connection failed: " . $conn->connect_error);
                 }
-           $sql = "SELECT * FROM topics WHERE TopicID=402401";
+           $sql = "SELECT * FROM topics WHERE TopicID=402402";
            $result = $conn->query($sql);
            while($row = $result->fetch_assoc()) 
            {
@@ -143,7 +143,7 @@
            if ($conn->connect_error) {
                  die("Connection failed: " . $conn->connect_error);
                 }
-           $sql = "SELECT * FROM questions WHERE QuestionID=40240101";
+           $sql = "SELECT * FROM questions WHERE QuestionID=40240214";
            $result = $conn->query($sql);
            while($row = $result->fetch_assoc()) 
            {
