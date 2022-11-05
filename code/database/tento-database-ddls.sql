@@ -10,14 +10,14 @@ Institution VARCHAR(30),
 Level VARCHAR(30),
 Status TINYINT,
 Code INT
-)
+);
 
 --create subjects table
 CREATE TABLE subjects (
 SubjectCode INT PRIMARY KEY NOT NULL,
 SubjectName VARCHAR(30) NOT NULL,
 Level VARCHAR(30) NOT NULL
-)
+);
 
 --create topics table
 CREATE TABLE topics (
@@ -25,7 +25,7 @@ TopicID INT PRIMARY KEY NOT NULL,
 TopicName VARCHAR(30) NOT NULL,
 SubjectCode INT NOT NULL,
 FOREIGN KEY (SubjectCode) REFERENCES subjects(SubjectCode)
-)
+);
 
 --create questions table
 CREATE TABLE questions (
@@ -34,7 +34,7 @@ QuestionText LONGTEXT NOT NULL,
 QuestionPicture LONGTEXT,
 TopicID INT,
 FOREIGN KEY (TopicID) REFERENCES topics(TopicID)
-)
+);
 
 --create choices table
 CREATE TABLE choices (
@@ -48,7 +48,7 @@ ChoiceBPic LONGTEXT,
 ChoiceCPic LONGTEXT,
 ChoiceDPic LONGTEXT,
 FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
-)
+);
 
 --create solutions table
 CREATE TABLE solutions (
@@ -59,7 +59,7 @@ Hint LONGTEXT NOT NULL,
 AnswerText LONGTEXT,
 AnswerPic LONGTEXT,
 FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
-)
+);
 
 --create test sessions table
 CREATE TABLE testSessions (
@@ -70,10 +70,10 @@ UserID INT NOT NULL,
 TopicID INT NOT NULL,
 FOREIGN KEY (TopicID) REFERENCES topics(TopicID),
 FOREIGN KEY (UserID) REFERENCES students(UserID)
-)
+);
 
 --create motivational quotes table
 CREATE TABLE motivationalquotes (
 QuoteID INT PRIMARY KEY NOT NULL,
 Quote TEXT NOT NULL
-)
+);
