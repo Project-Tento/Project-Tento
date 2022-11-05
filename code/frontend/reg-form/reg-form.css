@@ -72,6 +72,22 @@ html, body{
     width: 400px;
 }
 
+.forgot-pass-box{
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    width: 400px;
+}
+
+.reset-pass-box{
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    width: 400px;
+}
+
+
+
 
 /*contains the whole form
 for the glass effect*/
@@ -98,6 +114,31 @@ for the glass effect*/
     border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
 }
+
+#forgot-pass-container {
+    width: 100%;
+    height: 320px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+}
+
+#reset-pass-container{
+    width: 100%;
+    height: 440px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+}
+
 
 #exit-form-button{
     height: 30px;
@@ -161,67 +202,6 @@ for the glass effect*/
 }
 
 
-/*.nav {
-    width: 100%;
-    height: 100px;
-    padding-top: 40px;
-    opacity: 1;
-    transition: all .5s ease;
-}
-
-.nav-up {
-    transform: translateY(-100px);
-    opacity: 0;
-}
-
-
-li {
-    padding-left: 30px;
-    font-size: 18px;
-    display: inline;
-    text-align: center;
-    text-transform: uppercase;
-    padding-right: 10px;
-    color: #181887;
-}
-
-
-.signin-active a {
-    padding-bottom: 10px;
-    color: #181887;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: solid 2px #1059FF;
-    transition: all .25s ease;
-    cursor: pointer
-}
-
-.signin-inactive a {
-    padding-bottom: 0;
-    color: rgba(255, 255, 255, .3);
-    text-decoration: none;
-    border-bottom: none;
-    cursor: pointer
-}
-
-.signup-active a {
-    cursor: pointer;
-    color: #181887;
-    text-decoration: none;
-    border-bottom: solid 1px #1059FF;
-    padding-bottom: 10px
-}
-
-.signup-inactive a {
-    cursor: pointer;
-    color: rgba(255, 255, 255, .3);
-    text-decoration: none;
-    transition: all .25s ease
-}*/
-
-
-
-
 h3{
     text-align: center;
     color:#181887;
@@ -238,7 +218,6 @@ h3{
     color: #181887;
     
 }
-
 
 
 /*the forms*/
@@ -281,6 +260,9 @@ h3{
     padding-bottom:5px;
 }
 
+.forgot-pass-email-validate{
+    padding-bottom: 10px;
+}
 
 
 
@@ -337,6 +319,7 @@ h3{
     display: flex;
 }
 
+
 .submitButton:hover {
     transition: all 0.3s ease 0s;
     background-color: #181887;
@@ -351,6 +334,46 @@ h3{
 #clear {
     clear: both;
 }
+
+
+
+.toggle-login-register{
+    font-size:16px !important;
+    display: flex !important;
+    padding-left:12%;
+    padding-top:10px;
+}
+
+.toggle-login-register a{
+    font-size:16px !important;
+}
+
+.toggle-register-login{
+    font-size:16px !important;
+    display: flex !important;
+    padding-left:3%;
+}
+
+.toggle-register-login a{
+    font-size:16px !important;
+}
+
+
+
+
+.forgot-pass-mail-btn, .reset-pass-btn{
+    margin: auto !important;
+}
+
+.forgot-pass-header{
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.forgot-pass-header h6{
+    color:grey !important;
+}
+
 
 /*
     //Title: Validation while typing
@@ -408,24 +431,3 @@ h3{
 }
 
 
-
-.toggle-login-register{
-    font-size:16px !important;
-    display: flex !important;
-    padding-left:12%;
-    padding-top:10px;
-}
-
-.toggle-login-register a{
-    font-size:16px !important;
-}
-
-.toggle-register-login{
-    font-size:16px !important;
-    display: flex !important;
-    padding-left:3%;
-}
-
-.toggle-register-login a{
-    font-size:16px !important;
-}
