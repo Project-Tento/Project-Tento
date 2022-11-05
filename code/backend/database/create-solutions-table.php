@@ -15,10 +15,10 @@ if ($conn->connect_error) {
 $sql = "CREATE TABLE solutions (
 QuestionID INT NOT NULL,
 SolutionText LONGTEXT NOT NULL,
-SolutionPicture LONGBLOB,
+SolutionPicture LONGTEXT,
 Hint LONGTEXT NOT NULL,
 AnswerText LONGTEXT,
-AnswerPic LONGBLOB,
+AnswerPic LONGTEXT,
 FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
 )";
 

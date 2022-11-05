@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 $sql = "CREATE TABLE questions (
 QuestionID INT PRIMARY KEY NOT NULL,
 QuestionText LONGTEXT NOT NULL,
-QuestionPicture LONGBLOB,
+QuestionPicture LONGTEXT,
 TopicID INT,
 FOREIGN KEY (TopicID) REFERENCES topics(TopicID)
 )";

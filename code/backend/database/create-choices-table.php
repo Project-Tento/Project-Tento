@@ -18,10 +18,10 @@ ChoiceAText LONGTEXT,
 ChoiceBText LONGTEXT,
 ChoiceCText LONGTEXT,
 ChoiceDText LONGTEXT,
-ChoiceAPic LONGBLOB,
-ChoiceBPic LONGBLOB,
-ChoiceCPic LONGBLOB,
-ChoiceDPic LONGBLOB,
+ChoiceAPic LONGTEXT,
+ChoiceBPic LONGTEXT,
+ChoiceCPic LONGTEXT,
+ChoiceDPic LONGTEXT,
 FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
 )";
 
