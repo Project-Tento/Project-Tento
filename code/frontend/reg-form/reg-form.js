@@ -14,6 +14,8 @@ var togglePassword = document.getElementById('togglePassword');
 const signInPassword = document.getElementById('sPassword');
 const registerPassword = document.getElementById('rPassword');
 const confirmPassword = document.getElementById('confirmPassword');
+const resetPassword = document.getElementById('resetPass');
+const resetConfirmPassword = document.getElementById('resetConfirmPass');
 var container = document.getElementById('container');
 
 
@@ -53,4 +55,29 @@ function toggleConfirmPasswordVisibility(x) {
     // Toggle the eye and bi-eye icon
     x.classList.toggle('bi-eye');
 };
+
+
+function toggleResetPasswordVisibility(x) {
+    // Toggle the type attribute using
+    // getAttribure() method
+    const type = resetPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+
+    resetPassword.setAttribute('type', type);
+
+    // Toggle the eye and bi-eye icon
+    x.classList.toggle('bi-eye');
+};
+
+
+function toggleResetConfirmPasswordVisibility(x) {
+    // Toggle the type attribute using
+    // getAttribure() method
+    const type = resetConfirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+
+    resetConfirmPassword.setAttribute('type', type);
+
+    // Toggle the eye and bi-eye icon
+    x.classList.toggle('bi-eye');
+};
+
 
