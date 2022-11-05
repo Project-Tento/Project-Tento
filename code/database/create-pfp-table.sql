@@ -5,7 +5,7 @@
 */
 
 ---creating table for profile pictures---
-CREATE OR REPLACE TABLE pfp 
+CREATE OR REPLACE TABLE tentodatabase.pfp 
 (
     pfp_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     pfp_link TEXT
