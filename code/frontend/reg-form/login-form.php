@@ -1,11 +1,14 @@
+
+<?php
+
+include "backend/check-login.php";
+
+?>
+
 <!--
     Title: Register and login page
     Author: Nafisa Maliyat
 -->
-
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +21,7 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="../favicon.ico">
 </head>
 
@@ -46,7 +48,7 @@ session_start();
                     <!--for controlling visibility of the forms-->
                     <!--login form starts-->
                     <div id="login">
-                        <form method="post" action="login.php" autocomplete="off">
+                        <form method="post" action="" autocomplete="off">
 
 
                             <!--header-->
@@ -60,24 +62,22 @@ session_start();
 
                             <!--the fields-->
                             <div class="form-group">
-                                <input class="formField" type="email" name="email" id="login-email"
-                                    placeholder="Email *" required>
+                                <input class="formField" type="email" name="login-email" id="login-email" placeholder="Email *" required>
                             </div>
 
                             <div class="form-group">
-                                <input class="formField" type="password" name="spassword" id="sPassword"
-                                    placeholder="Password *" required>
+                                <input class="formField" type="password" name="sPassword" id="sPassword" placeholder="Password *" required>
                                 <!--toggle password option-->
-                                <i class="bi bi-eye-slash" id="togglePassword"
-                                    onclick="toggleSignInPasswordVisibility(this)"></i>
+                                <i class="bi bi-eye-slash" id="togglePassword" onclick="toggleSignInPasswordVisibility(this)"></i>
                             </div>
 
                             <div class="form-group">
-                                <input class="submitButton" type="submit" name="signin" value="Log In"/>
+              
                             </div>
 
+                            <button class="submitButton" type="submit" name="signin">Log In</button>
 
-                            <a href="#" class="forgot" id="forgot">Forgot your email or password?</a>
+                            <a href="register-form.php" class="forgot" id="forgot">Forgot your email or password?</a>
 
                             <div class="toggle-login-register">
                                 New to Tento? &nbsp;<a href="register-form.php" class="forgot" id="forgot">Register
@@ -98,8 +98,6 @@ session_start();
 
 
     <script src="reg-form.js"></script>
-    <script src="email-validation.js"></script>
-    <script src="password-validation.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 </body>
 

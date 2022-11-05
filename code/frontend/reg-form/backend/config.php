@@ -8,7 +8,7 @@
 
 include 'connection.php';
 
-$base_url = "http://localhost/test/reg-form/link-verification/";
+$base_url = "http://localhost/test/reg-form/backend/";
 $my_email = "teamtento336572@gmail.com";
 $my_name = "Team Tento";
 
