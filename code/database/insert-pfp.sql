@@ -4,13 +4,6 @@
     //Date: 28/10/2022
 */
 
----creating table for profile pictures---
-CREATE OR REPLACE TABLE pfp 
-(
-    pfp_id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    pfp_link TEXT
-);
-
 ---inserting values into the table---
 INSERT INTO `tentodatabase`.`pfp` (`pfp_id`,`pfp_link`) VALUES (1, 'https://images2.imgbox.com/cc/e1/5TkM3gaq_o.png');
 INSERT INTO `tentodatabase`.`pfp` (`pfp_id`,`pfp_link`) VALUES (2, 'https://images2.imgbox.com/d2/77/FmH43vYU_o.png');
