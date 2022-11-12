@@ -1,0 +1,2 @@
+INSERT INTO `tentodatabase`.`subjects` (`SubjectCode`, `SubjectName`, `Level`) VALUES ('4024', 'General Mathematics', 'O');
+INSERT INTO `tentodatabase`.`subjects` (`SubjectCode`, `SubjectName`, `Level`) VALUES ('4037', 'Additional Mathematics', 'O');
