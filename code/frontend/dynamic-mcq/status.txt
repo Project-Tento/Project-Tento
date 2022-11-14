@@ -1,0 +1,3 @@
+-works dynamically (mcq-test.php)
+-fix radio button
+-take quiz answers and check (have to make a new php file for that)
