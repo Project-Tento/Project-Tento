@@ -1,12 +1,12 @@
 (function workingTimer() {
-    var countTo = 30; //specifies the total time in seconds
+    var countTo = 500; //specifies the total time in seconds
     var min = Math.floor(countTo / 60); //calculating minute
     var sec = countTo - (min * 60); //calculating second
     var counter = 0;
 
     var time = document.getElementById('timer');
 
-    time.innerHTML = "00 : 30";
+    time.innerHTML = "08 : 20";
 
 
     function updateTimer() {
