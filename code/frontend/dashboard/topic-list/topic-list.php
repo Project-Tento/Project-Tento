@@ -137,7 +137,7 @@
                                     <button type="button"
                                         class="btn dropdown-toggle dropdown-toggle-split topic-filter-dropdown-button select-level-filter"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="label-icon">Filter Topics</span>
+                                        <span class="label-icon">Filter by Subjects</span>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-left topic-filter-dropdown">
 
@@ -145,7 +145,7 @@
                                             <!--loop this-->
                                             <label class="topic-filter-checkbox-and-label">
                                                 <input type="checkbox" class="checkbox" name="option[]">
-                                                Division of Continuing Education
+                                                General Mathematics 4024
                                             </label>
                                             <!--end loop item-->
                                         </div>
@@ -176,13 +176,18 @@
                                         PASS THE APPROPIRATE INDEX!!!!!!!!!!!!!!! 
                                         INDEXES START FROM 0 TO ONWARDS-->
                                         <span class="a-btn__text">
-                                            <h1 class="c-programs-item__title">General Mathematics</h1>
+                                            <h1 class="c-programs-item__title">Numbers</h1>
                                         </span>
                                     </button>
 
                                     <div class="hidden-by-default hidden"><!--to be expanded-->
                                         <div class="topic-level">
                                             <div class="c-programs-item__initals__comma-separator">
+                                                <div class="topic-level__initial">
+                                                    <div tabindex="0" aria-describedby="id-lqerb9">
+                                                        <span class="topic-level mt-2"> General Mathematics 4024 </span>
+                                                    </div>
+                                                </div>
                                                 <div class="topic-level__initial">
                                                     <div tabindex="0" aria-describedby="id-lqerb9">
                                                         <span class="topic-level mt-2"> O Level </span>
