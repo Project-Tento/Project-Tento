@@ -77,10 +77,10 @@ include "backend/check-login.php";
 
                             <button class="submitButton" type="submit" name="signin">Log In</button>
 
-                            <a href="register-form.php" class="forgot" id="forgot">Forgot your email or password?</a>
+                            <a href="forgot-password/forgot-password-email-verification.php" class="forgot" id="forgot">Forgot your email or password?</a>
 
                             <div class="toggle-login-register">
-                                New to Tento? &nbsp;<a href="forgot-password/forgot-password-email-verification.php" class="forgot" id="forgot">Register
+                                New to Tento? &nbsp;<a href="register-form.php" class="forgot" id="forgot">Register
                                     here!</a>
                             </div>
                         </form>
