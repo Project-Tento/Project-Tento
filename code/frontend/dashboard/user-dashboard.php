@@ -6,6 +6,7 @@ if (!isset($_SESSION["user_id"])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +51,7 @@ if (!isset($_SESSION["user_id"])) {
 						<a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
 					</li>
 					<li>
-						<a href="#"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i></span> Course List</a>
+						<a href="topic-list/topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i></span> Exam topics</a>
 					</li>
 					<p class="account-setting-header">Account setting</p>
 					<li>

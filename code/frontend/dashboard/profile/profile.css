@@ -48,6 +48,21 @@
     transform: translateX(0%);
 }
 
+
+#sidebar {
+    overflow: hidden;
+    position: fixed !important;
+}
+
+.content {
+    min-width: calc(100% - 350px);
+}
+
+.move-to-left {
+    margin-left: 310px;
+    width: calc(100% - 330px);
+}
+
 .card {
     border-radius: 1.5rem !important;
 }
@@ -177,4 +192,39 @@ a {
 .profile-info textarea{
     min-height: 200px !important;
     max-height:200px !important;
+}
+
+
+.change-photo{
+    margin-bottom:70px;
+    height:200px;
+    width:200px;
+}
+
+.photo-view{
+    height:200px;
+    width:180px;
+    padding-bottom: 20px;
+}
+
+.save-profile-button{
+    margin-left: 50px;
+    margin-bottom: 40px;
+    padding: 1em 2em;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #181887;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 45px;
+}
+
+.save-profile-button:hover{
+    color: #181887;
+    transform: translateY(-5px);
+    background-color: #9EF0FF;
 }
