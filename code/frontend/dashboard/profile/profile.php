@@ -49,7 +49,7 @@ if (!isset($_SESSION["user_id"])) {
         </div>-->
 
             <div class="p-4">
-                <h1><img class="logoImg" src="../favicon.png"><a href="user-dashboard.php" class="logo"> TENTO</a></h1>
+                <h1><img class="logoImg" src="../favicon.png"><a href="../user-dashboard.php" class="logo"> TENTO</a></h1>
                 <hr>
                 <ul class="list-unstyled components mb-5">
                     <li>
@@ -62,14 +62,14 @@ if (!isset($_SESSION["user_id"])) {
                         <a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
                     </li>
                     <li>
-                        <a href="#"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i></span> Course List</a>
+                        <a href="topic-list/topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i></span> Exam Topics</a>
                     </li>
                     <p class="account-setting-header">Account setting</p>
                     <li class="active">
                         <a href="profile.php"><span class="fa fa-user mr-3"></span> Profile</a>
                     </li>
                     <li>
-                        <a href="../settings/settings.php"><span class="fa fa-cog mr-3"></span> Settings</a>
+                        <a href=#><span class="fa fa-cog mr-3"></span> Settings</a>
                     </li>
                     <li>
                         <a href="../reg-form/backend/logout.php"><span class="fa fa-sign-out mr-3"></span> Log out</a>
@@ -82,142 +82,157 @@ if (!isset($_SESSION["user_id"])) {
         </nav>
 
 
+        <div class="move-to-left">
 
-        <div class="container-fluid">
+            <div class="content">
+
+            
+                <div class="container-fluid">
 
 
-            <div class="page-header">
-                <!-----------------the image is in css------------------>
-            </div>
-            <form class="profile-pic-div">
-                <img src="../default-profile.png" id="photo">
-                <input type="file" id="file" onchange="changeFile()" accept="image/*">
-                <label for="file" id="uploadBtn"><button onsubmit="return changeFile(x)">Choose Photo</button></label>
-            </form>
-            <div class="card card-body user-profile-card blur shadow-blur mx-4 mt-n6 overflow-hidden">
-                <div class="row gx-4">
-                    <!--<div class="col-auto">
-                        <div class="avatar avatar-xl position-relative">
-                            <img src="../course.png" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
-                        </div>
-                    </div>-->
-                    <div class="col-auto my-auto user-name">
-                        <div class="h-100 ">
-                            <h5 class="mb-1">
-                                <?php echo $row['Name'] ?>
-                            </h5>
-                        </div>
+                    <div class="page-header">
+                        <!-----------------the image is in css------------------>
                     </div>
-                    <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
-                        <div class="nav-wrapper position-relative end-0">
-                            <ul class="nav nav-pills nav-fill p-1 bg-transparent profile-card-buttons" role="tablist">
-                                <!--<li class="nav-item">
-                                    <button class="nav-link mb-0 px-0 py-1 " role="button"
-                                        role="tab" aria-selected="false">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                        <span class="ms-1">Edit Profile</span>
-                                    </button>
-                                </li>-->
-
-                                <li class="nav-item">
-                                    <button class="nav-link mb-0 px-0 py-1 " role="button" role="tab" aria-selected="false">
-                                        <i class="fa fa-cog"></i>
-                                        <span class="ms-1">Settings</span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="profile-pic-div">
+                        <img src="../default-profile.png" alt="profile photo" id="photo">
                     </div>
-                </div>
-            </div>
-
-            <div class="profile-details">
-                <div class="col-12 col-xl-12">
-                    <div class="card h-100 m-4">
-                        <div class="card-header pb-0 h-100">
-                            <div class="row profile-details-header">
-                                <div class="col-md-8 d-flex align-items-center">
-                                    <h3 class="mb-0">Profile Information</h3>
+                    <div class="card card-body user-profile-card blur shadow-blur mx-4 mt-n6 overflow-hidden">
+                        <div class="row gx-4">
+                            <!--<div class="col-auto">
+                                <div class="avatar avatar-xl position-relative">
+                                    <img src="../course.png" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
                                 </div>
-                                <div class="col-md-4 text-end">
-                                    <a href="javascript:;">
-                                        <!-----------WRITE JS OF THIS TO EDIT PROFILE------------->
-                                        <i class="fas fa-user-edit text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile" id="edit-pfp"></i>
-                                    </a>
+                            </div>-->
+                            <div class="col-auto my-auto user-name">
+                                <div class="h-100 ">
+                                    <h5 class="mb-1">
+                                        <?php echo $row['Name'] ?>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+                                <div class="nav-wrapper position-relative end-0">
+                                    <ul class="nav nav-pills nav-fill p-1 bg-transparent profile-card-buttons" role="tablist">
+                                        <!--<li class="nav-item">
+                                            <button class="nav-link mb-0 px-0 py-1 " role="button"
+                                                role="tab" aria-selected="false">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                                <span class="ms-1">Edit Profile</span>
+                                            </button>
+                                        </li>-->
+
+                                        <li class="nav-item">
+                                            <button class="nav-link mb-0 px-0 py-1 " role="button" role="tab" aria-selected="false">
+                                                <i class="fa fa-cog"></i>
+                                                <span class="ms-1">Settings</span>
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <form class="form" method="POST" action="edit-profile.php">
-                            <div class="col-md-12 ">
-
-                                <div class="p-2 py-3 profile-info">
-
-                                    <div class="row m-3">
-                                        <div class="col-md-8">
-                                            <label class="labels">Full Name</label>
-                                            <input type="text" class="form-control" id="get-name" name="get-name" value="<?php echo $row['Name'] ?>" disabled>
+                    <div class="profile-details">
+                        <div class="col-12 col-xl-12">
+                            <div class="card h-100 m-4">
+                                <div class="card-header pb-0 h-100">
+                                    <div class="row profile-details-header">
+                                        <div class="col-md-8 d-flex align-items-center">
+                                            <h3 class="mb-0">Profile Information</h3>
                                         </div>
-                                        <div class="col-md-12">
-                                            <label class="labels">Bio<span class="bio-word-limit"> (Max 200 characters)</span></label>
-
-                                            <textarea type="text" class="form-control" id="get-bio" name="get-bio" disabled><?php echo $row['Bio'] ?></textarea>
+                                        <div class="col-md-4 text-end">
+                                            <a href="javascript:;">
+                                                <!-----------WRITE JS OF THIS TO EDIT PROFILE------------->
+                                                <i class="fas fa-user-edit text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile" id="edit-pfp"></i>
+                                            </a>
                                         </div>
-
-                                        <div class="col-md-8">
-                                            <label class="labels">Institution</label>
-                                            <input type="text" class="form-control" id="get-ins" name="get-ins" value="<?php echo $row['Institution'] ?>" disabled>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <label class="labels">Level</label>
-
-                                                <!-------HIDE WHEN PROFILE EDIT MODE IT ON
-                                                        TOGGLE D-NONE CLASS OF LEVEL VALUE CLASS (AND NOT FORM-CONTROL!!!!)
-                                                                            THIS
-                                                                            .
-                                                                            .
-                                                                             .
-                                                                            V ----->
-                                                <input type="text" class="form-control level-value" value="<?php echo $row['Level'] ?>" id="get-level" name="get-level" disabled>
-
-                                                <!-------------------- SHOW THIS WHEN PROFILE EDIT MODE IS ON
-                                                            AND HIDE WHEN IN NORMAL MODE  
-                                                            TO HIDE, TOGGLE THE D-NONE CLASS OF DROPDOWN
-                                                                    
-                                                                                ----------------------->
-                                                <div class="dropdown d-none">
-                                                    <select name="get-level" id="get-level">
-                                                        <option value="O Level">O Level</option>
-                                                        <option value="A Level">A Level</option>
-                                                    </select>
-
-                                                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        O Level
-                                                    </button>
-                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                        <li><a class="dropdown-item">O Level</a></li>
-                                                        <li><a class="dropdown-item">A Level</a></li>
-                                                    </ul> -->
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
+
+                                <form class="form" method="POST" action="edit-profile.php">
+                                    <div class="col-md-12 ">
+
+                                        <div class="p-2 py-3 profile-info">
+
+                                            <div class="row m-3">
+                                                <div class="col-md-12 mb-3">
+                                                    <!--remove d-none at the edit profile function!!!-->
+                                                    <div class="change-photo d-none">
+                                                        <label class="labels" id="get-profile-photo" name="get-profile-photo">Change Profile Photo</label>
+                                                        <img src="../default-profile.png" class="photo-view" id="photo-view" alt="profile photo">
+                                                        <input type="file" id="file1" class="choose-photo-button"
+                                                            accept="image/*">
+                                                        <label for="file1" id="uploadBtn"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 mb-3">
+                                                    <label class="labels">Full Name</label>
+                                                    <input type="text" class="form-control" id="get-name" name="get-name" value="<?php echo $row['Name'] ?>" disabled>
+                                                </div>
+                                                <div class="col-md-12 mb-3">
+                                                    <label class="labels">Bio<span class="bio-word-limit"> (Max 200 characters)</span></label>
+
+                                                    <textarea type="text" class="form-control" id="get-bio" name="get-bio" disabled><?php echo $row['Bio'] ?></textarea>
+                                                </div>
+
+                                                <div class="col-md-8 mb-3">
+                                                    <label class="labels">Institution</label>
+                                                    <input type="text" class="form-control" id="get-ins" name="get-ins" value="<?php echo $row['Institution'] ?>" disabled>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label class="labels">Level</label>
+
+                                                        <!-------HIDE WHEN PROFILE EDIT MODE IT ON
+                                                                TOGGLE D-NONE CLASS OF LEVEL VALUE CLASS (AND NOT FORM-CONTROL!!!!)
+                                                                                    THIS
+                                                                                    .
+                                                                                    .
+                                                                                    .
+                                                                                    V ----->
+                                                        <input type="text" class="form-control level-value" value="<?php echo $row['Level'] ?>" id="get-level" name="get-level" disabled>
+
+                                                        <!-------------------- SHOW THIS WHEN PROFILE EDIT MODE IS ON
+                                                                    AND HIDE WHEN IN NORMAL MODE  
+                                                                    TO HIDE, TOGGLE THE D-NONE CLASS OF DROPDOWN
+                                                                            
+                                                                                        ----------------------->
+                                                        <div class="dropdown d-none">
+                                                            <select name="get-level" id="get-level">
+                                                                <option value="O Level">O Level</option>
+                                                                <option value="A Level">A Level</option>
+                                                            </select>
+
+                                                            <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                O Level
+                                                            </button>
+                                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                                <li><a class="dropdown-item">O Level</a></li>
+                                                                <li><a class="dropdown-item">A Level</a></li>
+                                                            </ul> -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-----------------------TOGGLE D-NONE CLASS TO SHOW WHEN EDIT MODE IS ON-->
+                                    <button type="submit" class="d-none save-profile-button" name="save-pfp-btn">Save profile</button>
+                                </form>
+
+
                             </div>
-
-
-                            <!-----------------------TOGGLE D-NONE CLASS TO SHOW WHEN EDIT MODE IS ON-->
-                            <button type="submit" class="d-none save-profile-button" name="save-pfp-btn">Save profile</button>
-                        </form>
-
-
+                        </div>
                     </div>
+
                 </div>
             </div>
 
-        </div>
+    </div>
 
     </div>
 
