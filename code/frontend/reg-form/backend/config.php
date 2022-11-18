@@ -14,5 +14,5 @@ $my_name = "Team Tento";
 
 $smtp['host'] = "smtp.gmail.com";
 $smtp['user'] = "teamtento336572@gmail.com";
-$smtp['pass'] = "cmkcfixhatfvqbnj";
+$smtp['pass'] = "sgztajuhfqszrtpi";
 $smtp['port'] = 465;
