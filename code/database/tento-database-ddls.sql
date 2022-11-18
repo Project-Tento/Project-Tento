@@ -72,7 +72,9 @@ QuoteID INT PRIMARY KEY NOT NULL,
 Quote TEXT NOT NULL
 );
 
+
 /*add foreign keys in required tables*/
+
 ALTER TABLE topics
 (
     ADD FOREIGN KEY (SubjectCode) REFERENCES subjects(SubjectCode)
