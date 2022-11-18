@@ -1,6 +1,6 @@
 --create students table
 CREATE TABLE students (
-UserID INT PRIMARY KEY NOT NULL,
+UserID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 Name VARCHAR(30) NOT NULL,
 Email VARCHAR(30) NOT NULL,
 Password VARCHAR(100) NOT NULL,
@@ -23,8 +23,7 @@ Level VARCHAR(30) NOT NULL
 CREATE TABLE topics (
 TopicID INT PRIMARY KEY NOT NULL,
 TopicName VARCHAR(30) NOT NULL,
-SubjectCode INT NOT NULL,
-FOREIGN KEY (SubjectCode) REFERENCES subjects(SubjectCode)
+SubjectCode INT NOT NULL
 );
 
 --create questions table
@@ -32,8 +31,7 @@ CREATE TABLE questions (
 QuestionID INT PRIMARY KEY NOT NULL,
 QuestionText LONGTEXT NOT NULL,
 QuestionPicture LONGTEXT,
-TopicID INT,
-FOREIGN KEY (TopicID) REFERENCES topics(TopicID)
+TopicID INT
 );
 
 --create choices table
@@ -46,8 +44,7 @@ ChoiceDText LONGTEXT,
 ChoiceAPic LONGTEXT,
 ChoiceBPic LONGTEXT,
 ChoiceCPic LONGTEXT,
-ChoiceDPic LONGTEXT,
-FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
+ChoiceDPic LONGTEXT
 );
 
 --create solutions table
@@ -57,8 +54,7 @@ SolutionText LONGTEXT NOT NULL,
 SolutionPicture LONGTEXT,
 Hint LONGTEXT NOT NULL,
 AnswerText LONGTEXT,
-AnswerPic LONGTEXT,
-FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
+AnswerPic LONGTEXT
 );
 
 --create test sessions table
@@ -67,13 +63,38 @@ SessionID INT PRIMARY KEY NOT NULL,
 Score INT NOT NULL,
 DateTime DATETIME NOT NULL,
 UserID INT NOT NULL,
-TopicID INT NOT NULL,
-FOREIGN KEY (TopicID) REFERENCES topics(TopicID),
-FOREIGN KEY (UserID) REFERENCES students(UserID)
+TopicID INT NOT NULL
 );
 
 --create motivational quotes table
 CREATE TABLE motivationalquotes (
 QuoteID INT PRIMARY KEY NOT NULL,
 Quote TEXT NOT NULL
+);
+
+--add foreign keys in required tables
+ALTER TABLE topics
+(
+    ADD FOREIGN KEY (SubjectCode) REFERENCES subjects(SubjectCode)
+);
+
+ALTER TABLE questions
+(
+    ADD FOREIGN KEY (TopicID) REFERENCES topics(TopicID)
+);
+
+ALTER TABLE choices
+(
+    ADD FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
+);
+
+ALTER TABLE solutions
+(
+    ADD FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
+);
+
+ALTER TABLE testSessions
+(
+    ADD FOREIGN KEY (TopicID) REFERENCES topics(TopicID),
+    ADD FOREIGN KEY (UserID) REFERENCES students(UserID)
 );
