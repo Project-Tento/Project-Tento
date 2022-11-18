@@ -60,9 +60,15 @@ if (isset($_POST['signup'])) {
 
     } else {
 
-        $sql = "INSERT INTO students (UserID, Name, Email, Password, ProfilePicture, Bio, Institution, Level, Status, Code) VALUES (default, '$full_name', '$email', '$hashedPassword', NULL, NULL, NULL, NULL, '0', '$token')";
+        $sqlForPFP="SELECT * FROM pfp ORDER BY RAND() LIMIT 1";
+        $resultPFP = $conn->query($sqlForPFP);
+        $row = $resultPFP->fetch_assoc();
+        $randomPFP = $row['pfp_link'];
 
-        $result = mysqli_query($conn, $sql);
+        $sql = "INSERT INTO students (UserID, Name, Email, Password, ProfilePicture, Bio, Institution, Level, Status, Code) VALUES (default, '$full_name', '$email', '$hashedPassword', '$randomPFP', NULL, NULL, NULL, '0', '$token')";
+
+        $result = $conn->query($sql);
+
         if ($result) {
 
             $_POST["fullName"] = "";
@@ -110,6 +116,7 @@ if (isset($_POST['signup'])) {
                 $mail->Body    = $message;
 
                 $mail->send();
+                echo "<script>console.log('Hereeee 4' );</script>";
                 echo "<script>alert('We have sent a verification link to your email - {$email}.');</script>";
                 header('Location: ../reg-form/login-form.php');
                 

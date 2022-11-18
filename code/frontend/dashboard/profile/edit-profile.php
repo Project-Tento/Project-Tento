@@ -19,7 +19,10 @@ if (isset($_POST['save-pfp-btn'])) {
     $ins = $_POST['get-ins'] ? $_POST['get-ins'] : 0;
     $level = $_POST['get-level'] ? $_POST['get-level'] : 0;
 
-    echo "<script>console.log('M'+ '$id' );</script>";
+    // File upload path
+    $filename = $_FILES["file1"]["name"];
+    $tempname = $_FILES["file1"]["tmp_name"];
+    $folder = "./uploads/" . $filename;
 
     $sql = "SELECT * FROM students WHERE UserID='$id'";
     $result = $conn->query($sql);
@@ -27,27 +30,37 @@ if (isset($_POST['save-pfp-btn'])) {
 
     $checkID = $row['UserID'];
 
-    echo "<script>console.log('$checkID' );</script>";
-
     if ($checkID === $id) {
 
-        $update = "UPDATE students SET Name='$name', Bio='$bio', Institution='$ins', Level='$level' where UserID='$id'";
+        // Allow certain file formats
+        // $allowTypes = array('jpg','png','jpeg','gif');
+
+        // if(in_array($fileType, $allowTypes)){
+        //     // Upload file to server
+        //     if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
+
+        //         $update = "UPDATE students SET Name='$name', ProfilePicture='".$targetFilePath."', Bio='$bio', Institution='$ins', Level='$level' where UserID='$id'";
+        //     }
+        //     else
+        //     {
+        $update = "UPDATE students SET Name='$name', ProfilePicture='$folder', Bio='$bio', Institution='$ins', Level='$level' where UserID='$id'";
+        // $insert = "INSERT INTO students(ProfilePicture) VALUES ('$folder')";
+        // }
+        // }
+
         $result2 = $conn->query($update);
+        // $conn->query($insert);
+        move_uploaded_file($tempname, $folder);
 
         if ($result2) {
             /*Successful*/
-            echo "<script>alert('User account updated!')</script>";
-            header('Location: ../user-dashboard.php');
-            
+            header('Location: profile.php');
         } else {
             /*sorry your profile is not update*/
-            echo "<script>alert('User not account updated!')</script>";
             header('Location: profile.php');
         }
-
     } else {
         /*sorry your id is not match*/
-        echo "<script>alert('ID does not match!')</script>";
         header('Location: profile.php');
     }
 }

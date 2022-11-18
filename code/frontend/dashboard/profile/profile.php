@@ -10,7 +10,7 @@ if (!isset($_SESSION["user_id"])) {
     
     $id = $_SESSION['user_id'];
     $sql = "SELECT * FROM students WHERE UserID='$id'";
-    $result = $conn->query($sql);
+    $result = $conn->query($sql); 
     $row = $result->fetch_assoc();
 }
 ?>
@@ -94,7 +94,7 @@ if (!isset($_SESSION["user_id"])) {
                         <!-----------------the image is in css------------------>
                     </div>
                     <div class="profile-pic-div">
-                        <img src="../default-profile.png" alt="profile photo" id="photo">
+                        <img src="<?php echo $row['ProfilePicture'] ?>" alt="profile photo" id="photo">
                     </div>
                     <div class="card card-body user-profile-card blur shadow-blur mx-4 mt-n6 overflow-hidden">
                         <div class="row gx-4">
@@ -150,7 +150,7 @@ if (!isset($_SESSION["user_id"])) {
                                     </div>
                                 </div>
 
-                                <form class="form" method="POST" action="edit-profile.php">
+                                <form class="form" method="POST" action="edit-profile.php" enctype="multipart/form-data">
                                     <div class="col-md-12 ">
 
                                         <div class="p-2 py-3 profile-info">
@@ -160,8 +160,8 @@ if (!isset($_SESSION["user_id"])) {
                                                     <!--remove d-none at the edit profile function!!!-->
                                                     <div class="change-photo d-none">
                                                         <label class="labels" id="get-profile-photo" name="get-profile-photo">Change Profile Photo</label>
-                                                        <img src="../default-profile.png" class="photo-view" id="photo-view" alt="profile photo">
-                                                        <input type="file" id="file1" class="choose-photo-button"
+                                                        <img src="<?php echo $row['ProfilePicture'] ?>" alt="" class="photo-view" id="photo-view" alt="profile photo">
+                                                        <input type="file" id="file1" name="file1" class="choose-photo-button"
                                                             accept="image/*">
                                                         <label for="file1" id="uploadBtn"></label>
                                                     </div>
