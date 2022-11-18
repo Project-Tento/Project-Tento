@@ -1,4 +1,4 @@
---create students table
+/*create students table*/
 CREATE TABLE students (
 UserID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 Name VARCHAR(30) NOT NULL,
@@ -12,21 +12,21 @@ Status TINYINT,
 Code INT
 );
 
---create subjects table
+/*create subjects table*/
 CREATE TABLE subjects (
 SubjectCode INT PRIMARY KEY NOT NULL,
 SubjectName VARCHAR(30) NOT NULL,
 Level VARCHAR(30) NOT NULL
 );
 
---create topics table
+/*create topics table*/
 CREATE TABLE topics (
 TopicID INT PRIMARY KEY NOT NULL,
 TopicName VARCHAR(30) NOT NULL,
 SubjectCode INT NOT NULL
 );
 
---create questions table
+/*create questions table*/
 CREATE TABLE questions (
 QuestionID INT PRIMARY KEY NOT NULL,
 QuestionText LONGTEXT NOT NULL,
@@ -34,7 +34,7 @@ QuestionPicture LONGTEXT,
 TopicID INT
 );
 
---create choices table
+/*create choices table*/
 CREATE TABLE choices (
 QuestionID INT NOT NULL,
 ChoiceAText LONGTEXT,
@@ -47,7 +47,7 @@ ChoiceCPic LONGTEXT,
 ChoiceDPic LONGTEXT
 );
 
---create solutions table
+/*create solutions table*/
 CREATE TABLE solutions (
 QuestionID INT NOT NULL,
 SolutionText LONGTEXT NOT NULL,
@@ -57,7 +57,7 @@ AnswerText LONGTEXT,
 AnswerPic LONGTEXT
 );
 
---create test sessions table
+/*create test sessions table*/
 CREATE TABLE testSessions (
 SessionID INT PRIMARY KEY NOT NULL,
 Score INT NOT NULL,
@@ -66,13 +66,15 @@ UserID INT NOT NULL,
 TopicID INT NOT NULL
 );
 
---create motivational quotes table
+/*create motivational quotes table*/
 CREATE TABLE motivationalquotes (
 QuoteID INT PRIMARY KEY NOT NULL,
 Quote TEXT NOT NULL
 );
 
---add foreign keys in required tables
+
+/*add foreign keys in required tables*/
+
 ALTER TABLE topics
 (
     ADD FOREIGN KEY (SubjectCode) REFERENCES subjects(SubjectCode)
