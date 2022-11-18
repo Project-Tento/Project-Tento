@@ -74,27 +74,17 @@ Quote TEXT NOT NULL
 
 --add foreign keys in required tables
 ALTER TABLE topics
-(
-    ADD FOREIGN KEY (SubjectCode) REFERENCES subjects(SubjectCode)
-);
+    ADD FOREIGN KEY (SubjectCode) REFERENCES subjects(SubjectCode);
 
 ALTER TABLE questions
-(
-    ADD FOREIGN KEY (TopicID) REFERENCES topics(TopicID)
-);
+    ADD FOREIGN KEY (TopicID) REFERENCES topics(TopicID);
 
 ALTER TABLE choices
-(
-    ADD FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
-);
+    ADD FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID);
 
 ALTER TABLE solutions
-(
-    ADD FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID)
-);
+    ADD FOREIGN KEY (QuestionID) REFERENCES questions(QuestionID);
 
 ALTER TABLE testSessions
-(
     ADD FOREIGN KEY (TopicID) REFERENCES topics(TopicID),
-    ADD FOREIGN KEY (UserID) REFERENCES students(UserID)
-);
+    ADD FOREIGN KEY (UserID) REFERENCES students(UserID);
