@@ -1,7 +1,17 @@
 <?php
+session_start();
 
-include "../profile/connection.php"
+include "../profile/connection.php";
 
+if (!isset($_SESSION["user_id"])) {
+	header("Location: ../../reg-form/login-form.php");
+} else {
+
+	$id = $_SESSION['user_id'];
+	$sql = "SELECT * FROM students WHERE UserID='$id'";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+}
 ?>
 
 <!DOCTYPE html>
@@ -95,7 +105,18 @@ include "../profile/connection.php"
                             <!--the profile picture-->
                             <div class="user-area dropdown">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img class="user-avatar rounded-circle" src="default-profile.png" alt="User Avatar">
+                                    <!-- Specifying image source as default or user-updated one -->
+									<?php
+										$check = 'uploads';
+										$print = strpos($row['ProfilePicture'], $check);
+										if (strpos($row['ProfilePicture'], $check)) {
+											$src = './../profile/';
+											$src .= $row['ProfilePicture'];
+										} else {
+											$src = $row['ProfilePicture'];
+										}
+									?>
+                                <img class="user-avatar rounded-circle" src="<?php echo $src ?>" alt="User Avatar">
                                 </a>
 
                                 <div class="user-menu dropdown-menu">
@@ -117,8 +138,7 @@ include "../profile/connection.php"
 
                                 <!--o and a level filters-->
                                 <div class="level-filter-buttons">
-                                    <button hidden onclick="selectLevel(this)" class="select-level-filter hidden levelSelected"></button>
-                                    <button tabindex="0" type="button" default="" label="O Level" class="select-level-filter oLevel" onclick="selectLevel(this)">O
+                                    <button tabindex="0" type="button" label="O Level" class="select-level-filter oLevel" onclick="selectLevel(this)">O
                                         Level</button>
                                     <button tabindex="0" type="button" label="A Level" class="select-level-filter aLevel" role="radio" onclick="selectLevel(this)">A
                                         Level</button>

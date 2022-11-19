@@ -8,10 +8,6 @@
     margin: 10px;
 }
 
-#sidebar {
-    overflow: hidden !important;
-}
-
 
 .content {
     min-width: calc(100% - 350px);
@@ -41,6 +37,10 @@
 
 .user-area {
     margin-left: 60%;
+}
+
+.user-area .user-avatar{
+    margin-top:2px !important;
 }
 
 .topic-filter-dropdown {
@@ -279,7 +279,7 @@ input[type=text] {
 }
 
 #sidebar {
-    overflow: hidden;
+    overflow: hidden !important;
     position: fixed !important;
 }
 
