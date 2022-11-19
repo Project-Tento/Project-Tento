@@ -23,6 +23,22 @@
     margin-top:30px;
 }
 
+
+.move-to-left {
+    margin-left: 310px;
+    width: calc(100% - 330px);
+}
+
+#sidebar {
+    overflow: hidden !important;
+    position: fixed !important;
+}
+
+
+.content {
+    min-width: calc(100% - 350px);
+}
+
 .account-setting-header {
     margin-top: 40px;
     margin-left: 5px;
@@ -46,6 +62,13 @@
 }
 
 
+.user-greeting h1{
+    color:#181887;
+    font-weight: bold !important;
+    margin-top: -18px;
+    
+}
+
 
 .user-area .user-menu .nav-link {
     color: #607d8b;
@@ -62,8 +85,9 @@
 
 
 .user-area .user-avatar {
-    width: 40px;
+    width: 70px;
     float: right;
+    margin-top:-28px;
 }
 
 
