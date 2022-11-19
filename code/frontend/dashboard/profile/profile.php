@@ -110,26 +110,7 @@ if (!isset($_SESSION["user_id"])) {
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
-                                <div class="nav-wrapper position-relative end-0">
-                                    <ul class="nav nav-pills nav-fill p-1 bg-transparent profile-card-buttons" role="tablist">
-                                        <!--<li class="nav-item">
-                                            <button class="nav-link mb-0 px-0 py-1 " role="button"
-                                                role="tab" aria-selected="false">
-                                                <i class="fa-solid fa-pen-to-square"></i>
-                                                <span class="ms-1">Edit Profile</span>
-                                            </button>
-                                        </li>-->
-
-                                        <li class="nav-item">
-                                            <button class="nav-link mb-0 px-0 py-1 " role="button" role="tab" aria-selected="false">
-                                                <i class="fa fa-cog"></i>
-                                                <span class="ms-1">Settings</span>
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <!-- settings erased from here -->
                         </div>
                     </div>
 
@@ -155,7 +136,7 @@ if (!isset($_SESSION["user_id"])) {
 
                                         <div class="p-2 py-3 profile-info">
 
-                                            <div class="row m-3">
+                                            <div class="row mb-3 ml-2 mr-3">
                                                 <div class="col-md-12 mb-3">
                                                     <!--remove d-none at the edit profile function!!!-->
                                                     <div class="change-photo d-none">
