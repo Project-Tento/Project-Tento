@@ -15,9 +15,9 @@ if (isset($_POST['save-pfp-btn'])) {
 
     $id = $_SESSION['user_id'];
     $name = $_POST['get-name'];
-    $bio = $_POST['get-bio'] ? $_POST['get-bio'] : 0;
-    $ins = $_POST['get-ins'] ? $_POST['get-ins'] : 0;
-    $level = $_POST['get-level'] ? $_POST['get-level'] : 0;
+    $bio = $_POST['get-bio'] ? $_POST['get-bio'] : "";
+    $ins = $_POST['get-ins'] ? $_POST['get-ins'] : "";
+    $level = $_POST['get-level'] ? $_POST['get-level'] : "";
 
     // File upload path
     $filename = $_FILES["file1"]["name"];
@@ -43,7 +43,17 @@ if (isset($_POST['save-pfp-btn'])) {
         //     }
         //     else
         //     {
-        $update = "UPDATE students SET Name='$name', ProfilePicture='$folder', Bio='$bio', Institution='$ins', Level='$level' where UserID='$id'";
+
+            if($_FILES["file1"]["name"])
+            {
+                $update = "UPDATE students SET Name='$name', ProfilePicture='$folder', Bio='$bio', Institution='$ins', Level='$level' where UserID='$id'";
+            }
+            else
+            {
+                $update = "UPDATE students SET Name='$name', Bio='$bio', Institution='$ins', Level='$level' where UserID='$id'";
+            }
+
+        
         // $insert = "INSERT INTO students(ProfilePicture) VALUES ('$folder')";
         // }
         // }
