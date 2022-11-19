@@ -44,7 +44,7 @@ include "../profile/connection.php"
                 <hr>
                 <ul class="list-unstyled components mb-5">
                     <li>
-                        <a href="user-dashboard.php"><span class="fa fa-desktop mr-3"></span> Dashboard</a>
+                        <a href="../user-dashboard.php"><span class="fa fa-desktop mr-3"></span> Dashboard</a>
                     </li>
                     <li>
                         <a href="#"><span class="fa fa-history mr-3"></span> User History</a>
@@ -53,7 +53,7 @@ include "../profile/connection.php"
                         <a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
                     </li>
                     <li class="active">
-                        <a href="topic-list.html"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i>
+                        <a href="topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i>
                             </span> Exam Topics</a>
                     </li>
                     <p class="account-setting-header">Account setting</p>
@@ -117,7 +117,8 @@ include "../profile/connection.php"
 
                                 <!--o and a level filters-->
                                 <div class="level-filter-buttons">
-                                    <button tabindex="0" type="button" default="" label="O Level" class="select-level-filter oLevel levelSelected" onclick="selectLevel(this)">O
+                                    <button hidden onclick="selectLevel(this)" class="select-level-filter hidden levelSelected"></button>
+                                    <button tabindex="0" type="button" default="" label="O Level" class="select-level-filter oLevel" onclick="selectLevel(this)">O
                                         Level</button>
                                     <button tabindex="0" type="button" label="A Level" class="select-level-filter aLevel" role="radio" onclick="selectLevel(this)">A
                                         Level</button>
@@ -132,6 +133,12 @@ include "../profile/connection.php"
                                     </button>
                                 </div>
 
+                                <?php
+
+                                $subject = "SELECT * FROM subjects ORDER BY SubjectCode";
+                                $resultS = $conn->query($subject);
+
+                                ?>
 
                                 <!--topic filter-->
                                 <div class="dropdown topic-dropdown">
@@ -142,10 +149,22 @@ include "../profile/connection.php"
 
                                         <div class="topic-checkbox-list" onclick="topicDropDownStaysOpen(this)">
                                             <!--loop this-->
+
+                                            <?php
+
+                                            if ($resultS->num_rows > 0) {
+                                                while ($rowS = $resultS->fetch_assoc()) {
+                                            ?>
+
                                             <label class="topic-filter-checkbox-and-label">
                                                 <input type="checkbox" class="checkbox" name="option[]">
-                                                General Mathematics 4024
+                                                <?php echo $rowS['SubjectCode'], ' ', $rowS['SubjectName'] ?>
                                             </label>
+
+                                            <?php 
+                                                }
+                                            }
+                                            ?>
                                             <!--end loop item-->
                                         </div>
 
@@ -167,7 +186,7 @@ include "../profile/connection.php"
                                 <!--loop item begins-->
                                 <?php
 
-                                $sql = "SELECT * FROM topics natural join subjects";
+                                $sql = "SELECT * FROM topics natural join subjects ORDER BY TopicName";
                                 $result = $conn->query($sql);
                                 $count = 0;
 
