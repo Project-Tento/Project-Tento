@@ -8,10 +8,6 @@
     margin: 10px;
 }
 
-#sidebar {
-    overflow: hidden !important;
-}
-
 
 .content {
     min-width: calc(100% - 350px);
@@ -43,6 +39,10 @@
     margin-left: 60%;
 }
 
+.user-area .user-avatar{
+    margin-top:2px !important;
+}
+
 .topic-filter-dropdown {
     float: none !important;
     display: flex;
@@ -50,7 +50,7 @@
 
 .topic-filter-dropdown-button {
     border-radius: 20px !important;
-    min-width: 150px !important;
+    min-width: 180px !important;
     font-size: 16px !important;
     background-color: #f9fbfd !important;
     color: black !important;
@@ -279,7 +279,7 @@ input[type=text] {
 }
 
 #sidebar {
-    overflow: hidden;
+    overflow: hidden !important;
     position: fixed !important;
 }
 

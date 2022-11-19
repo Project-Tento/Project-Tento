@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+include "../profile/connection.php";
+
+if (!isset($_SESSION["user_id"])) {
+	header("Location: ../../reg-form/login-form.php");
+} else {
+
+	$id = $_SESSION['user_id'];
+	$sql = "SELECT * FROM students WHERE UserID='$id'";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +25,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -39,7 +54,7 @@
                 <hr>
                 <ul class="list-unstyled components mb-5">
                     <li>
-                        <a href="user-dashboard.php"><span class="fa fa-desktop mr-3"></span> Dashboard</a>
+                        <a href="../user-dashboard.php"><span class="fa fa-desktop mr-3"></span> Dashboard</a>
                     </li>
                     <li>
                         <a href="#"><span class="fa fa-history mr-3"></span> User History</a>
@@ -48,7 +63,7 @@
                         <a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
                     </li>
                     <li class="active">
-                        <a href="topic-list.html"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i>
+                        <a href="topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i>
                             </span> Exam Topics</a>
                     </li>
                     <p class="account-setting-header">Account setting</p>
@@ -89,9 +104,19 @@
 
                             <!--the profile picture-->
                             <div class="user-area dropdown">
-                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <img class="user-avatar rounded-circle" src="default-profile.png" alt="User Avatar">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <!-- Specifying image source as default or user-updated one -->
+									<?php
+										$check = 'uploads';
+										$print = strpos($row['ProfilePicture'], $check);
+										if (strpos($row['ProfilePicture'], $check)) {
+											$src = './../profile/';
+											$src .= $row['ProfilePicture'];
+										} else {
+											$src = $row['ProfilePicture'];
+										}
+									?>
+                                <img class="user-avatar rounded-circle" src="<?php echo $src ?>" alt="User Avatar">
                                 </a>
 
                                 <div class="user-menu dropdown-menu">
@@ -99,8 +124,7 @@
 
                                     <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
-                                    <a class="nav-link" href="../reg-form/backend/logout.php"><i
-                                            class="fa fa-power-off"></i>
+                                    <a class="nav-link" href="../reg-form/backend/logout.php"><i class="fa fa-power-off"></i>
                                         Logout</a>
                                 </div>
                             </div>
@@ -114,11 +138,9 @@
 
                                 <!--o and a level filters-->
                                 <div class="level-filter-buttons">
-                                    <button tabindex="0" type="button" default="" label="O Level"
-                                        class="select-level-filter oLevel levelSelected" onclick="selectLevel(this)">O
+                                    <button tabindex="0" type="button" label="O Level" class="select-level-filter oLevel" onclick="selectLevel(this)">O
                                         Level</button>
-                                    <button tabindex="0" type="button" label="A Level"
-                                        class="select-level-filter aLevel" role="radio" onclick="selectLevel(this)">A
+                                    <button tabindex="0" type="button" label="A Level" class="select-level-filter aLevel" role="radio" onclick="selectLevel(this)">A
                                         Level</button>
                                 </div>
 
@@ -131,30 +153,45 @@
                                     </button>
                                 </div>
 
+                                <?php
+
+                                $subject = "SELECT * FROM subjects ORDER BY SubjectCode";
+                                $resultS = $conn->query($subject);
+
+                                ?>
 
                                 <!--topic filter-->
                                 <div class="dropdown topic-dropdown">
-                                    <button type="button"
-                                        class="btn dropdown-toggle dropdown-toggle-split topic-filter-dropdown-button select-level-filter"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span class="label-icon">Filter Topics</span>
+                                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split topic-filter-dropdown-button select-level-filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="label-icon">Filter by Subjects</span>
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-left topic-filter-dropdown">
 
                                         <div class="topic-checkbox-list" onclick="topicDropDownStaysOpen(this)">
                                             <!--loop this-->
+
+                                            <?php
+
+                                            if ($resultS->num_rows > 0) {
+                                                while ($rowS = $resultS->fetch_assoc()) {
+                                            ?>
+
                                             <label class="topic-filter-checkbox-and-label">
                                                 <input type="checkbox" class="checkbox" name="option[]">
-                                                Division of Continuing Education
+                                                <?php echo $rowS['SubjectCode'], ' ', $rowS['SubjectName'] ?>
                                             </label>
+
+                                            <?php 
+                                                }
+                                            }
+                                            ?>
                                             <!--end loop item-->
                                         </div>
 
 
                                         <!--clear filter button-->
                                         <div class="topic-filter-footer">
-                                            <button type="button" class="clear-filter-button ml-2"
-                                                onclick="clearFilter()">Clear filter</button>
+                                            <button type="button" class="clear-filter-button ml-2" onclick="clearFilter()">Clear filter</button>
                                             <button type="button" class="dropdown-filter-button">Filter</button>
                                         </div>
                                     </div>
@@ -167,43 +204,61 @@
                                     <div> TITLE </div>
                                 </div>
                                 <!--loop item begins-->
-                                <div class="topic-item-begins c-programs-item">
-                                    <button type="button" aria-expanded="false" aria-controls="id-jcnbk8"
-                                        aria-haspopup="dialog"
-                                        class="topic-name-class c-programs-item__title-link"
-                                        onclick="makeExamButtonsVisible(0)">
-                                        <!--to make the buttons visible
-                                        PASS THE APPROPIRATE INDEX!!!!!!!!!!!!!!! 
-                                        INDEXES START FROM 0 TO ONWARDS-->
-                                        <span class="a-btn__text">
-                                            <h1 class="c-programs-item__title">General Mathematics</h1>
-                                        </span>
-                                    </button>
+                                <?php
 
-                                    <div class="hidden-by-default hidden"><!--to be expanded-->
-                                        <div class="topic-level">
-                                            <div class="c-programs-item__initals__comma-separator">
-                                                <div class="topic-level__initial">
-                                                    <div tabindex="0" aria-describedby="id-lqerb9">
-                                                        <span class="topic-level mt-2"> O Level </span>
+                                $sql = "SELECT * FROM topics natural join subjects ORDER BY TopicName";
+                                $result = $conn->query($sql);
+                                $count = 0;
+
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                ?>
+
+                                        <div class="topic-item-begins c-programs-item">
+                                            <button type="button" aria-expanded="false" aria-controls="id-jcnbk8" aria-haspopup="dialog" class="topic-name-class c-programs-item__title-link" onclick="makeExamButtonsVisible(<?php echo $count ?>)">
+                                                <!--to make the buttons visible
+                                                PASS THE APPROPIRATE INDEX!!!!!!!!!!!!!!! 
+                                                INDEXES START FROM 0 TO ONWARDS-->
+
+                                                <span class="a-btn__text">
+                                                    <h1 class="c-programs-item__title"><?php echo $row['TopicName'] ?></h1>
+                                                </span>
+                                            </button>
+
+                                            <div class="hidden-by-default hidden">
+                                                <!--to be expanded-->
+                                                <div class="topic-level">
+                                                    <div class="c-programs-item__initals__comma-separator">
+                                                        <div class="topic-level__initial">
+                                                            <div tabindex="0" aria-describedby="id-lqerb9">
+                                                                <span class="topic-level mt-2"><?php echo $row['SubjectName'], ' ', $row['SubjectCode'] ?></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="topic-level__initial">
+                                                            <div tabindex="0" aria-describedby="id-lqerb9">
+                                                                <span class="topic-level mt-2"> <?php echo $row['Level'] ?> Level </span>
+                                                            </div>
+                                                        </div>
                                                     </div>
+                                                </div>
+                                                <div class="topic-quiz-button mt-3">
+
+                                                    <button class="take-quiz">
+                                                        Take quiz
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="topic-quiz-button mt-3">
-
-                                            <button class="take-quiz">
-                                                Take quiz
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end of loop item-->
+                                        <!--end of loop item-->
 
 
+                                <?php
+                                        $count += 1;
+                                    }
+                                } ?>
 
                                 <!--test looped items-->
-                                
+
                                 <!--end of test loop-->
                             </section>
                         </div>

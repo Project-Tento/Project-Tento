@@ -1,8 +1,16 @@
 <?php
 session_start();
 
+include "profile/connection.php";
+
 if (!isset($_SESSION["user_id"])) {
 	header("Location: ../reg-form/login-form.php");
+} else {
+
+	$id = $_SESSION['user_id'];
+	$sql = "SELECT * FROM students WHERE UserID='$id'";
+	$result = $conn->query($sql);
+	$row = $result->fetch_assoc();
 }
 ?>
 
@@ -74,9 +82,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
 		<div class="move-to-left">
-
-
-			<div class="content">
+      <div class="content">
 
 				<div class="all-content-without-footer">
 					<div id="cont" class="mt-0 p-md-5">
