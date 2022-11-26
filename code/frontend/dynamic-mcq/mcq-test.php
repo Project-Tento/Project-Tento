@@ -75,8 +75,8 @@ include "connection.php";
     <div class="navbar sticky-top" id="navbar">
 
         <!--logo-->
-        <div class="logo">
-            <img src="../favicon.png"> TENTO
+        <div class="logo" >
+            <!-- <img src="../favicon.png"> TENTO -->
 
         </div>
 
