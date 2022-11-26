@@ -35,7 +35,8 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="topic-list.css">
     <link rel="stylesheet" href="../mds.css">
     <link rel="stylesheet" href="../user-dashboard.css">
-
+    
+	<link rel="shortcut icon" href="favicon.ico">
     <title>Test Topics</title>
 </head>
 
@@ -50,7 +51,7 @@ if (!isset($_SESSION["user_id"])) {
             </div>-->
 
             <div class="p-4">
-                <h1><img class="logoImg" src="favicon.png"><a href="user-dashboard.php" class="logo"> TENTO</a></h1>
+                <h1><img class="logoImg" src="favicon.png"><a href="../user-dashboard.php" class="logo"> TENTO</a></h1>
                 <hr>
                 <ul class="list-unstyled components mb-5">
                     <li>
@@ -120,7 +121,7 @@ if (!isset($_SESSION["user_id"])) {
                                 </a>
 
                                 <div class="user-menu dropdown-menu">
-                                    <a class="nav-link" href="profile/profile.php"><i class="fa fa-user"></i> My Profile</a>
+                                    <a class="nav-link" href="../profile/profile.php"><i class="fa fa-user"></i> My Profile</a>
 
                                     <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 

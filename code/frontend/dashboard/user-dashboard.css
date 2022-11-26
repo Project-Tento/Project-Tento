@@ -3,6 +3,17 @@
     width: 40px;
 }
 
+.move-to-left {
+    margin-left: 310px;
+    width: calc(100% - 330px);
+}
+
+#sidebar {
+    overflow: hidden !important;
+    position: fixed !important;
+}
+
+
 #side-bar hr{
     margin:0;
     margin-bottom:10px;
