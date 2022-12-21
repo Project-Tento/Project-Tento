@@ -51,7 +51,7 @@
             <?php
                 $score = 7;
                 $numberOfQuestions = 10; // we need to find ways to pass these two variables into this page
-                $searchID = floor((7 * 5) / 10);
+                $searchID = floor((7 * 5) / $numberOfQuestions);
                 $servername = "localhost";
                 $username = "root";
                 $password = "Kji1357924680";
