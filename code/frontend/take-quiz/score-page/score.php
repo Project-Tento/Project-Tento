@@ -47,7 +47,27 @@
             <div class="writing">
                 <h3>You scored...</h3>
                 <h1><span class="score"><strong>5</strong></span> out of <span class="total-score">10</span></h1>
-                <h4 class="italic">Keep it up for better result!</h4>
+                <h4 class="italic">
+            <?php
+                $score = 7;
+                $numberOfQuestions = 10; // we need to find ways to pass these two variables into this page
+                $searchID = floor((7 * 5) / 10);
+                $servername = "localhost";
+                $username = "root";
+                $password = "Kji1357924680";
+                $dbname = "tentodatabase";
+                $conn = new mysqli($servername, $username, $password, $dbname);
+           if ($conn->connect_error) {
+                 die("Connection failed: " . $conn->connect_error);
+                }
+           $sql = "SELECT * FROM motivationalquotes WHERE QuoteID='$searchID'";
+           $result = $conn->query($sql);
+           while($row = $result->fetch_assoc()) 
+           {
+               echo $row["Quote"];
+           }
+           $conn->close();
+            ?></h4>
 
 
 
