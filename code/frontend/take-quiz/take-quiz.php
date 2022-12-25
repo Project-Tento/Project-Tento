@@ -45,7 +45,7 @@
         <hr>
 
         <!--the form begins----------------------->
-        <form>
+        <form method="post">
             <div class="set-font-size">
 
                 <!--selecting the setting: custom or default-------
@@ -148,6 +148,7 @@
             <!--SUBMIT BUTTON----------------------->
             <div class="col-12">
                 <div class="d-flex justify-content-center">
+                    <!--Cannot add window.location.href because of type=submit, maybe redirect in php-->
                     <button type="submit" class="submit-button">Continue</button>
                 </div>
             </div>
