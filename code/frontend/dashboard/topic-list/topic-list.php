@@ -244,7 +244,7 @@ if (!isset($_SESSION["user_id"])) {
                                                 </div>
                                                 <div class="topic-quiz-button mt-3">
 
-                                                    <button class="take-quiz">
+                                                    <button class="take-quiz" onclick="window.location.href='../../take-quiz/take-quiz.php';">
                                                         Take quiz
                                                     </button>
                                                 </div>
