@@ -53,7 +53,7 @@ if (!isset($_SESSION["user_id"])) {
 						<a href="user-dashboard.php"><span class="fa fa-desktop mr-3"></span> Dashboard</a>
 					</li>
 					<li>
-						<a href="#"><span class="fa fa-history mr-3"></span> User History</a>
+						<a href="user-history/user-history.php"><span class="fa fa-history mr-3"></span> User History</a>
 					</li>
 					<li>
 						<a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
@@ -237,7 +237,7 @@ if (!isset($_SESSION["user_id"])) {
 				<div class="dashboard-second-row">
 
 
-					<!--------------------------- view courses--------------------------->
+					<!--------------------------- view topics--------------------------->
 					<div class="row mt-4">
 						<div class="col-lg-7 mb-lg-0 mb-4">
 							<div class="card">
@@ -245,7 +245,7 @@ if (!isset($_SESSION["user_id"])) {
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="d-flex flex-column h-100">
-												<h3 class="font-weight-bolder mb-4 pt-2">Check out our courses</h3>
+												<h3 class="font-weight-bolder mb-4 pt-2">Check out our exam topics</h3>
 												<p class="mb-5 sub-heading">Tento provides you with all necessary
 													practice
 													materials to
@@ -253,7 +253,7 @@ if (!isset($_SESSION["user_id"])) {
 													upcoming
 													exams at your home.</p>
 												<a class="card-link text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-													Explore courses
+													Explore topics
 													<i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
 												</a>
 											</div>
