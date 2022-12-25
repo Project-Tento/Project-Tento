@@ -65,3 +65,4 @@
 function redirectToScorePage() {
     window.location.href = 'score.html';
 }
+

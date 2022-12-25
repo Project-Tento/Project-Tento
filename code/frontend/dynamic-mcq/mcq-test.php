@@ -13,7 +13,8 @@ include "connection.php";
     <link rel="stylesheet" href="mcq-form-2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="../favicon.ico">
 </head>
 
@@ -50,8 +51,8 @@ include "connection.php";
 
 
         id of radio buttons (the circle portion of the option)
-        one-one
-        one-two
+        one1
+        two1
         .
         .
         .
@@ -75,7 +76,7 @@ include "connection.php";
     <div class="navbar sticky-top" id="navbar">
 
         <!--logo-->
-        <div class="logo" >
+        <div class="logo">
             <!-- <img src="../favicon.png"> TENTO -->
 
         </div>
@@ -89,7 +90,7 @@ include "connection.php";
     <?php
 
             $questionNumber = 1;
-            $sql = "SELECT * FROM questions natural join choices WHERE TopicID=402401";
+            $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID=402401";
             $sqlForTopicName = "SELECT TopicName FROM topics WHERE TopicID=402401";
             $result = $conn->query($sql);
             $resultForTopicName = $conn->query($sqlForTopicName);
@@ -100,79 +101,89 @@ include "connection.php";
 
         <!--insert topic name here-->
         <h1 id="topic-name"><?php echo $topicName['TopicName'] ?></h1>
+        <!--GET THE SCORE-->
         <h6 id="total-score">Total score: 10</h6>
         <hr>
 
         <form method="post" action="">
-            
-        <?php
+
+            <?php
             if ($result->num_rows > 0) {
                 while ($questionNumber<6) {
                     
                     $row = $result->fetch_assoc();
         ?>
 
-                    <div class="row">
-                        <!--question1-->
-                        <form class="question1">
-                            <div class="col-12">
-                                <p class="fw-bold" id="question-1-text">
-                                    <?php echo "{$questionNumber}. {$row['QuestionText']}"; ?>
-                                <p>
-                                    <img id="question-1-img" class="question-image" id="question-1-image" src="" alt="">
-                                </p>
-                                </p>
-                                <div>
-                                    <input type="radio" name="box" id="one-one">
-                                    <input type="radio" name="box" id="one-two">
-                                    <input type="radio" name="box" id="one-three">
-                                    <input type="radio" name="box" id="one-four">
+            <div class="row">
+                <!--question1-->
+                <form class="question<?php echo "{$questionNumber}"; ?>">
+                    <div class="col-12">
+                        <p class="fw-bold" id="question-1-text">
+                            <?php echo "{$questionNumber}. {$row['QuestionText']}"; ?>
+                        <p>
+                            <img id="question-1-img" class="question-image" id="question-1-image" src="" alt="">
+                        </p>
+                        </p>
+                        <div>
+                            <input type="radio" name="box" id="one<?php echo "{$questionNumber}"; ?>">
+                            <input type="radio" name="box" id="two<?php echo "{$questionNumber}"; ?>">
+                            <input type="radio" name="box" id="three<?php echo "{$questionNumber}"; ?>">
+                            <input type="radio" name="box" id="four<?php echo "{$questionNumber}"; ?>">
+                            <!--THE ANSWER FOR POSTING-->
+                            <input id="answerForPosting" class="d-none" value="<?php echo $row['AnswerText']; ?>" />
 
-                                    <label for="one-one" class="box one-one">
-                                        <div class="course">
-                                            <span class="circle"></span>
-                                            <span class="subject">
-                                                <?php echo $row['ChoiceAText']; ?>
-                                                <img id="question-1-img-option-a" alt="">
-                                            </span>
-                                        </div>
-                                    </label>
 
-                                    <label for="one-two" class="box one-two">
-                                        <div class="course">
-                                            <span class="circle"></span>
-                                            <span class="subject">
-                                                <?php echo $row['ChoiceBText']; ?>
-                                                <img id="question-1-img-option-b" alt="">
-                                            </span>
-                                        </div>
-                                    </label>
-
-                                    <label for="one-three" class="box one-three">
-                                        <div class="course">
-                                            <span class="circle"></span>
-                                            <span class="subject">
-                                                <?php echo $row['ChoiceCText']; ?>
-                                                <img id="question-1-img-option-c" alt="">
-                                            </span>
-                                        </div>
-                                    </label>
-
-                                    <label for="one-four" class="box one-four">
-                                        <div class="course">
-                                            <span class="circle"></span>
-                                            <span class="subject">
-                                                <?php echo $row['ChoiceDText']; ?>
-                                            </span>
-                                            <img id="question-1-img-option-d" alt="">
-                                        </div>
-                                    </label>
-
+                            <label for="one<?php echo "{$questionNumber}"; ?>"
+                                class="box one<?php echo "{$questionNumber}"; ?>">
+                                <div class="course">
+                                    <span class="circle"></span>
+                                    <span class="subject">
+                                        <?php echo $row['ChoiceAText']; ?>
+                                        <img id="question-1-img-option-a" alt="">
+                                    </span>
                                 </div>
-                            </div>
-                        </form>
+                            </label>
+
+                            <label for="two<?php echo "{$questionNumber}"; ?>"
+                                class="box two<?php echo "{$questionNumber}"; ?>">
+                                <div class="course">
+                                    <span class="circle"></span>
+                                    <span class="subject">
+                                        <?php echo $row['ChoiceBText']; ?>
+                                        <img id="question-1-img-option-b" alt="">
+                                    </span>
+                                </div>
+                            </label>
+
+                            <label for="three<?php echo "{$questionNumber}"; ?>"
+                                class="box three<?php echo "{$questionNumber}"; ?>">
+                                <div class="course">
+                                    <span class="circle"></span>
+                                    <span class="subject">
+                                        <?php echo $row['ChoiceCText']; ?>
+                                        <img id="question-1-img-option-c" alt="">
+                                    </span>
+                                </div>
+                            </label>
+
+                            <label for="four<?php echo "{$questionNumber}"; ?>"
+                                class="box four<?php echo "{$questionNumber}"; ?>">
+                                <div class="course">
+                                    <span class="circle"></span>
+                                    <span class="subject">
+                                        <?php echo $row['ChoiceDText']; ?>
+                                    </span>
+                                    <img id="question-1-img-option-d" alt="">
+                                </div>
+                            </label>
+
+                        </div>
                     </div>
-                <?php 
+                </form>
+
+
+            </div>
+            <?php 
                     $questionNumber+=1;   
                 }
             } ?>
