@@ -1,16 +1,20 @@
 <?php
 session_start();
 
+// $_SESSION['userTopicChoice']
+
 include "../profile/connection.php";
 
 if (!isset($_SESSION["user_id"])) {
-	header("Location: ../../reg-form/login-form.php");
+    header("Location: ../../reg-form/login-form.php");
 } else {
 
-	$id = $_SESSION['user_id'];
-	$sql = "SELECT * FROM students WHERE UserID='$id'";
-	$result = $conn->query($sql);
-	$row = $result->fetch_assoc();
+    // $_SESSION['userTopicChoice'] = "Topic Name";
+
+    $id = $_SESSION['user_id'];
+    $sql = "SELECT * FROM students WHERE UserID='$id'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
 }
 ?>
 
@@ -35,8 +39,8 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="topic-list.css">
     <link rel="stylesheet" href="../mds.css">
     <link rel="stylesheet" href="../user-dashboard.css">
-    
-	<link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="shortcut icon" href="favicon.ico">
     <title>Test Topics</title>
 </head>
 
@@ -107,17 +111,17 @@ if (!isset($_SESSION["user_id"])) {
                             <div class="user-area dropdown">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <!-- Specifying image source as default or user-updated one -->
-									<?php
-										$check = 'uploads';
-										$print = strpos($row['ProfilePicture'], $check);
-										if (strpos($row['ProfilePicture'], $check)) {
-											$src = './../profile/';
-											$src .= $row['ProfilePicture'];
-										} else {
-											$src = $row['ProfilePicture'];
-										}
-									?>
-                                <img class="user-avatar rounded-circle" src="<?php echo $src ?>" alt="User Avatar">
+                                    <?php
+                                    $check = 'uploads';
+                                    $print = strpos($row['ProfilePicture'], $check);
+                                    if (strpos($row['ProfilePicture'], $check)) {
+                                        $src = './../profile/';
+                                        $src .= $row['ProfilePicture'];
+                                    } else {
+                                        $src = $row['ProfilePicture'];
+                                    }
+                                    ?>
+                                    <img class="user-avatar rounded-circle" src="<?php echo $src ?>" alt="User Avatar">
                                 </a>
 
                                 <div class="user-menu dropdown-menu">
@@ -177,12 +181,12 @@ if (!isset($_SESSION["user_id"])) {
                                                 while ($rowS = $resultS->fetch_assoc()) {
                                             ?>
 
-                                            <label class="topic-filter-checkbox-and-label">
-                                                <input type="checkbox" class="checkbox" name="option[]">
-                                                <?php echo $rowS['SubjectCode'], ' ', $rowS['SubjectName'] ?>
-                                            </label>
+                                                    <label class="topic-filter-checkbox-and-label">
+                                                        <input type="checkbox" class="checkbox" name="option[]">
+                                                        <?php echo $rowS['SubjectCode'], ' ', $rowS['SubjectName'] ?>
+                                                    </label>
 
-                                            <?php 
+                                            <?php
                                                 }
                                             }
                                             ?>
@@ -244,9 +248,13 @@ if (!isset($_SESSION["user_id"])) {
                                                 </div>
                                                 <div class="topic-quiz-button mt-3">
 
-                                                    <button class="take-quiz" onclick="window.location.href='../../take-quiz/take-quiz.php';">
+
+
+                                                    <button class="take-quiz" name="take-quiz" onclick="takeQuizButtonFunction('<?php echo $row['TopicName'] ?>')">
                                                         Take quiz
                                                     </button>
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -254,9 +262,15 @@ if (!isset($_SESSION["user_id"])) {
 
 
                                 <?php
+                                        //$_SESSION['userTopicChoice'] = $row['TopicName'];
                                         $count += 1;
                                     }
                                 } ?>
+
+                                <form method="post" action="topic-session.php" id="topic-form">
+                                    <input name="theTopicName" id="theTopicName" class="d-none" value="">
+                                    <button name="submit-topic" id="submit-topic" class="d-none"></button>
+                                </form>
 
                                 <!--test looped items-->
 
@@ -272,6 +286,7 @@ if (!isset($_SESSION["user_id"])) {
 
         </div>
 
+        <script src="quiz-button.js"></script>
 </body>
 
 </html>
