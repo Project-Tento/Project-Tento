@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+p {
+    margin: 0%
+}
+body {
+    background-color: #5adfe0 !important;
+    background-image: linear-gradient(180deg, #5adfe0 8%, #9ef0ff 34%, #ffffff 99%, #ffffff 100%) !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:100vh;
+    color:#000 !important;
+}
+
+/*predefined colors*/
+.dark-blue{
+    color:#181887;
+}
+.red{
+    color:red;
+}
+.grey{
+    color:grey;
+}
+.black{
+    color:#000;
+}
+
+
+
+.underline{
+    text-decoration: underline;
+}
+
+
+
+
+.navbar {
+    width: 100%;
+    max-height: max-content;
+    margin: auto;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    position:sticky; 
+    border: none;
+    top: 0px;
+    height:max-content;
+    padding:0 !important;
+    margin-bottom: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+.logo {
+    color: #003458;
+    font-size: 30px;
+    font-weight: bolder;
+    float: left;
+    padding: 10px;
+    margin-left:20px;
+    cursor: pointer;
+}
+
+.logo img{
+    height:40px;
+    width:40px;
+}
+
+
+#timer {
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    color: #181887;
+}
+
+
+.container {
+    margin: 30px auto;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width:75%;
+}
+form{
+    padding:30px;
+}
+
+#header{
+    align-items: center;
+    text-align: center;
+}
+
+.set-font-size{
+    font-size:20px;
+}
+
+input[type="radio"] {
+    margin-right:10px
+}
+
+input[type="radio"]:checked {
+    background-color:red;
+}
+
+.fix-radio-button-position label{
+    margin-right: 40px;
+}
+
+.time-mode-selection-radio label{
+    margin-right: 115px;
+}
+
+.dropdown select{
+    min-width: 60px ;
+}
+
+.btn.btn-primary {
+    border-radius: 25px;
+    margin-top: 20px
+}
+.submit-button {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    float: left;
+    border: none;
+    border-radius: 15px;
+    background-color: #181887;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /*top right bottom left*/
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+}
+.submit-button:hover {
+    transition: all 0.3s ease 0s;
+    color: #000;
+    background-color: #9EF0FF;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
