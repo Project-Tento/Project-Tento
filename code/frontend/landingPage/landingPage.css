@@ -285,7 +285,7 @@ input[type=text]{
 
 
 
-#courses .heading{
+#courses .heading, #about-us .heading{
     padding-bottom:40px;
 }
 
@@ -375,7 +375,7 @@ input[type=text]{
 
 
 
-#our-mission, #about-us{
+#our-mission{
     background-color: #000000;
     background-image: linear-gradient(315deg, #000000 0%, #110033 5%, #07075a 54%, #181887 73%, #342ecc 85%, #716aff 99%);
     background-position: center;
@@ -426,24 +426,27 @@ input[type=text]{
 }
 
 
-#about-us .heading{
+/* #about-us .heading{
     color:#716AFF;
-}
+} */
 
-#about-us span{
+/* #about-us span{
     color:#E6ECEF;
-}
+} */
 
 .box{
     padding:20px;
     border-radius: 18px;
-    background:#fff;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #110033 0%, #07075a 54%, #181887 73%, #342ecc 85%, #716aff 99%);
+    background-position: center;
+    background-size: cover;
     border-radius: 16px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     transition: .2s linear;
-    width:330px;
+    width:400px;
 }
 
 .meet-team{
@@ -469,13 +472,13 @@ input[type=text]{
     text-align: center;
     /*top right bottom left*/
     height: 150px;
-    color: #181887;
+    color: #fff;
 }
 
 
 .box h3{
    font-size: 16px;
-   color:black;
+   color:#fff;
    line-height: 1.8;
    text-align: center;
 }
