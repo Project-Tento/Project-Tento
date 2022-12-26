@@ -2,6 +2,11 @@
     var time = document.getElementById('timer');
     var setTime = document.getElementById('time').getAttribute('value');
 
+    if(setTime == 0){
+        time.classList.add('d-none');
+        return;
+    }
+    
     //console.log(setTime);
 
     var countTo = setTime*60; //specifies the total time in seconds
