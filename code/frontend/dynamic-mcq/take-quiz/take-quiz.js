@@ -71,6 +71,9 @@ function dynamicdropdown(questionCount){
     } else if(questionCount == "20"){
         timeDropdown.value="40";
         recommendedLabel.classList.remove("d-none");
+    } else if(questionCount == "25"){
+        timeDropdown.value="50";
+        recommendedLabel.classList.remove("d-none");
     }
 }
 
@@ -81,7 +84,8 @@ function changeRecommndedLabel(time){
     if((questionCountDropdown.value == "5" && timeDropdown.value == "10")
         || (questionCountDropdown.value == "10" && timeDropdown.value == "20")
         || (questionCountDropdown.value == "15" && timeDropdown.value == "30")
-        || (questionCountDropdown.value == "20" && timeDropdown.value == "40")){
+        || (questionCountDropdown.value == "20" && timeDropdown.value == "40")
+        || (questionCountDropdown.value == "25" && timeDropdown.value == "50")){
             recommendedLabel.classList.remove("d-none");
     } else {
         recommendedLabel.classList.add("d-none");
