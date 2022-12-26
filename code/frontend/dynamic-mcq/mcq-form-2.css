@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+p {
+    margin: 0%
+}
+body {
+    background-color: #5adfe0;
+    background-image: linear-gradient(180deg, #5adfe0 8%, #9ef0ff 34%, #ffffff 99%, #ffffff 100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 100%;
+    height: max-content;
+    margin: auto;
+    /* backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px); */
+    position:sticky; 
+    border: none;
+    top: 0px;
+    height:max-content;
+}
+
+
+
+
+.logo {
+    color: #003458;
+    font-size: 30px;
+    font-weight: bolder;
+    float: left;
+    padding: 10px;
+}
+
+.logo img{
+    height:40px;
+    width:40px;
+}
+
+
+#timer {
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    color: #181887;
+}
+
+
+
+
+#topic-name {
+    text-align: center;
+    padding: 10px;
+    color: #181887;
+}
+.question-image{
+    width:fit-content;
+}
+#total-score {
+    text-align: left;
+    padding-left: 30px;
+}
+.container {
+    margin: 30px auto;
+    background: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+form{
+    padding:30px;
+}
+/* the options*/
+label.box {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+/* individual options when checked */
+#one1:checked~label.one1,
+#two1:checked~label.two1,
+#three1:checked~label.three1,
+#four1:checked~label.four1,
+#one2:checked~label.one2,
+#two2:checked~label.two2,
+#three2:checked~label.three2,
+#four2:checked~label.four2,
+#one3:checked~label.one3,
+#two3:checked~label.two3,
+#three3:checked~label.three3,
+#four3:checked~label.four3,
+#one4:checked~label.one4,
+#two4:checked~label.two4,
+#three4:checked~label.three4,
+#four4:checked~label.four4,
+#one5:checked~label.one5,
+#two5:checked~label.two5,
+#three5:checked~label.three5,
+#four5:checked~label.four5,
+#one6:checked~label.one6,
+#two6:checked~label.two6,
+#three6:checked~label.three6,
+#four6:checked~label.four6,
+#one7:checked~label.one7,
+#two7:checked~label.two7,
+#three7:checked~label.three7,
+#four7:checked~label.four7,
+#one8:checked~label.one8,
+#two8:checked~label.two8,
+#three8:checked~label.three8,
+#four8:checked~label.four8,
+#one9:checked~label.one9,
+#two9:checked~label.two9,
+#three9:checked~label.three9,
+#four9:checked~label.four9,
+#one10:checked~label.one10,
+#two10:checked~label.two10,
+#three10:checked~label.three10,
+#four10:checked~label.four10,
+#one11:checked~label.one11,
+#two11:checked~label.two11,
+#three11:checked~label.three11,
+#four11:checked~label.four11,
+#one12:checked~label.one12,
+#two12:checked~label.two12,
+#three12:checked~label.three12,
+#four12:checked~label.four12,
+#one13:checked~label.one13,
+#two13:checked~label.two13,
+#three13:checked~label.three13,
+#four13:checked~label.four13,
+#one14:checked~label.one14,
+#two14:checked~label.two14,
+#three14:checked~label.three14,
+#four14:checked~label.four14,
+#one15:checked~label.one15,
+#two15:checked~label.two15,
+#three15:checked~label.three15,
+#four15:checked~label.four15,
+#one16:checked~label.one16,
+#two16:checked~label.two16,
+#three16:checked~label.three16,
+#four16:checked~label.four16,
+#one17:checked~label.one17,
+#two17:checked~label.two17,
+#three17:checked~label.three17,
+#four17:checked~label.four17,
+#one18:checked~label.one18,
+#two18:checked~label.two18,
+#three18:checked~label.three18,
+#four18:checked~label.four18,
+#one19:checked~label.one19,
+#two19:checked~label.two19,
+#three19:checked~label.three19,
+#four19:checked~label.four19,
+#one20:checked~label.one20,
+#two20:checked~label.two20,
+#three20:checked~label.three20,
+#four20:checked~label.four20
+{
+    border-color: #8e498e
+}
+
+
+/* .checkedLabelBoxes{
+    border-color: #8e498e;
+} */
+
+
+
+/*circle when checked*/
+#one1:checked~label.one1 .circle,
+#two1:checked~label.two1 .circle,
+#three1:checked~label.three1 .circle,
+#four1:checked~label.four1 .circle,
+#one2:checked~label.one2 .circle,
+#two2:checked~label.two2 .circle,
+#three2:checked~label.three2 .circle,
+#four2:checked~label.four2 .circle,
+#one3:checked~label.one3 .circle,
+#two3:checked~label.two3 .circle,
+#three3:checked~label.three3 .circle,
+#four3:checked~label.four3 .circle,
+#one4:checked~label.one4 .circle,
+#two4:checked~label.two4 .circle,
+#three4:checked~label.three4 .circle,
+#four4:checked~label.four4 .circle,
+#one5:checked~label.one5 .circle,
+#two5:checked~label.two5 .circle,
+#three5:checked~label.three5 .circle,
+#four5:checked~label.four5 .circle,
+#one6:checked~label.one6 .circle,
+#two6:checked~label.two6 .circle,
+#three6:checked~label.three6 .circle,
+#four6:checked~label.four6 .circle,
+#one7:checked~label.one7 .circle,
+#two7:checked~label.two7 .circle,
+#three7:checked~label.three7 .circle,
+#four7:checked~label.four7 .circle,
+#one8:checked~label.one8 .circle,
+#two8:checked~label.two8 .circle,
+#three8:checked~label.three8 .circle,
+#four8:checked~label.four8 .circle,
+#one9:checked~label.one9 .circle,
+#two9:checked~label.two9 .circle,
+#three9:checked~label.three9 .circle,
+#four9:checked~label.four9 .circle,
+#one10:checked~label.one10 .circle,
+#two10:checked~label.two10 .circle,
+#three10:checked~label.three10 .circle,
+#four10:checked~label.four10 .circle,
+#one11:checked~label.one11 .circle,
+#two11:checked~label.two11 .circle,
+#three11:checked~label.three11 .circle,
+#four11:checked~label.four11 .circle,
+#one12:checked~label.one12 .circle,
+#two12:checked~label.two12 .circle,
+#three12:checked~label.three12 .circle,
+#four12:checked~label.four12 .circle,
+#one13:checked~label.one13 .circle,
+#two13:checked~label.two13 .circle,
+#three13:checked~label.three13 .circle,
+#four13:checked~label.four13 .circle,
+#one14:checked~label.one14 .circle,
+#two14:checked~label.two14 .circle,
+#three14:checked~label.three14 .circle,
+#four14:checked~label.four14 .circle,
+#one15:checked~label.one15 .circle,
+#two15:checked~label.two15 .circle,
+#three15:checked~label.three15 .circle,
+#four15:checked~label.four15 .circle,
+#one16:checked~label.one16 .circle,
+#two16:checked~label.two16 .circle,
+#three16:checked~label.three16 .circle,
+#four16:checked~label.four16 .circle,
+#one17:checked~label.one17 .circle,
+#two17:checked~label.two17 .circle,
+#three17:checked~label.three17 .circle,
+#four17:checked~label.four17 .circle,
+#one18:checked~label.one18 .circle,
+#two18:checked~label.two18 .circle,
+#three18:checked~label.three18 .circle,
+#four18:checked~label.four18 .circle,
+#one19:checked~label.one19 .circle,
+#two19:checked~label.two19 .circle,
+#three19:checked~label.three19 .circle,
+#four19:checked~label.four19 .circle,
+#one20:checked~label.one20 .circle,
+#two20:checked~label.two20 .circle,
+#three20:checked~label.three20 .circle,
+#four20:checked~label.four20 .circle{
+    border: 6px solid #8e498e;
+    background-color: #fff
+}
+
+
+label.box:hover {
+    background: #d5bbf7
+}
+
+
+
+/*the box*/
+label.box .course {
+    display: flex;
+    align-items: center;
+    width: fit-content
+}
+/*the circle*/
+label.box .circle {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ddd;
+    display: inline-block
+}
+/*options unchecked*/
+input[type="radio"] {
+    display: none
+}
+.btn.btn-primary {
+    border-radius: 25px;
+    margin-top: 20px
+}
+.submit-button {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    float: left;
+    border: none;
+    border-radius: 15px;
+    background-color: #181887;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /*top right bottom left*/
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+}
+.submit-button:hover {
+    transition: all 0.3s ease 0s;
+    color: #000;
+    background-color: #9EF0FF;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+@media(max-width: 450px) {
+    .subject {
+        font-size: 12px
+    }
+}
