@@ -29,3 +29,6 @@ function makeExamButtonsVisible(x){
     hiddenBlock[x].classList.toggle("hidden");
 
 }
+
+
+

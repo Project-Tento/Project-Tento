@@ -1,3 +1,28 @@
+<?php
+
+session_start();
+
+include "../connection.php";
+//include "../../dashboard/topic-list/topic-list.php";
+//include "../../dashboard/topic-list/topic-session.php";
+
+if (!isset($_SESSION["user_id"])) {
+    header("Location: ../../reg-form/login-form.php");
+} else {
+
+    // $_SESSION['userSetQuestionNo'];
+    //$topicName = $_SESSION['userTopicChoice'];
+    
+    $id = $_SESSION['user_id'];
+    $sql = "SELECT * FROM students WHERE UserID='$id'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +63,7 @@
 
     <div class="container mb-5">
         <span id="header">
-            <h1 class="dark-blue"><strong>Topic: Numbers</strong></h1>
+            <h1 class="dark-blue"><strong><?php echo $_SESSION['userTopicChoice'] ?></strong></h1>
             <h4>Choose <strong class="dark-blue">Default</strong> settings or <strong
                     class="underline">Customize</strong> your Quiz</h4>
         </span>
