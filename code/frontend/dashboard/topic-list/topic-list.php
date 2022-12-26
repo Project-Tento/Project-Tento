@@ -250,7 +250,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
 
-                                                    <button class="take-quiz" name="take-quiz" onclick="takeQuizButtonFunction('<?php echo $row['TopicName'] ?>')">
+                                                    <button class="take-quiz" name="take-quiz" onclick="takeQuizButtonFunction('<?php echo $row['TopicName'] ?>', '<?php echo $row['TopicID'] ?>')">
                                                         Take quiz
                                                     </button>
 
@@ -269,6 +269,7 @@ if (!isset($_SESSION["user_id"])) {
 
                                 <form method="post" action="topic-session.php" id="topic-form">
                                     <input name="theTopicName" id="theTopicName" class="d-none" value="">
+                                    <input name="theTopicID" id="theTopicID" class="d-none" value="">
                                     <button name="submit-topic" id="submit-topic" class="d-none"></button>
                                 </form>
 

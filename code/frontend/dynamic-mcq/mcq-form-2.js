@@ -1,12 +1,33 @@
 (function workingTimer() {
-    var countTo = 500; //specifies the total time in seconds
+    var time = document.getElementById('timer');
+    var setTime = document.getElementById('time').getAttribute('value');
+
+    //console.log(setTime);
+
+    var countTo = setTime*60; //specifies the total time in seconds
     var min = Math.floor(countTo / 60); //calculating minute
     var sec = countTo - (min * 60); //calculating second
     var counter = 0;
 
-    var time = document.getElementById('timer');
+    var minS = String(min);
+    var secS = String(sec);
 
-    time.innerHTML = "08 : 20";
+    if (min > 9) {
+
+        minS = minS;
+    }
+    else {
+        minS = "0" + minS;
+    }
+
+    if (sec < 10) {
+        secS = "0" + secS;
+    }
+    else {
+        secS = secS;
+    }
+
+    time.innerHTML = minS + " : " + secS;
 
 
     function updateTimer() {
@@ -61,4 +82,8 @@
 
 })();
 
+
+function redirectToScorePage() {
+    ;
+}
 

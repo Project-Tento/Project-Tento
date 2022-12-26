@@ -70,7 +70,7 @@ if (!isset($_SESSION["user_id"])) {
         <hr>
 
         <!--the form begins----------------------->
-        <form method="post">
+        <form method="post" action="settings.php">
             <div class="set-font-size">
 
                 <!--selecting the setting: custom or default-------
@@ -120,6 +120,7 @@ if (!isset($_SESSION["user_id"])) {
                                     <option value="10" selected="selected">10</option>
                                     <option value="15">15</option>
                                     <option value="20">20</option>
+                                    <option value="25">25</option>
                                 </select>
                             </div>
                         </div>
@@ -157,6 +158,7 @@ if (!isset($_SESSION["user_id"])) {
                                     <option value="20" selected="selected">20</option>
                                     <option value="30">30</option>
                                     <option value="40">40</option>
+                                    <option value="50">50</option>
                                 </select>
                             </div>
 
@@ -174,7 +176,7 @@ if (!isset($_SESSION["user_id"])) {
             <div class="col-12">
                 <div class="d-flex justify-content-center">
                     <!--Cannot add window.location.href because of type=submit, maybe redirect in php-->
-                    <button type="submit" class="submit-button">Continue</button>
+                    <button type="submit" class="submit-button" name="submit-settings" id="submit-settings">Continue</button>
                 </div>
             </div>
 
