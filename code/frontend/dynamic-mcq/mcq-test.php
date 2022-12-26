@@ -6,7 +6,10 @@ if (!isset($_SESSION["user_id"])) {
     header("Location: ../../reg-form/login-form.php");
 } else {
 
-    $_SESSION['userSetQuestionNo']=5;
+    $setQuestions = $_SESSION['setQuestions'];
+    $setTime = $_SESSION['setTime'];
+    $setTopicName = $_SESSION['userTopicChoice'];
+    $setTopicID = $_SESSION['setTopicID'];
     
     $id = $_SESSION['user_id'];
     $sql = "SELECT * FROM students WHERE UserID='$id'";
@@ -94,7 +97,7 @@ if (!isset($_SESSION["user_id"])) {
         </div>
 
         <span id="timer">
-            <span id="time"></span>
+            <span id="time" value="<?php echo $setTime; ?>"></span>
         </span>
 
     </div>
@@ -102,26 +105,24 @@ if (!isset($_SESSION["user_id"])) {
     <?php
 
     $questionNumber = 1;
-    $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID=402401";
-    $sqlForTopicName = "SELECT TopicName FROM topics WHERE TopicID=402401";
+    
+    $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID=$setTopicID";
     $result = $conn->query($sql);
-    $resultForTopicName = $conn->query($sqlForTopicName);
-    $topicName = $resultForTopicName->fetch_assoc();
     ?>
 
     <div class="container mb-5">
 
         <!--insert topic name here-->
-        <h1 id="topic-name"><?php echo $topicName['TopicName'] ?></h1>
+        <h1 id="topic-name"><?php echo $setTopicName ?></h1>
         <!--GET THE SCORE-->
-        <h6 id="total-score">Total score: 10</h6>
+        <h6 id="total-score">Total score: <?php echo $setQuestions ?></h6>
         <hr>
 
         <form method="post" action="get-answer.php">
 
             <?php
             if ($result->num_rows > 0) {
-                while ($questionNumber <= $_SESSION['userSetQuestionNo']) {
+                while ($questionNumber <= $setQuestions) {
 
                     $row = $result->fetch_assoc();
             ?>
@@ -211,6 +212,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
     <script src="mcq-form-2.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
