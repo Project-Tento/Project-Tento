@@ -118,7 +118,7 @@ if (!isset($_SESSION["user_id"])) {
         <h6 id="total-score">Total score: <?php echo $setQuestions ?></h6>
         <hr>
 
-        <form method="post" action="get-answer.php">
+        <form method="post" action="get-answer.php" id="mcq-form">
 
             <?php
             if ($result->num_rows > 0) {
@@ -203,7 +203,7 @@ if (!isset($_SESSION["user_id"])) {
 
             <div class="col-12">
                 <div class="d-flex justify-content-center">
-                    <button class="submit-button" name="submit-answers">SUBMIT</button>
+                    <button class="submit-button" name="submit-answers" id="submit-answers">SUBMIT</button>
                 </div>
             </div>
         </form>
