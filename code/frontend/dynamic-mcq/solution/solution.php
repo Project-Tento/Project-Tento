@@ -32,59 +32,6 @@ if (!isset($_SESSION["user_id"])) {
 </head>
 
 <body>
-    <!--
-        reference for fetching question text & image, 
-        answer option (four each) and their image(if any)
-        
-        id of total score: total-score
-        id of topic name: topic-name
-        id of question text: 
-        question-1-text
-        question-2-text
-        question-3-text
-        question-4-text
-        question-5-text
-        question-6-text
-        question-7-text
-        question-8-text
-        question-9-text
-        question-10-text
-
-        id of question image
-        question-1-image
-        question-2-image
-        question-3-image
-        question-4-image
-        question-5-image
-        question-6-image
-        question-7-image
-        question-8-image
-        question-9-image
-        question-10-image
-
-
-        id of radio buttons (the circle portion of the option)
-        one1
-        two1
-        .
-        .
-        .
-        ten-three
-        ten-four
-
-        
-        id of images in option format
-        question-1-img-option-a
-        question-1-img-option-b
-        question-1-img-option-c
-        question-1-img-option-d
-        question-2-img-option-a
-        .
-        .
-        .
-        question-10-img-option-d
-        
-    -->
 
     <div class="navbar sticky-top" id="navbar">
 
@@ -139,25 +86,32 @@ if (!isset($_SESSION["user_id"])) {
 
                         <div>
                             <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="one<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceAText']; ?>">
+                                id="one<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceAText']; ?>" disabled>
 
                             <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="two<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceBText']; ?>">
+                                id="two<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceBText']; ?>" disabled>
 
                             <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="three<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceCText']; ?>">
+                                id="three<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceCText']; ?>" disabled>
 
                             <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="four<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceDText']; ?>">
+                                id="four<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceDText']; ?>" disabled>
 
-                            <!--THE ANSWER FOR POSTING-->
+                            <!--THE ANSWER FOR POSTING---------------->
                             <input type=text name="answer<?php echo "{$questionNumber}"; ?>" class="d-none"
                                 value="<?php echo $row['AnswerText']; ?>" />
 
 
+                                
+                            <!------------add incorrectBox to the class list
+                                        to the label 
+                                        example: class="box incorrectBox..."--------------->
                             <label for="one<?php echo "{$questionNumber}"; ?>"
-                                class="box one<?php echo "{$questionNumber}"; ?>">
+                                class="box one<?php echo "{$questionNumber}"; ?>" disabled>
                                 <div class="course">
+                                <!------------add incorrectCircle  to the class list
+                                        to the span element with circle class 
+                                        example: class="circle incorrectCircle..."--------------->
                                     <span class="circle"></span>
                                     <span class="subject">
                                         <?php echo $row['ChoiceAText']; ?>
@@ -167,7 +121,7 @@ if (!isset($_SESSION["user_id"])) {
                             </label>
 
                             <label for="two<?php echo "{$questionNumber}"; ?>"
-                                class="box two<?php echo "{$questionNumber}"; ?>">
+                                class="box two<?php echo "{$questionNumber}"; ?>" disabled>
                                 <div class="course">
                                     <span class="circle"></span>
                                     <span class="subject">
@@ -178,7 +132,7 @@ if (!isset($_SESSION["user_id"])) {
                             </label>
 
                             <label for="three<?php echo "{$questionNumber}"; ?>"
-                                class="box three<?php echo "{$questionNumber}"; ?>">
+                                class="box three<?php echo "{$questionNumber}"; ?>" disabled>
                                 <div class="course">
                                     <span class="circle"></span>
                                     <span class="subject">
@@ -189,7 +143,7 @@ if (!isset($_SESSION["user_id"])) {
                             </label>
 
                             <label for="four<?php echo "{$questionNumber}"; ?>"
-                                class="box four<?php echo "{$questionNumber}"; ?>">
+                                class="box four<?php echo "{$questionNumber}"; ?>" disabled>
                                 <div class="course">
                                     <span class="circle"></span>
                                     <span class="subject">
