@@ -14,8 +14,8 @@ if (!isset($_SESSION["user_id"])) {
 
     //Motivation Quote ID Calculation and Fetching
 
-    $score = $_SESSION['userScore'];
-    $numberOfQuestions = $_SESSION['userSetQuestionNo']; 
+    $score = $_SESSION['userScore']?$_SESSION['userScore']:0;
+    $numberOfQuestions = $_SESSION['setQuestions']; 
     $searchID = floor(($score * 5) / $numberOfQuestions);
 
     $sql = "SELECT * FROM motivationalquotes WHERE QuoteID='$searchID'";
@@ -70,7 +70,7 @@ if (!isset($_SESSION["user_id"])) {
         <div class="announcement">
             <div class="writing">
                 <h3>You scored...</h3>
-                <h1><span class="score"><strong><?php echo $_SESSION['userScore'] ?></strong></span> out of <span class="total-score"><?php echo $_SESSION['userSetQuestionNo'] ?></span></h1>
+                <h1><span class="score"><strong><?php echo $score ?></strong></span> out of <span class="total-score"><?php echo $numberOfQuestions ?></span></h1>
                 <h4 class="italic">
                     <?php
 

@@ -19,7 +19,7 @@ function test_input($data) {
 
 if (isset($_POST['submit-answers'])) {
 
-    $questionNumber = $_SESSION['userSetQuestionNo'];
+    $questionNumber = $_SESSION['setQuestions'];
     $calculatedScore=0;
 
     while($questionNumber>0)
@@ -40,7 +40,7 @@ if (isset($_POST['submit-answers'])) {
 
     $_SESSION['userScore']=$calculatedScore;
 
-    header('Location: score-page/score.php');
+    header('Location: loader.php');
 }
 
 ?>
