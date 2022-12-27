@@ -168,7 +168,27 @@ label.box {
 #one20:checked~label.one20,
 #two20:checked~label.two20,
 #three20:checked~label.three20,
-#four20:checked~label.four20
+#four20:checked~label.four20,
+#one21:checked~label.one21,
+#two21:checked~label.two21,
+#three21:checked~label.three21,
+#four21:checked~label.four21,
+#one22:checked~label.one22,
+#two22:checked~label.two22,
+#three22:checked~label.three22,
+#four22:checked~label.four22,
+#one23:checked~label.one23,
+#two23:checked~label.two23,
+#three23:checked~label.three23,
+#four23:checked~label.four23,
+#one24:checked~label.one24,
+#two24:checked~label.two24,
+#three24:checked~label.three24,
+#four24:checked~label.four24,
+#one25:checked~label.one25,
+#two25:checked~label.two25,
+#three25:checked~label.three25,
+#four25:checked~label.four25
 {
     border-color: #8e498e
 }
@@ -260,7 +280,27 @@ label.box {
 #one20:checked~label.one20 .circle,
 #two20:checked~label.two20 .circle,
 #three20:checked~label.three20 .circle,
-#four20:checked~label.four20 .circle{
+#four20:checked~label.four20 .circle,
+#one21:checked~label.one21 .circle,
+#two21:checked~label.two21 .circle,
+#three21:checked~label.three21 .circle,
+#four21:checked~label.four21 .circle,
+#one22:checked~label.one22 .circle,
+#two22:checked~label.two22 .circle,
+#three22:checked~label.three22 .circle,
+#four22:checked~label.four22 .circle,
+#one23:checked~label.one23 .circle,
+#two23:checked~label.two23 .circle,
+#three23:checked~label.three23 .circle,
+#four23:checked~label.four23 .circle,
+#one24:checked~label.one24 .circle,
+#two24:checked~label.two24 .circle,
+#three24:checked~label.three24 .circle,
+#four24:checked~label.four24 .circle,
+#one25:checked~label.one25 .circle,
+#two25:checked~label.two25 .circle,
+#three25:checked~label.three25 .circle,
+#four25:checked~label.four25 .circle{
     border: 6px solid #8e498e;
     background-color: #fff
 }
