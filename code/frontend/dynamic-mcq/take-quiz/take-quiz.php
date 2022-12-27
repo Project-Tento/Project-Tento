@@ -154,6 +154,7 @@ if (!isset($_SESSION["user_id"])) {
 
                             <div class="dropdown time-dropdown">
                                 <select name="get-time" id="get-time" disabled onchange="javascript:changeRecommndedLabel(this.options[this.selectedIndex].value);">
+                                    <option value="0.1">(demo)</option>
                                     <option value="10">10</option>
                                     <option value="20" selected="selected">20</option>
                                     <option value="30">30</option>

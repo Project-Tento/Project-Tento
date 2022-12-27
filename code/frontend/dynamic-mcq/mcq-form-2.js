@@ -75,7 +75,7 @@
 
         //if timer runs out
         if (min == 0 && sec == 0) {
-            redirectToScorePage();
+            submitForm();
         }
 
 
@@ -87,8 +87,15 @@
 
 })();
 
+function submitForm()
+{
+    var submitBtn = document.getElementById('submit-answers');
+    submitBtn.click();
+    redirectToLoading();
+}
 
-function redirectToScorePage() {
-    ;
+function redirectToLoading() {
+    
+    window.location.href = 'loader.php';
 }
 
