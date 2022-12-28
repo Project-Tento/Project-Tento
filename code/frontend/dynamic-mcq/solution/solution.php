@@ -7,7 +7,9 @@ if (!isset($_SESSION["user_id"])) {
 } else {
 
     $setQuestions = $_SESSION['setQuestions'];
-    
+    $userAnswers = $_SESSION['userAnswers'];
+    $setTopicName = $_SESSION['userTopicChoice'];
+    $setTopicID = $_SESSION['setTopicID'];
     $id = $_SESSION['user_id'];
     $sql = "SELECT * FROM students WHERE UserID='$id'";
     $result = $conn->query($sql);
@@ -47,8 +49,8 @@ if (!isset($_SESSION["user_id"])) {
     <?php
 
     $questionNumber = 1;
-    $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID=402401";
-    $sqlForTopicName = "SELECT TopicName FROM topics WHERE TopicID=402401";
+    $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID='$setTopicID'";
+    $sqlForTopicName = "SELECT TopicName FROM topics WHERE TopicID='$setTopicID'";
     $result = $conn->query($sql);
     $resultForTopicName = $conn->query($sqlForTopicName);
     $topicName = $resultForTopicName->fetch_assoc();
@@ -59,14 +61,14 @@ if (!isset($_SESSION["user_id"])) {
         <!--insert topic name here-->
         <h1 id="topic-name"><?php echo $topicName['TopicName'] ?></h1>
         <!--GET THE SCORE-->
-        <h6 id="total-score">Total score: 10</h6>
+        <h6 id="total-score">Total score: <?php echo $setQuestions ?></h6>
         <hr>
 
         <form method="post" id="" action="">
 
             <?php
             if ($result->num_rows > 0) {
-                while ($questionNumber <= $_SESSION['userSetQuestionNo']) {
+                while ($questionNumber <= $setQuestions) {
 
                     $row = $result->fetch_assoc();
             ?>
@@ -106,10 +108,11 @@ if (!isset($_SESSION["user_id"])) {
                             <input type="text" name="answer<?php echo "{$questionNumber}"; ?>" class="answer d-none"
                                 value="<?php echo $row['AnswerText']; ?>" />
 
-
+                            <?php $i = $setQuestions - $questionNumber; ?>
 
                             <!--HIDDEN BUTTON FOR COLORING-->
                             <button type="button" class="d-none" id="greenButton" onclick="colorThisGreen(<?php echo $questionNumber ?>)">CLICK ME!!!!!</button>
+                            <button type="button" class="d-none" id="redButton" onclick="colorThisRed(<?php echo $userAnswers[$i] ?>, <?php echo $questionNumber ?>)">CLICK ME RED!!!!!</button>
 
                             <!------------add incorrectBox to the class list
                                         to the label 
