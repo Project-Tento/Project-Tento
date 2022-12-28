@@ -1,7 +1,7 @@
 <?php
-session_start();
 
-include "../profile/connection.php";
+include "reset-pass.php";
+
 
 if (!isset($_SESSION["user_id"])) {
 	header("Location: ../../reg-form/login-form.php");
@@ -122,8 +122,14 @@ if (!isset($_SESSION["user_id"])) {
                                                 <div class="update-pass-header">
 
                                                     <h4 class="text-left">Update password</h4>
-                                                    <h6>Ensure your account has a long, random password to stay safe
+                                                    <h6>Ensure your account has a long, random password to stay safe. Must include:
                                                     </h6>
+                                                    <ul style="list-style-type:circle"></ul>
+                                                    <li>Lowercase & Uppercase</li>
+                                                    <li>Number (0-9)</li>
+                                                    <li>Special Character (!@#$%^&*)</li>
+                                                    <li>At least 8 Character</li>
+
                                                 </div>
                                                 <!--icon-->
                                                 <!-- <div class="icons">
@@ -135,7 +141,8 @@ if (!isset($_SESSION["user_id"])) {
                                             <!-- the fields of update password-->
                                             <div class="col-7 ">
                                                 <div class="form-group w-100">
-                                                    <input class="formField" type="password" name="resetCurrentPass"
+                                                   <input class="formField" type="password" name="updateCurrentPass"
+
                                                         id="updateCurrentPass" placeholder="Current Password *"
                                                         required>
                                                     <!--toggle password option-->
@@ -144,14 +151,16 @@ if (!isset($_SESSION["user_id"])) {
                                                 </div>
 
                                                 <div class="form-group w-100">
-                                                    <input class="formField" type="password" name="resetPass"
+                                                  <input class="formField" type="password" name="updateNewPass"
+
                                                         id="updateNewPass" placeholder=" New Password " required>
                                                     <!--toggle password option-->
                                                     <i class="bi bi-eye-slash" id="togglePassword"
                                                         onclick="toggleUpdateNewPasswordVisibility(this)"></i>
                                                 </div>
                                                 <div class="form-group pb-3 w-100">
-                                                    <input class="formField" type="password" name="resetConfirmPass"
+                                                  <input class="formField" type="password" name="updateConfirmPass"
+
                                                         id="updateConfirmPass" placeholder="Confirm Password " required>
                                                     <!--toggle password option-->
                                                     <i class="bi bi-eye-slash" id="togglePassword"
@@ -159,7 +168,8 @@ if (!isset($_SESSION["user_id"])) {
                                                 </div>
                                                 <div class="form-group">
                                                     <button class="update-pass-btn align-self-end mr-4"
-                                                        type="submit">Update Password</button>
+                                                        type="submit" name="reset-pass" id="reset-pass">Update Password</button>
+
                                                 </div>
                                             </div>
 
