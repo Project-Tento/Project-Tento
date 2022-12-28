@@ -233,3 +233,17 @@ a {
     transform: translateY(-5px);
     background-color: #9EF0FF;
 }
+
+
+.footer{
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #fafafa;
+    color: gray;
+}
+
+.all-contents-without-footer{
+    min-height:calc(100vh) ;
+}

@@ -43,3 +43,17 @@ a {
 .searchField:focus{
     outline: none;
 }
+
+
+.footer{
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #fafafa;
+    color: gray;
+}
+
+.all-contents-without-footer{
+    min-height:calc(100vh - 70px) ;
+}

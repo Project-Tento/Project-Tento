@@ -144,6 +144,7 @@
     border: none;
     border-radius: 20px;
     transition: all 0.3s ease 0s;
+    text-transform: uppercase;
 }
 
 .dropdown-filter-button {
@@ -415,4 +416,20 @@ input[type=text] {
 
 .topic-level{
     font-size: 16px;
+}
+
+
+.footer{
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #fafafa;
+    color: gray;
+}
+
+.all-contents-without-footer{
+    min-height:calc(100vh - 45px) ;
+    margin-bottom:10px;
+    font-family: 'Poppins', sans-serif;
 }
