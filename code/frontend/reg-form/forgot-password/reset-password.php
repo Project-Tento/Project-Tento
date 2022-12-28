@@ -3,6 +3,12 @@
     Author: Nafisa Maliyat
 -->
 
+<?php
+
+include "../backend/forgot-pass.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +80,7 @@
 
 
                             <div class="form-group">
-                                <button class="submitButton reset-pass-btn" type="submit">Reset Password</button>
+                                <button class="submitButton reset-pass-btn" type="submit" id="change-pass" name="change-pass">Reset Password</button>
                             </div>
 
                         </form>
