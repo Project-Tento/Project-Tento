@@ -47,8 +47,7 @@
 
                             <div class="reset-pass-header">
                                 <!--header-->
-                                <h3>Update password</h3>
-                                <h6>Ensure your account is using a long, random password to stay secure.</h6>
+                                <h3>Reset password</h3>
                             </div>
 
                             <!--icon-->
@@ -56,14 +55,6 @@
                                 <iconify-icon icon="fluent:key-reset-20-filled"></iconify-icon>
                             </div>
 
-                            <div class="form-group">
-                                <input class="formField" type="password" name="resetCurrentPass" id="resetCurrentPass"
-                                    placeholder="Current Password *" required>
-                                <!--toggle password option-->
-                                <i class="bi bi-eye-slash" id="togglePassword"
-                                    onclick="toggleResetPasswordVisibility(this)"></i>
-                            </div>
-                            
                             <div class="form-group">
                                 <input class="formField" type="password" name="resetPass" id="resetPass"
                                     placeholder="Password *" required>
