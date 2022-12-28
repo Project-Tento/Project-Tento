@@ -3,6 +3,8 @@ $('#signup').click(function () {
   $('.emailValidationAlert').addClass("show");
   $('.emailValidationAlert').removeClass("hide");
   $('.emailValidationAlert').addClass("showAlert");
+  var correctMsg = document.getElementsByClassName("correctMsg");
+  correctMsg.innerHTML = x;
 
 
   //code for the wrong pattern alert to appear

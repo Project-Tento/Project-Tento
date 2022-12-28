@@ -42,6 +42,7 @@ include "backend/reg-ver.php";
 
             <div class="alert emailValidationAlert hide">
                 <span class="fas fa-check-circle"></span>
+                <span class="msg correctMsg">Your verification mail has been sent! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <span class="msg">Your verification mail has been sent! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <div class="email-validation-alert-close-btn">
                     <span class="fas fa-times"></span>
@@ -50,11 +51,13 @@ include "backend/reg-ver.php";
 
             <div class="alert wrongPatternAlert hide">
                 <span class="fas fa-exclamation-circle"></span>
+                <span class="msg incorrectMsg">Invalid Iput!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <span class="msg">Your email or password is invalid!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <div class="wrong-pattern-close-btn">
                     <span class="fas fa-times"></span>
                 </div>
             </div>
+
 
         </nav>
 
@@ -139,9 +142,33 @@ include "backend/reg-ver.php";
 
                             </div>
 
-                            <!--CHANGE BUTTON TYPE TO TYPE SUBMIT OR NOTHING FOR THE FORM TO SUBMIT-->
-                            <button class="submitButton" type="button" name="signup" id="signup">Sign Up</button>
+                            <?php
+                            //echo $_SESSION['error'];
+                            // if (str_contains($_SESSION['error'], "emailSent")) {
+                                // echo "OKK";
+                            // } else if(isset($_POST['signup'])) { ?>
+                                <!-- <script type=text/javascript>
+                                    $("#signup").click(function() {
+                                        // setTimeout(() => {
+                                        //     ;
+                                        // }, 50000);
+                                        //code for the email validation alert to appear
+                                        $(".wrongPatternAlert").addClass("show");
+                                        $(".wrongPatternAlert").removeClass("hide");
+                                        $(".wrongPatternAlert").addClass("showAlert");
+                                    });
+                                    $(".wrong-pattern-close-btn").click(function() {
+                                        $(".wrongPatternAlert").removeClass("show");
+                                        $(".wrongPatternAlert").addClass("hide");
+                                        $(".wrongPatternAlert").removeClass("showAlert");
+                                    });
+                                </script> -->
 
+                            <?php
+                            //} ?>
+                            
+                            <!--CHANGE BUTTON TYPE TO TYPE SUBMIT OR NOTHING FOR THE FORM TO SUBMIT-->
+                            <button class="submitButton" type="submit" name="signup" id="signup">Sign Up</button>
 
                             <div class="toggle-register-login">
                                 Already have an account? &nbsp;<a href="login-form.php" class="forgot" id="forgot">Sign in
@@ -163,16 +190,31 @@ include "backend/reg-ver.php";
         </div>
     </div>
 
-
+    <!-- <script type=text/javascript>
+        $(document).ready(function() {
+            $("#signup").click(function() {
+                //code for the email validation alert to appear
+                $(".emailValidationAlert").addClass("show");
+                $(".emailValidationAlert").removeClass("hide");
+                $(".emailValidationAlert").addClass("showAlert");
+            });
+            $(".email-validation-alert-close-btn").click(function() {
+                $(".emailValidationAlert").removeClass("show");
+                $(".emailValidationAlert").addClass("hide");
+                $(".emailValidationAlert").removeClass("showAlert");
+            });
+        })
+    </script> -->
 
 
 
     <script src="reg-form.js"></script>
-    <script src="modal.js"></script>
+    <!-- <script src="modal.js"></script> -->
     <script src="email-validation.js"></script>
     <script src="password-validation.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
     
+
 
 </body>
 

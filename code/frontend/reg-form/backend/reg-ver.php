@@ -24,10 +24,12 @@ session_start();
 error_reporting(0);
 
 if (isset($_SESSION["user_id"])) {
-  header("Location: ../dashboard/user-dashboard.php");
+    header("Location: ../dashboard/user-dashboard.php");
 }
 
 if (isset($_POST['signup'])) {
+
+    //$_SESSION['check_signup'] = true;
 
     $full_name = mysqli_real_escape_string($conn, $_POST["fullName"]);
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
@@ -38,29 +40,30 @@ if (isset($_POST['signup'])) {
 
     $check_email = mysqli_num_rows(mysqli_query($conn, "SELECT Email FROM students WHERE Email='$email'"));
 
-    if ($password != $cPassword) {
+    if (!isNameValid($fullName)) {
 
+        $_SESSION['error'] = 'nameInvalid';
         header('Location: ../reg-form/register-form.php');
-
     } elseif (!isEmailValid($email)) {
 
+        $_SESSION['error'] = 'emailInvalid';
         header('Location: ../reg-form/register-form.php');
-
-    } elseif (!isNameValid($fullName)) {
-
-        header('Location: ../reg-form/register-form.php');
-
-    } elseif (!isPasswordValid($_POST["rPassword"])) {
-
-        header('Location: ../reg-form/register-form.php');
-
     } elseif ($check_email > 0) {
 
+        $_SESSION['error'] = 'emailNotUnique';
         header('Location: ../reg-form/register-form.php');
+    } 
+    elseif (!isPasswordValid($_POST["rPassword"])) {
 
-    } else {
+        $_SESSION['error'] = 'passInvalid';
+        header('Location: ../reg-form/register-form.php');
+    } elseif ($password != $cPassword) {
 
-        $sqlForPFP="SELECT * FROM pfp ORDER BY RAND() LIMIT 1";
+        $_SESSION['error'] = 'passNotMatch';
+        header('Location: ../reg-form/register-form.php');
+    }  else {
+
+        $sqlForPFP = "SELECT * FROM pfp ORDER BY RAND() LIMIT 1";
         $resultPFP = $conn->query($sqlForPFP);
         $row = $resultPFP->fetch_assoc();
         $randomPFP = $row['pfp_link'];
@@ -116,16 +119,18 @@ if (isset($_POST['signup'])) {
                 $mail->Body    = $message;
 
                 $mail->send();
-                echo "<script>console.log('Hereeee 4' );</script>";
-                echo "<script>alert('We have sent a verification link to your email - {$email}.');</script>";
-                header('Location: ../reg-form/login-form.php');
                 
+                $_SESSION['error'] = 'emailSent';
+                header('Location: ../reg-form/login-form.php');
+
             } catch (Exception $e) {
-                echo "<script>alert('Mail not sent. Please try again.');</script>";
+
+                $_SESSION['error'] = 'emailNotSent';
                 header('Location: ../reg-form/register-form.php');
             }
         } else {
-            echo "<script>alert('User registration failed.');</script>";
+
+            $_SESSION['error'] = 'tryAgain';
             header('Location: ../reg-form/register-form.php');
         }
     }
