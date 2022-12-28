@@ -1,12 +1,12 @@
 <?php
 include "connection.php";
-include "get-answer.php";
+session_start();
 
 if (!isset($_SESSION["user_id"])) {
     header("Location: ../../reg-form/login-form.php");
 } else {
 
-    $_SESSION['userSetQuestionNo']=5;
+    $setQuestions = $_SESSION['setQuestions'];
     
     $id = $_SESSION['user_id'];
     $sql = "SELECT * FROM students WHERE UserID='$id'";
@@ -29,9 +29,10 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="../favicon.ico">
+    <script src="solution.js"></script>
 </head>
 
-<body>
+<body onload="colorAll(<?php echo $setQuestions ?>)">
 
     <div class="navbar sticky-top" id="navbar">
 
@@ -61,7 +62,7 @@ if (!isset($_SESSION["user_id"])) {
         <h6 id="total-score">Total score: 10</h6>
         <hr>
 
-        <form method="post" id="" action="get-answer.php">
+        <form method="post" id="" action="">
 
             <?php
             if ($result->num_rows > 0) {
@@ -85,31 +86,38 @@ if (!isset($_SESSION["user_id"])) {
 
 
                         <div>
-                            <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="one<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceAText']; ?>" disabled>
+                            <input type="radio" class="radioButton" name="box<?php echo "{$questionNumber}"; ?>"
+                                id="one<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceAText']; ?>"
+                                disabled>
 
-                            <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="two<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceBText']; ?>" disabled>
+                            <input type="radio" class="radioButton" name="box<?php echo "{$questionNumber}"; ?>"
+                                id="two<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceBText']; ?>"
+                                disabled>
 
-                            <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="three<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceCText']; ?>" disabled>
+                            <input type="radio" class="radioButton" name="box<?php echo "{$questionNumber}"; ?>"
+                                id="three<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceCText']; ?>"
+                                disabled>
 
-                            <input type="radio" name="box<?php echo "{$questionNumber}"; ?>"
-                                id="four<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceDText']; ?>" disabled>
+                            <input type="radio" class="radioButton" name="box<?php echo "{$questionNumber}"; ?>"
+                                id="four<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceDText']; ?>"
+                                disabled>
 
                             <!--THE ANSWER FOR POSTING---------------->
-                            <input type=text name="answer<?php echo "{$questionNumber}"; ?>" class="d-none"
+                            <input type="text" name="answer<?php echo "{$questionNumber}"; ?>" class="answer d-none"
                                 value="<?php echo $row['AnswerText']; ?>" />
 
 
-                                
+
+                            <!--HIDDEN BUTTON FOR COLORING-->
+                            <button type="button" class="d-none" id="greenButton" onclick="colorThisGreen(<?php echo $questionNumber ?>)">CLICK ME!!!!!</button>
+
                             <!------------add incorrectBox to the class list
                                         to the label 
                                         example: class="box incorrectBox..."--------------->
                             <label for="one<?php echo "{$questionNumber}"; ?>"
                                 class="box one<?php echo "{$questionNumber}"; ?>" disabled>
                                 <div class="course">
-                                <!------------add incorrectCircle  to the class list
+                                    <!------------add incorrectCircle  to the class list
                                         to the span element with circle class 
                                         example: class="circle incorrectCircle..."--------------->
                                     <span class="circle"></span>
@@ -191,6 +199,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="solution.js"></script>
 </body>
 
 </html>
