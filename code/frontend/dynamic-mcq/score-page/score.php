@@ -7,6 +7,7 @@ if (!isset($_SESSION["user_id"])) {
     header("Location: ../../reg-form/login-form.php");
 } else {
 
+    $setTopicID = $_SESSION['setTopicID'];
     $id = $_SESSION['user_id'];
     $sql = "SELECT * FROM students WHERE UserID='$id'";
     $result = $conn->query($sql);
@@ -20,6 +21,11 @@ if (!isset($_SESSION["user_id"])) {
 
     $sql = "SELECT * FROM motivationalquotes WHERE QuoteID='$searchID'";
     $result = $conn->query($sql);
+
+    $storeScore = $score . '/' . $numberOfQuestions;
+
+    $sqlTestSession = "INSERT INTO testsessions (SessionID, Score, DateTime, UserID, TopicID) values (default, '$storeScore', now(), '$id', '$setTopicID')";
+    $insert = $conn->query($sqlTestSession);
 }
 
 ?>

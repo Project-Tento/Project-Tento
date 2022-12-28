@@ -5,13 +5,13 @@ include "get-answer.php";
 if (!isset($_SESSION["user_id"])) {
     header("Location: ../../reg-form/login-form.php");
 } else {
-
+    
     $setQuestions = $_SESSION['setQuestions'];
     $setTime = $_SESSION['setTime'];
     $setTopicName = $_SESSION['userTopicChoice'];
     $setTopicID = $_SESSION['setTopicID'];
-    
     $id = $_SESSION['user_id'];
+    
     $sql = "SELECT * FROM students WHERE UserID='$id'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
