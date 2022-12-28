@@ -43,6 +43,7 @@ include "backend/reg-ver.php";
             <div class="alert emailValidationAlert hide">
                 <span class="fas fa-check-circle"></span>
                 <span class="msg correctMsg">Your verification mail has been sent! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="msg">Your verification mail has been sent! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <div class="email-validation-alert-close-btn">
                     <span class="fas fa-times"></span>
                 </div>
@@ -51,11 +52,11 @@ include "backend/reg-ver.php";
             <div class="alert wrongPatternAlert hide">
                 <span class="fas fa-exclamation-circle"></span>
                 <span class="msg incorrectMsg">Invalid Iput!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <span class="msg">Your email or password is invalid!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <div class="wrong-pattern-close-btn">
                     <span class="fas fa-times"></span>
                 </div>
             </div>
-
 
 
         </nav>
@@ -165,11 +166,9 @@ include "backend/reg-ver.php";
 
                             <?php
                             //} ?>
-
-                            <!--CHANGE BUTTON TYPE TO TYPE SUBMIT OR NOTHING FOR THE FORM TO SUBMIT-->
-                            <button type="submit" class="submitButton" name="signup" id="signup">Sign Up</button>
-
                             
+                            <!--CHANGE BUTTON TYPE TO TYPE SUBMIT OR NOTHING FOR THE FORM TO SUBMIT-->
+                            <button class="submitButton" type="submit" name="signup" id="signup">Sign Up</button>
 
                             <div class="toggle-register-login">
                                 Already have an account? &nbsp;<a href="login-form.php" class="forgot" id="forgot">Sign in
@@ -214,6 +213,7 @@ include "backend/reg-ver.php";
     <script src="email-validation.js"></script>
     <script src="password-validation.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    
 
 
 </body>

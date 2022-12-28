@@ -1,6 +1,6 @@
 <!--
     Title: Register and login page
-    Author: Nafisa Maliyat
+    Author: Nafisa Maliyat/Kazi Jawadul Islam Jishan
 -->
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Reset password</title>
+    <title>Forgot password</title>
     <link rel="stylesheet" href="../reg-form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -33,9 +33,9 @@
         </nav>
 
         <!--the whole box-->
-        <div class="reset-pass-box">
+        <div class="delete-acc-box">
 
-            <div id="reset-pass-container">
+            <div id="delete-acc-container">
                 <!--for outline-->
 
                 <div class="comm">
@@ -45,45 +45,24 @@
                         <form method="post" action="" autocomplete="off">
 
 
-                            <div class="reset-pass-header">
+                            <div class="delete-acc-header">
                                 <!--header-->
-                                <h3>Update password</h3>
-                                <h6>Ensure your account is using a long, random password to stay secure.</h6>
+                                <h3>Delete Account?</h3>
+                                <h6>Enter password to delete a count</h6>
                             </div>
 
-                            <!--icon-->
-                            <div class="icons">
-                                <iconify-icon icon="fluent:key-reset-20-filled"></iconify-icon>
-                            </div>
 
+                            <!--the fields-->
                             <div class="form-group">
-                                <input class="formField" type="password" name="resetCurrentPass" id="resetCurrentPass"
-                                    placeholder="Current Password *" required>
-                                <!--toggle password option-->
-                                <i class="bi bi-eye-slash" id="togglePassword"
-                                    onclick="toggleResetPasswordVisibility(this)"></i>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input class="formField" type="password" name="resetPass" id="resetPass"
+                                <input class="formField" type="password" name="Pass" id="Pass"
                                     placeholder="Password *" required>
                                 <!--toggle password option-->
                                 <i class="bi bi-eye-slash" id="togglePassword"
                                     onclick="toggleResetPasswordVisibility(this)"></i>
                             </div>
 
-
-                            <div class="form-group pb-3">
-                                <input class="formField" type="password" name="resetConfirmPass" id="resetConfirmPass"
-                                    placeholder="Confirm Password *" required>
-                                <!--toggle password option-->
-                                <i class="bi bi-eye-slash" id="togglePassword"
-                                    onclick="toggleResetConfirmPasswordVisibility(this)"></i>
-                            </div>
-
-
                             <div class="form-group">
-                                <button class="submitButton reset-pass-btn" type="submit">Reset Password</button>
+                                <button class="submitButton delete-acc-btn" type="submit">Delete Account</button>
                             </div>
 
                         </form>
@@ -97,7 +76,7 @@
 
         </div>
     </div>
-    <script src="../reg-form.js"></script>
+
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 </body>
 

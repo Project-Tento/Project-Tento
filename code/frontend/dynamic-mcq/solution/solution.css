@@ -88,7 +88,7 @@ label.box {
     cursor: pointer;
     border: 1px solid #ddd;
 }
-/* individual options when checked */
+/* individual options when checked
 #one1:checked~label.one1,
 #two1:checked~label.two1,
 #three1:checked~label.three1,
@@ -201,7 +201,7 @@ label.box {
 
 
 /*circle when checked*/
-#one1:checked~label.one1 .circle,
+/* #one1:checked~label.one1 .circle,
 #two1:checked~label.two1 .circle,
 #three1:checked~label.three1 .circle,
 #four1:checked~label.four1 .circle,
@@ -303,12 +303,32 @@ label.box {
 #four25:checked~label.four25 .circle{
     border: 6px solid #8e498e;
     background-color: #fff
+} */
+
+
+.correctBox {
+    border: 1.5px solid green !important;
+    background-color: rgb(168, 247, 168);
+    font-weight: bold;
 }
 
+.correctCircle{
+    border: 4px solid green !important;
+    background-color: #fff !important
+}
+
+.incorrectBox {
+    background-color:  rgb(247, 164, 164);
+}
+
+.incorrectCircle{
+    background-color: #fff !important
+}
 
 label.box:hover {
     background: #d5bbf7
 }
+
 
 
 
@@ -360,6 +380,39 @@ input[type="radio"] {
     transform: translateY(-5px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* .hintButton{
+    border: none;
+    border-radius: 15px;
+    background-color: #716AFF;
+    color: #fff;
+    /*top right bottom left*/
+    /* padding: 10px; */
+    /* text-align: center;
+    width: 150px;
+    height: 40px;
+}
+
+.darkerButton{
+    background-color: #181887 !important;
+}
+
+.hintButton:hover{
+    background-color: #181887 !important;
+}
+
+.hint-text{
+    color:blue;
+    font-weight: bold;
+    font-size: 17px;
+}  */
+
+.solution-text-section{
+    color:blue;
+    font-weight: bold;
+}
+
+
 @media(max-width: 450px) {
     .subject {
         font-size: 12px
