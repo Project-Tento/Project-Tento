@@ -26,6 +26,11 @@ if (!isset($_SESSION["user_id"])) {
 
     $sqlTestSession = "INSERT INTO testsessions (SessionID, Score, DateTime, UserID, TopicID) values (default, '$storeScore', now(), '$id', '$setTopicID')";
     $insert = $conn->query($sqlTestSession);
+
+    // for($i=0; $i<count($_SESSION['userAnswers']); $i++)
+    // {
+    //     echo '<td>' . $_SESSION['userAnswers'][$i] . 'break' . '</td>';
+    // }
 }
 
 ?>
