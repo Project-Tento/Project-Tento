@@ -1,3 +1,23 @@
+<?php
+session_start();
+
+// $_SESSION['userTopicChoice']
+
+include "../profile/connection.php";
+
+if (!isset($_SESSION["user_id"])) {
+    header("Location: ../../reg-form/login-form.php");
+} else {
+
+    // $_SESSION['userTopicChoice'] = "Topic Name";
+
+    $id = $_SESSION['user_id'];
+    $sql = "SELECT * FROM students WHERE UserID='$id'";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -119,50 +139,43 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <!--ONE ROW!!!!!-->
-                                                                    <tr class="mt-2 mb-2">
-                                                                        <td>1</td>
-                                                                        <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                        <td class="txt-oflo">Elite admin</td>
-                                                                        <td class="txt-oflo">April 18, 2021</td>
-                                                                        <td><span class="text-success">$24</span></td>
-                                                                    </tr>
-                                                                    <!--end of row-->
+
+                                                                <?php
+
+                                                                    $sqlLoop = "SELECT * FROM testsessions WHERE UserID = '$id'";
+                                                                    $resultLoop = $conn->query($sqlLoop);
+                                                                    $count = 1;
+
+                                                                    //echo $count;
+
+                                                                  
+                                                                        while ($rowL = $resultLoop->fetch_assoc()) { 
+                                                                            $topicID = $rowL['TopicID']; 
+                                                                            $sqlTopicName = "SELECT TopicName from topics WHERE TopicID = '$topicID'";
+                                                                            $resultTN = $conn->query($sqlTopicName);
+                                                                            $rowTN = $resultTN->fetch_assoc();
+                                                                            $topicName = $rowTN['TopicName']; ?>
+                                                                            
+                                                                        <!--ONE ROW!!!!!-->
+                                                                        <tr class="mt-2 mb-2">
+                                                                            <td><?php echo $count ?></td>
+                                                                            <!--INCREASE THIS BY 1 EACH TIME-->
+                                                                            <td class="txt-oflo"><?php echo $topicName ?></td>
+                                                                            <td class="txt-oflo"><?php echo $rowL['DateTime']; ?></td>
+                                                                            <td><span class="text-success"><?php echo $rowL['Score']; ?></span></td>
+                                                                        </tr>
+                                                                        <!--end of row-->
+                                                                    <?php $count++;
+                                                                    } 
+                                                                ?>
+                                                                
+
+                                                                    
 
 
 
                                                                     <!--test loop begins-->
-                                                                    <tr class="mt-2 mb-2">
-                                                                        <td>1</td>
-                                                                        <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                        <td class="txt-oflo">Elite admin</td>
-                                                                        <td class="txt-oflo">April 18, 2021</td>
-                                                                        <td><span class="text-success">$24</span></td>
-                                                                    </tr>
-                                                                    <tr class="mt-2 mb-2">
-                                                                        <td>1</td>
-                                                                        <td class="txt-oflo">Elite admin</td>
-                                                                        <td class="txt-oflo">April 18, 2021</td>
-                                                                        <td><span class="text-success">$24</span></td>
-                                                                    </tr>
-                                                                    <tr class="mt-2 mb-2">
-                                                                        <td>1</td>
-                                                                        <td class="txt-oflo">Elite admin</td>
-                                                                        <td class="txt-oflo">April 18, 2021</td>
-                                                                        <td><span class="text-success">$24</span></td>
-                                                                    </tr>
-                                                                    <tr class="mt-2 mb-2">
-                                                                        <td>1</td>
-                                                                        <td class="txt-oflo">Elite admin</td>
-                                                                        <td class="txt-oflo">April 18, 2021</td>
-                                                                        <td><span class="text-success">$24</span></td>
-                                                                    </tr>
-                                                                    <tr class="mt-2 mb-2">
-                                                                        <td>1</td>
-                                                                        <td class="txt-oflo">Elite admin</td>
-                                                                        <td class="txt-oflo">April 18, 2021</td>
-                                                                        <td><span class="text-success">$24</span></td>
-                                                                    </tr>
+                                                                    
                                                                     <!--end of test loop-->
 
                                                                 </tbody>
