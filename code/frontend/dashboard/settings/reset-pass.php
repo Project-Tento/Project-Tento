@@ -46,5 +46,3 @@ if(isset($_POST['reset-pass']))
         }
     }
 }
-
-?>
