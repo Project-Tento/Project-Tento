@@ -3,6 +3,12 @@
     Author: Nafisa Maliyat
 -->
 
+<?php
+
+include "../backend/forgot-pass.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,12 +60,12 @@
 
                             <!--the fields-->
                             <div class="form-group forgot-pass-email-validate">
-                                <input class="formField" type="email" name="email" id="login-email"
+                                <input class="formField" type="email" name="login-email" id="login-email"
                                     placeholder="Email *" required>
                             </div>
 
                             <div class="form-group">
-                                <button class="submitButton forgot-pass-mail-btn" type="submit">Get Reset Link</button>
+                                <button class="submitButton forgot-pass-mail-btn" type="submit" name="reset" id="reset">Get Reset Link</button>
                             </div>
 
                         </form>
