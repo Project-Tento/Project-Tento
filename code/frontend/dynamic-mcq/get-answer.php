@@ -19,6 +19,7 @@ function test_input($data) {
 
 if (isset($_POST['submit-answers'])) {
 
+    $_SESSION['userAnswers'] = array();
     $questionNumber = $_SESSION['setQuestions'];
     $calculatedScore=0;
 
@@ -29,6 +30,8 @@ if (isset($_POST['submit-answers'])) {
 
         $correctAnswer = $_POST[$postAnswerVariableName];
         $userAnswer = $_POST[$postUserAnsVariableName];
+
+        array_push($_SESSION['userAnswers'], $userAnswer?$userAnswer:'null');
 
         if($correctAnswer==$userAnswer)
         {
