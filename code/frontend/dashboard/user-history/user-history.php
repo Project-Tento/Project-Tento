@@ -42,9 +42,9 @@
                     <li class="active">
                         <a href="user-history.php"><span class="fa fa-history mr-3"></span> User History</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="../topic-list/topic-list.php"><span class="mr-3"><i
                                     class="fa-solid fa-lines-leaning"></i></span> Exam Topics</a>
@@ -54,10 +54,11 @@
                         <a href="../profile/profile.php"><span class="fa fa-user mr-3"></span> Profile</a>
                     </li>
                     <li>
-                        <a href=#><span class="fa fa-cog mr-3"></span> Settings</a>
+                        <a href="../settings/settings.php"><span class="fa fa-cog mr-3"></span> Settings</a>
                     </li>
                     <li>
-                        <a href="../reg-form/backend/logout.php"><span class="fa fa-sign-out mr-3"></span> Log out</a>
+                        <a href="../../reg-form/backend/logout.php"><span class="fa fa-sign-out mr-3"></span> Log
+                            out</a>
                     </li>
 
                 </ul>
@@ -70,22 +71,25 @@
         <div class="move-to-left">
 
             <div class="content">
+                <div class="all-contents-without-footer">
 
-                <div class="row mt-4 top-bar">
-                    <div class="col-8">
-                        <div class="page-header">
-                            <span class="m-8">History</span>
+
+
+                    <div class="row mt-4 top-bar">
+                        <div class="col-8">
+                            <div class="page-header">
+                                <span class="m-8"> View History</span>
+                            </div>
                         </div>
+
                     </div>
 
-                </div>
-
-                <div class="col-md-12 mt-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div id="bootstrap-data-table_wrapper"
-                                class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                <div class="row mb-3">
+                    <div class="col-md-12 mt-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="bootstrap-data-table_wrapper"
+                                    class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                    <!-- <div class="row mb-3">
                                     <div class="col-6">
                                         <div id="bootstrap-data-table_filter" class="dataTables_filter">
                                             <label>
@@ -95,72 +99,75 @@
                                             </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        
-
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-12 col-sm-12">
-                                                <div class="white-box">
-                                                    <div class="table-responsive">
-                                                        <table class="table no-wrap">
-                                                            <thead>
-                                                                <tr>
-                                                                    <!--the table headings-->
-                                                                    <th class="border-top-0">#</th>
-                                                                    <th class="border-top-0">Topic Name</th>
-                                                                    <th class="border-top-0">Date</th>
-                                                                    <th class="border-top-0">Score</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <!--ONE ROW!!!!!-->
-                                                                <tr class="mt-2 mb-2">
-                                                                    <td>1</td> <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                    <td class="txt-oflo">Elite admin</td>
-                                                                    <td class="txt-oflo">April 18, 2021</td>
-                                                                    <td><span class="text-success">$24</span></td>
-                                                                </tr>
-                                                                <!--end of row-->
+                                </div> -->
+                                    <div class="row">
+                                        <div class="col-sm-12">
 
 
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-12 col-sm-12">
+                                                    <div class="white-box">
+                                                        <div class="table-responsive">
+                                                            <table class="table no-wrap">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <!--the table headings-->
+                                                                        <th class="border-top-0">#</th>
+                                                                        <th class="border-top-0">Topic Name</th>
+                                                                        <th class="border-top-0">Date</th>
+                                                                        <th class="border-top-0">Score</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <!--ONE ROW!!!!!-->
+                                                                    <tr class="mt-2 mb-2">
+                                                                        <td>1</td>
+                                                                        <!--INCREASE THIS BY 1 EACH TIME-->
+                                                                        <td class="txt-oflo">Elite admin</td>
+                                                                        <td class="txt-oflo">April 18, 2021</td>
+                                                                        <td><span class="text-success">$24</span></td>
+                                                                    </tr>
+                                                                    <!--end of row-->
 
-                                                                <!--test loop begins-->
-                                                                <tr class="mt-2 mb-2">
-                                                                    <td>1</td> <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                    <td class="txt-oflo">Elite admin</td>
-                                                                    <td class="txt-oflo">April 18, 2021</td>
-                                                                    <td><span class="text-success">$24</span></td>
-                                                                </tr>
-                                                                <tr class="mt-2 mb-2">
-                                                                    <td>1</td>
-                                                                    <td class="txt-oflo">Elite admin</td>
-                                                                    <td class="txt-oflo">April 18, 2021</td>
-                                                                    <td><span class="text-success">$24</span></td>
-                                                                </tr>
-                                                                <tr class="mt-2 mb-2">
-                                                                    <td>1</td>
-                                                                    <td class="txt-oflo">Elite admin</td>
-                                                                    <td class="txt-oflo">April 18, 2021</td>
-                                                                    <td><span class="text-success">$24</span></td>
-                                                                </tr>
-                                                                <tr class="mt-2 mb-2">
-                                                                    <td>1</td>
-                                                                    <td class="txt-oflo">Elite admin</td>
-                                                                    <td class="txt-oflo">April 18, 2021</td>
-                                                                    <td><span class="text-success">$24</span></td>
-                                                                </tr>
-                                                                <tr class="mt-2 mb-2">
-                                                                    <td>1</td>
-                                                                    <td class="txt-oflo">Elite admin</td>
-                                                                    <td class="txt-oflo">April 18, 2021</td>
-                                                                    <td><span class="text-success">$24</span></td>
-                                                                </tr>
-                                                                <!--end of test loop-->
 
-                                                            </tbody>
-                                                        </table>
+
+                                                                    <!--test loop begins-->
+                                                                    <tr class="mt-2 mb-2">
+                                                                        <td>1</td>
+                                                                        <!--INCREASE THIS BY 1 EACH TIME-->
+                                                                        <td class="txt-oflo">Elite admin</td>
+                                                                        <td class="txt-oflo">April 18, 2021</td>
+                                                                        <td><span class="text-success">$24</span></td>
+                                                                    </tr>
+                                                                    <tr class="mt-2 mb-2">
+                                                                        <td>1</td>
+                                                                        <td class="txt-oflo">Elite admin</td>
+                                                                        <td class="txt-oflo">April 18, 2021</td>
+                                                                        <td><span class="text-success">$24</span></td>
+                                                                    </tr>
+                                                                    <tr class="mt-2 mb-2">
+                                                                        <td>1</td>
+                                                                        <td class="txt-oflo">Elite admin</td>
+                                                                        <td class="txt-oflo">April 18, 2021</td>
+                                                                        <td><span class="text-success">$24</span></td>
+                                                                    </tr>
+                                                                    <tr class="mt-2 mb-2">
+                                                                        <td>1</td>
+                                                                        <td class="txt-oflo">Elite admin</td>
+                                                                        <td class="txt-oflo">April 18, 2021</td>
+                                                                        <td><span class="text-success">$24</span></td>
+                                                                    </tr>
+                                                                    <tr class="mt-2 mb-2">
+                                                                        <td>1</td>
+                                                                        <td class="txt-oflo">Elite admin</td>
+                                                                        <td class="txt-oflo">April 18, 2021</td>
+                                                                        <td><span class="text-success">$24</span></td>
+                                                                    </tr>
+                                                                    <!--end of test loop-->
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -170,11 +177,28 @@
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
 
-
-
-
+                <footer class="footer pt-3  ">
+                    <div class="container-fluid">
+                        <div class="row align-items-center justify-content-lg-between">
+                            <div class="col-lg-6 mb-lg-0 mb-4">
+                                <div class="copyright text-center text-sm text-muted text-lg-start">
+                                    <!---text was removed here -->
+                                </div>
+                            </div>
+                            <!-------=====================================================
+						===================insert links==============================
+						==============================================================-->
+                            <div class="col-lg-12 text-end">
+                                Copyright © 2022 Tento
+                            </div>
+                        </div>
+                    </div>
+                </footer>
 
 
             </div>

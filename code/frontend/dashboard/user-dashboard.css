@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
 .logoImg {
     height: 40px;
     width: 40px;
@@ -145,6 +148,8 @@
     max-width: 400px;
     max-width: 600px;
     padding:10px;
+    max-height: 150px;
+    min-height: 120px !important;
 }
 
 
@@ -198,5 +203,8 @@
 }
 
 .all-content-without-footer{
-    min-height: 100vh;
+    min-height: calc(100vh - 10px);
+    font-family: 'Poppins', sans-serif;
 }
+
+
