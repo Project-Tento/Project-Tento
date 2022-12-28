@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.emailValidationAlert{
+  background: rgb(168, 247, 168);
+  padding: 20px 40px;
+  min-width: 200px !important;
+  max-width: 800px;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  border-left: 8px solid rgb(168, 247, 168);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute !important;
+}
+.emailValidationAlert.showAlert{
+  opacity: 1;
+  pointer-events: auto;
+}
+.emailValidationAlert.show{
+  animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+  0%{
+    transform: translateY(20%);
+  }
+  40%{
+    transform: translateY(-10%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+.emailValidationAlert.hide{
+  animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+  0%{
+    transform: translateY(-10px);
+  }
+  40%{
+    transform: translateY(0%);
+  }
+  80%{
+    transform: translateY(-10%);
+  }
+  100%{
+    transform: translateY(100%);
+  }
+}
+.emailValidationAlert .fa-check-circle{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: darkgreen;
+  font-size: 30px;
+}
+.emailValidationAlert .msg{
+  padding: 0 20px;
+  font-size: 18px;
+  color: darkgreen;
+  margin-left:30px;
+}
+.emailValidationAlert .email-validation-alert-close-btn{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(168, 247, 168);
+  padding: 20px 18px;
+  cursor: pointer;
+}
+.emailValidationAlert .email-validation-alert-close-btn:hover{
+  background: orangered;
+}
+.emailValidationAlert .email-validation-alert-close-btn .fas{
+  color: darkgreen;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+
+
+
+
+/*------------- wrong pattern alert css */
+
+.wrongPatternAlert{
+  background: rgb(247, 164, 164);
+  padding: 20px 40px;
+  min-width: 200px !important;
+  max-width: 800px;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  border-left: 8px solid rgb(247, 164, 164);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute !important;
+}
+.wrongPatternAlert.showAlert{
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrongPatternAlert.show{
+  animation: show_slide 1s ease forwards;
+}
+
+.wrongPatternAlert.hide{
+  animation: hide_slide 1s ease forwards;
+}
+
+.wrongPatternAlert .fa-exclamation-circle{
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: red;
+  font-size: 30px;
+}
+.wrongPatternAlert .msg{
+  padding: 0 20px;
+  font-size: 18px;
+  color: red;
+  margin-left:30px;
+}
+.wrongPatternAlert .wrong-pattern-close-btn{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(247, 164, 164);
+  padding: 20px 18px;
+  cursor: pointer;
+}
+.wrongPatternAlert .wrong-pattern-close-btn:hover{
+  background: orange;
+}
+.wrongPatternAlert .wrong-pattern-close-btn .fas{
+  color: red;
+  font-size: 22px;
+  line-height: 40px;
+}

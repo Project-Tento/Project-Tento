@@ -1,4 +1,3 @@
-
 <?php
 
 include "backend/reg-ver.php";
@@ -20,11 +19,13 @@ include "backend/reg-ver.php";
     <meta charset="UTF-8">
     <title>Tento | Register</title>
     <link rel="stylesheet" href="reg-form.css">
+    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico">
 
 </head>
@@ -37,6 +38,22 @@ include "backend/reg-ver.php";
             <!--logo-->
             <div class="logo" onclick="window.location.href='../landingPage/landingPage.html';">
                 <img src="favicon.png"> TENTO
+            </div>
+
+            <div class="alert emailValidationAlert hide">
+                <span class="fas fa-check-circle"></span>
+                <span class="msg">Your verification mail has been sent! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <div class="email-validation-alert-close-btn">
+                    <span class="fas fa-times"></span>
+                </div>
+            </div>
+
+            <div class="alert wrongPatternAlert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg">Your email or password is invalid!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <div class="wrong-pattern-close-btn">
+                    <span class="fas fa-times"></span>
+                </div>
             </div>
 
         </nav>
@@ -54,10 +71,7 @@ include "backend/reg-ver.php";
 
                         <!--<button aria-label='delete item' onClick="window.location.href='../landingPage/landingPage.html'" class='close-button'>X</button>-->
 
-                        <h3>REGISTRATION
-
-                        </h3>
-
+                        <h3>REGISTRATION</h3>
 
 
                         <form id="register-form" method="post" action="" autocomplete="off">
@@ -125,7 +139,9 @@ include "backend/reg-ver.php";
 
                             </div>
 
-                            <button class="submitButton" type="submit" name="signup">Sign Up</button>
+                            <!--CHANGE BUTTON TYPE TO TYPE SUBMIT OR NOTHING FOR THE FORM TO SUBMIT-->
+                            <button class="submitButton" type="button" name="signup" id="signup">Sign Up</button>
+
 
                             <div class="toggle-register-login">
                                 Already have an account? &nbsp;<a href="login-form.php" class="forgot" id="forgot">Sign in
@@ -133,6 +149,7 @@ include "backend/reg-ver.php";
                             </div>
                         </form>
                         <!--register form ends-->
+
 
                     </div>
                 </div>
@@ -151,9 +168,11 @@ include "backend/reg-ver.php";
 
 
     <script src="reg-form.js"></script>
+    <script src="modal.js"></script>
     <script src="email-validation.js"></script>
     <script src="password-validation.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    
 
 </body>
 
