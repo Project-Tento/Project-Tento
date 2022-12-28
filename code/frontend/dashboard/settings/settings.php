@@ -117,7 +117,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
                                             <!--header-->
-                                            <div class="col-5 mt-3">
+                                            <div class="col-5 ">
                                                 <div class="update-pass-header">
 
                                                     <h4 class="text-left">Update password</h4>
