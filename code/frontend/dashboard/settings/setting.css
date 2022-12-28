@@ -1,0 +1,98 @@
+a {
+    text-decoration: none !important;
+}
+
+.card {
+    border: none !important;
+    border-radius: 10px !important;
+    max-width: 95%;
+}
+
+.section-divider {
+    color: grey;
+}
+
+.delete-account-msg {
+    color: red;
+    line-height: 1.6;
+}
+
+.update-btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    float: right;
+    border: none;
+    border-radius: 15px;
+    color: #000;
+    background-color: rgb(247, 58, 58);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*top right bottom left*/
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    display: flex;
+}
+
+.update-btn:hover {
+    transition: all 0.3s ease 0s;
+    background-color:red;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.update-pass-btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    float: right;
+    border: none;
+    border-radius: 15px;
+    color: #000;
+    background-color: #9EF0FF;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /*top right bottom left*/
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    display: flex;
+}
+
+
+.update-pass-btn:hover {
+    transition: all 0.3s ease 0s;
+    background-color: #181887;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer{
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: normal;
+    background: #fafafa;
+    color: gray;
+}
+
+.all-contents-without-footer{
+    min-height:calc(100vh - 60px) ;
+}
+
+.logoImgSetting{
+    margin-left:-140px !important;
+    margin-bottom: -15px !important;
+}
+
+.logoSetting{
+    margin-left:10px !important;
+}
+
+
+::placeholder {
+    margin-left:20pxs;
+  }
