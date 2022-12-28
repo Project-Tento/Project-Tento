@@ -23,7 +23,7 @@ function isEmailValid($email) {
 //Checks if name consists of only upper and lower case alphabets and white spaces
 
 function isNameValid($name) {
-        return (!preg_match("/^[a-zA-Z-' ]*$/",$name)) ? FALSE : TRUE;
+        return (!preg_match("/^[A-Za-z]*$/",$name)) ? FALSE : TRUE;
 }
 
 ?>
