@@ -91,7 +91,8 @@ function submitForm()
 {
     var submitBtn = document.getElementById('submit-answers');
     submitBtn.click();
-    redirectToLoading();
+    setTimeout(() => {  redirectToLoading(); }, 4000);
+    
 }
 
 function redirectToLoading() {
