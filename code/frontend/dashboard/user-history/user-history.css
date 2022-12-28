@@ -57,3 +57,14 @@ a {
 .all-contents-without-footer{
     min-height:calc(100vh - 70px) ;
 }
+
+
+.logoHistory {
+    font-size: 2.5rem !important;
+    line-height: 1.5 !important;
+}
+
+#sidebar{
+    font-family: "Poppins", Arial, sans-serif !important;
+    line-height: 1.8 !important;
+} 

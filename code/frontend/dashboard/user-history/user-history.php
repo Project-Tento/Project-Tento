@@ -52,7 +52,7 @@ if (!isset($_SESSION["user_id"])) {
         </div>-->
 
             <div class="p-4">
-                <h1><img class="logoImg" src="../favicon.png"><a href="../user-dashboard.php" class="logo"> TENTO</a>
+                <h1><img class="logoImg" src="../favicon.png"><a href="../user-dashboard.php" class="logo logoHistory"> TENTO</a>
                 </h1>
                 <hr>
                 <ul class="list-unstyled components mb-5">
