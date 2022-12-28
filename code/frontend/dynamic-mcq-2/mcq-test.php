@@ -32,59 +32,6 @@ if (!isset($_SESSION["user_id"])) {
 </head>
 
 <body>
-    <!--
-        reference for fetching question text & image, 
-        answer option (four each) and their image(if any)
-        
-        id of total score: total-score
-        id of topic name: topic-name
-        id of question text: 
-        question-1-text
-        question-2-text
-        question-3-text
-        question-4-text
-        question-5-text
-        question-6-text
-        question-7-text
-        question-8-text
-        question-9-text
-        question-10-text
-
-        id of question image
-        question-1-image
-        question-2-image
-        question-3-image
-        question-4-image
-        question-5-image
-        question-6-image
-        question-7-image
-        question-8-image
-        question-9-image
-        question-10-image
-
-
-        id of radio buttons (the circle portion of the option)
-        one1
-        two1
-        .
-        .
-        .
-        ten-three
-        ten-four
-
-        
-        id of images in option format
-        question-1-img-option-a
-        question-1-img-option-b
-        question-1-img-option-c
-        question-1-img-option-d
-        question-2-img-option-a
-        .
-        .
-        .
-        question-10-img-option-d
-        
-    -->
 
     <div class="navbar sticky-top" id="navbar">
 
@@ -215,7 +162,7 @@ if (!isset($_SESSION["user_id"])) {
                     </div>
 
                     <!--THE HINT RETRIEVED HERE-->
-                    <label class="ml-3 mt-1 mb-2 hint-text d-none">Hint: </label>
+                    <label class="ml-3 mt-1 mb-5 hint-text d-none">Hint:&nbsp;<?php echo $row['Hint']; ?></label>
                 </div>
 
 
