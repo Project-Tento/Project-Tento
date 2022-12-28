@@ -22,10 +22,12 @@ if(isset($_POST['submit-settings']))
         if($checkQuizMode == "Timed")
         {
             $_SESSION['setTime'] = $_POST['get-time'];
+            header('Location: ../mcq-test.php');
         }
         else
         {
             $_SESSION['setTime'] = 0;
+            header('Location: ../untimed-test.php');
         }
     }
 
@@ -33,7 +35,7 @@ if(isset($_POST['submit-settings']))
     //echo $_SESSION['setQuestions'];
     //echo $_SESSION['setTime'];
 
-    header('Location: ../mcq-test.php');
+    
     
 }
 
