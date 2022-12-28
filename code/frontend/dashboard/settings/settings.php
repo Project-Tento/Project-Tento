@@ -23,12 +23,12 @@ if (!isset($_SESSION["user_id"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tento | Profile</title>
+    <title>Tento | Settings</title>
     <link rel="stylesheet" href="../user-dashboard.scss">
     <link rel="stylesheet" href="../mds.css">
     <link rel="stylesheet" href="../user-dashboard.css">
     <link rel="stylesheet" href="setting.css">
-    <link rel="stylesheet" href="../../reg-form/reg-form.css">
+    <!-- <link rel="stylesheet" href="../../reg-form/reg-form.css"> -->
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -45,13 +45,6 @@ if (!isset($_SESSION["user_id"])) {
 <body>
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar">
-            <!--<div class="custom-menu">
-            <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                <i class="fa fa-bars"></i>
-                <span class="sr-only">Toggle Menu</span>
-            </button>
-        </div>-->
-
             <div class="p-4">
                 <h1><img class="logoImg logoImgSetting" src="../favicon.png"><a href="../user-dashboard.php" class="logo logoSetting"> TENTO</a>
                 </h1>
@@ -98,10 +91,10 @@ if (!isset($_SESSION["user_id"])) {
 
 
 
-                    <div class="row  mt-3 ml-3">
+                    <div class="row  mt-4 ml-4">
                         <div class="settings-page-header">
                             <span class="page-heading">
-                                <h2>Settings</h2>
+                                <h1 class="fw-bold">Settings</h1>
                             </span>
                         </div>
                     </div>
@@ -120,7 +113,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <div class="col-5 ">
                                                 <div class="update-pass-header">
 
-                                                    <h4 class="text-left">Update password</h4>
+                                                    <h4 class="text-left">Update Password</h4>
                                                     <h6>Ensure your account has a long, random password to stay safe. Must include:
                                                     </h6>
                                                     <ul style="list-style-type:circle"></ul>

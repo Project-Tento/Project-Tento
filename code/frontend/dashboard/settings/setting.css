@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
 a {
     text-decoration: none !important;
 }
@@ -37,7 +39,7 @@ a {
 
 .update-btn:hover {
     transition: all 0.3s ease 0s;
-    background-color:red;
+    background-color: red;
     color: #fff;
     transform: translateY(-5px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
@@ -70,7 +72,7 @@ a {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.footer{
+.footer {
     font-family: "Poppins", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.8;
@@ -79,20 +81,51 @@ a {
     color: gray;
 }
 
-.all-contents-without-footer{
-    min-height:calc(100vh - 60px) ;
+.all-contents-without-footer {
+    min-height: calc(100vh - 60px);
+    font-family: 'Poppins', sans-serif;
 }
 
-.logoImgSetting{
-    margin-left:-140px !important;
-    margin-bottom: -15px !important;
+/* .logoImgSetting {
+    margin-left: -188px !important;
+    margin-bottom: -30px !important;
+} */
+
+/* .logoSetting {
+    margin-left: 10px !important;
+} */
+
+
+/* ::placeholder {
+    margin-left: 20px;
+} */
+
+.logoSetting {
+    font-size: 2.5rem !important;
+    line-height: 1.5 !important;
 }
 
-.logoSetting{
-    margin-left:10px !important;
+#sidebar{
+    font-family: "Poppins", Arial, sans-serif !important;
+    line-height: 1.8 !important;
+} 
+
+/*fields of the form*/
+.formField {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #A6B2FC;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    width: 100%;
+    padding-bottom:5px;
 }
 
+/*toggling password visibility*/
+#togglePassword {
+    margin-left: -30px;
+    cursor: pointer;
+}
 
-::placeholder {
-    margin-left:20pxs;
-  }
