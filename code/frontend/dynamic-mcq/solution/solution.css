@@ -68,8 +68,8 @@ body {
 }
 
 #total-score {
-    text-align: left;
-    padding-left: 30px;
+    text-align: center;
+    font-size: 23px;
 }
 
 .container {
