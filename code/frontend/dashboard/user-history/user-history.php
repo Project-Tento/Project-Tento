@@ -34,8 +34,7 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,8 +65,7 @@ if (!isset($_SESSION["user_id"])) {
                         <a href="../ranking/ranking.php"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
                     </li>
                     <li>
-                        <a href="../topic-list/topic-list.php"><span class="mr-3"><i
-                                    class="fa-solid fa-lines-leaning"></i></span> Exam Topics</a>
+                        <a href="../topic-list/topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i></span> Exam Topics</a>
                     </li>
                     <p class="account-setting-header">Account setting</p>
                     <li>
@@ -107,8 +105,7 @@ if (!isset($_SESSION["user_id"])) {
                     <div class="col-md-12 mt-3">
                         <div class="card">
                             <div class="card-body">
-                                <div id="bootstrap-data-table_wrapper"
-                                    class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                <div id="bootstrap-data-table_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
                                     <!-- <div class="row mb-3">
                                     <div class="col-6">
                                         <div id="bootstrap-data-table_filter" class="dataTables_filter">
@@ -140,42 +137,51 @@ if (!isset($_SESSION["user_id"])) {
                                                                 </thead>
                                                                 <tbody>
 
-                                                                <?php
+                                                                    <?php
 
                                                                     $sqlLoop = "SELECT * FROM testsessions WHERE UserID = '$id'";
                                                                     $resultLoop = $conn->query($sqlLoop);
+                                                                    $row_count = $resultLoop->num_rows;
                                                                     $count = 1;
 
                                                                     //echo $count;
 
-                                                                  
-                                                                        while ($rowL = $resultLoop->fetch_assoc()) { 
-                                                                            $topicID = $rowL['TopicID']; 
+                                                                    if ($row_count > 0) {
+                                                                        while ($rowL = $resultLoop->fetch_assoc()) {
+                                                                            $topicID = $rowL['TopicID'];
                                                                             $sqlTopicName = "SELECT TopicName from topics WHERE TopicID = '$topicID'";
                                                                             $resultTN = $conn->query($sqlTopicName);
                                                                             $rowTN = $resultTN->fetch_assoc();
                                                                             $topicName = $rowTN['TopicName']; ?>
-                                                                            
-                                                                        <!--ONE ROW!!!!!-->
-                                                                        <tr class="mt-2 mb-2">
-                                                                            <td><?php echo $count ?></td>
-                                                                            <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                            <td class="txt-oflo"><?php echo $topicName ?></td>
-                                                                            <td class="txt-oflo"><?php echo $rowL['DateTime']; ?></td>
-                                                                            <td><span class="text-success"><?php echo $rowL['Score']; ?></span></td>
-                                                                        </tr>
-                                                                        <!--end of row-->
-                                                                    <?php $count++;
-                                                                    } 
-                                                                ?>
-                                                                
 
-                                                                    
+                                                                            <!--ONE ROW!!!!!-->
+                                                                            <tr class="mt-2 mb-2">
+                                                                                <td><?php echo $count ?></td>
+                                                                                <!--INCREASE THIS BY 1 EACH TIME-->
+                                                                                <td class="txt-oflo"><?php echo $topicName ?></td>
+                                                                                <td class="txt-oflo"><?php echo $rowL['DateTime']; ?></td>
+                                                                                <td><span class="text-success"><?php echo $rowL['Score']; ?></span></td>
+                                                                            </tr>
+                                                                            <!--end of row-->
+                                                                        <?php $count++;
+                                                                        }
+                                                                    } else { ?>
+
+                                                                        <tr class="mt-2 mb-2">
+                                                                            <td> <?php echo "You have not participated in any quiz yet."; ?> </td>
+                                                                        </tr>
+
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+
+
+
 
 
 
                                                                     <!--test loop begins-->
-                                                                    
+
                                                                     <!--end of test loop-->
 
                                                                 </tbody>
@@ -223,17 +229,13 @@ if (!isset($_SESSION["user_id"])) {
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
