@@ -30,7 +30,10 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico">
     <script src="solution.js"></script>
 </head>
 
@@ -57,6 +60,13 @@ if (!isset($_SESSION["user_id"])) {
     ?>
 
     <div class="container mb-5">
+        <span class="float-end">
+            <button class="hintButton" type="button"
+                onclick="window.location.href='../../dashboard/user-dashboard.php';">
+                <div class="icon fa fa-desktop"></div>
+                <span></span>
+            </button>
+        </span>
 
         <!--insert topic name here-->
         <h1 id="topic-name"><?php echo $topicName['TopicName'] ?></h1>
@@ -79,6 +89,8 @@ if (!isset($_SESSION["user_id"])) {
                     <div class="col-12">
                         <p class="fw-bold each-question-text" id="question-1-text">
                             <?php echo "{$questionNumber}. {$row['QuestionText']}"; ?>
+                            <span class="tick-mark fa-solid fa-circle-check ml-2 d-none"></span>
+                            <span class="cross-mark fa-solid fa-circle-xmark ml-2 d-none"></span>
                         </p>
                         <p>
                             <img id="question-1-img" class="question-image" id="question-1-image">
@@ -111,8 +123,11 @@ if (!isset($_SESSION["user_id"])) {
                             <?php $i = $setQuestions - $questionNumber; ?>
 
                             <!--HIDDEN BUTTON FOR COLORING-->
-                            <button type="button" class="d-none" id="greenButton" onclick="colorThisGreen(<?php echo $questionNumber ?>)">CLICK ME!!!!!</button>
-                            <button type="button" class="d-none" id="redButton" onclick="colorThisRed(<?php echo $userAnswers[$i] ?>, <?php echo $questionNumber ?>)">CLICK ME RED!!!!!</button>
+                            <button type="button" class="d-none" id="greenButton"
+                                onclick="colorThisGreen(<?php echo $questionNumber ?>)">CLICK ME!!!!!</button>
+                            <button type="button" class="d-none" id="redButton"
+                                onclick="colorThisRed(<?php echo $userAnswers[$i] ?>, <?php echo $questionNumber ?>)">CLICK
+                                ME RED!!!!!</button>
 
                             <!------------add incorrectBox to the class list
                                         to the label 
