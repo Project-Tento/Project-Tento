@@ -7,6 +7,7 @@ if (!isset($_SESSION["user_id"])) {
 } else {
 
     $setQuestions = $_SESSION['setQuestions'];
+    $score = $_SESSION['userScore']?$_SESSION['userScore']:0;
     $userAnswers = $_SESSION['userAnswers'];
     $setTopicName = $_SESSION['userTopicChoice'];
     $setTopicID = $_SESSION['setTopicID'];
@@ -71,7 +72,7 @@ if (!isset($_SESSION["user_id"])) {
         <!--insert topic name here-->
         <h1 id="topic-name"><?php echo $topicName['TopicName'] ?></h1>
         <!--GET THE SCORE-->
-        <h6 id="total-score">Total score: <?php echo $setQuestions ?></h6>
+        <h6 id="total-score">Obtained Score: <?php echo  $score?>&nbsp;/&nbsp;<?php echo  $setQuestions?></h6>
         <hr>
 
         <form method="post" id="" action="">
