@@ -61,7 +61,7 @@ if (!isset($_SESSION["user_id"])) {
 
     <div class="container mb-5">
         <span class="float-end">
-            <button class="hintButton" type="button"
+            <button class="backToDashboardButton" type="button"
                 onclick="window.location.href='../../dashboard/user-dashboard.php';">
                 <div class="icon fa fa-desktop"></div>
                 <span></span>
@@ -189,9 +189,8 @@ if (!isset($_SESSION["user_id"])) {
 
             <div class="solution mt-2">
 
-                <div class="solution-text-section">
-                    Solution:
-                    <br>
+                <div class="solution-text-section p-2">
+                    Solution:&nbsp;
                     <?php echo $row['SolutionText']; ?>
                 </div>
                 <br>

@@ -415,10 +415,7 @@ input[type="radio"] {
 
 
 
-
-
-
-.hintButton {
+.backToDashboardButton {
     border: none;
     border-radius: 15px;
     background-color: #716AFF;
@@ -429,17 +426,12 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.hintButton .icon{
-    font-size: 30px;
-    margin-top:10px !important;
+.backToDashboardButton .icon{
+    font-size: 20px;
+    margin-top:13px !important;
 }
 
-/* .hintButton .icon::after{
-    margin-top:-20px !important;
-    margin-left:-20px;
-} */
-
-.hintButton span {
+.backToDashboardButton span {
     cursor: pointer;
     position: relative;
     transition: 0.5s;
@@ -450,10 +442,10 @@ input[type="radio"] {
 }
 
 
-.hintButton span:after {
+.backToDashboardButton span:after {
     content: 'Back To Dashboard';
     opacity: 0;
-    transition: 0.5s;
+    /* transition: 0.2s; */
     margin-left: 10px;
     padding-bottom:20px;
 }
@@ -463,45 +455,23 @@ input[type="radio"] {
     padding-right: 25px;
 } */
 
-.hintButton:hover span:after {
+.backToDashboardButton:hover span:after {
     opacity: 1;
     right: 0;
 }
 
-.hintButton:hover {
+.backToDashboardButton:hover {
     background-color: #181887 !important;
     width: 280px;
 }
 
-/* .hintButton{
-    border: none;
-    border-radius: 15px;
-    background-color: #716AFF;
-    color: #fff;
-    /*top right bottom left*/
-/* padding: 10px; */
-/* text-align: center;
-    width: 150px;
-    height: 40px;
-}
-
-.darkerButton{
-    background-color: #181887 !important;
-}
-
-.hintButton:hover{
-    background-color: #181887 !important;
-}
-
-.hint-text{
-    color:blue;
-    font-weight: bold;
-    font-size: 17px;
-}  */
 
 .solution-text-section {
+    max-width: max-content;
+    border: 1px dashed blue;
     color: blue;
     font-weight: bold;
+    font-size:20px;
 }
 
 
