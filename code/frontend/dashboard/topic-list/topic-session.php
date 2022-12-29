@@ -11,7 +11,22 @@ if (isset($_POST['theTopicName'])) {
 
     //echo $_SESSION['setTopicID'];
 
-    header('Location: ../../dynamic-mcq/take-quiz/take-quiz.php');
+    $topicID = $_SESSION['setTopicID'];
+
+    $sql = "SELECT * FROM questions WHERE TopicID = '$topicID'";
+    $check = mysqli_num_rows(mysqli_query($conn, $sql));
+
+    if($check > 0)
+    {
+        header('Location: ../../dynamic-mcq/take-quiz/take-quiz.php');
+    }
+    else
+    {
+        header('Location: ../../dynamic-mcq/no-quiz-loader.php');
+    }
+
+
+    
 }
 
 ?>
