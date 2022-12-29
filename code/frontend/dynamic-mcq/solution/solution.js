@@ -23,8 +23,29 @@ function markCorrectAnswer(x) {
 
     const circles = document.querySelectorAll('.circle');
     circles[x].classList.add('correctCircle');
+}
 
-    
+
+
+
+function makeQuestionTextGreen(x) {
+    const questionTexts = document.querySelectorAll('#question-1-text');
+    questionTexts[x].classList.add('green-text');
+}
+
+function makeQuestionTextRed(x) {
+    const questionTexts = document.querySelectorAll('#question-1-text');
+    questionTexts[x].classList.add('red-text');
+}
+
+function crossMarkAppears(x) {
+    const crossMarks = document.querySelectorAll('.cross-mark');
+    crossMarks[x].classList.remove('d-none');
+}
+
+function tickMarkAppears(x) {
+    const tickMarks = document.querySelectorAll('.tick-mark');
+    tickMarks[x].classList.remove('d-none');
 }
 
 
@@ -62,8 +83,9 @@ function colorThisRed(userValue, y) {
     var userIdx = -1; //user input index of radio button
 
     //user answer is null
-    if (userValue == 'null') {
-        ;
+    if (userValue == null) {
+        makeQuestionTextRed(y);
+        crossMarkAppears(y);
     }
     //user 
     else { //not null
@@ -76,18 +98,20 @@ function colorThisRed(userValue, y) {
             //checking radio button value with user input value
             if (checkValue == userValue) {
                 userIdx = z; //we got the index of radiobutton
-                
+
                 //we know which radio button was clicked previously by user
                 const answerBoxes = document.querySelectorAll('.answer');
                 var answerValue = answerBoxes[y].getAttribute('value');
 
                 if (userValue == answerValue) {
-                    ;
+                    makeQuestionTextGreen(y);
+                    tickMarkAppears(y);
                 }
                 else {
-
-                    
                     markIncorrectAnswer(userIdx);
+
+                    makeQuestionTextRed(y);
+                    crossMarkAppears(y);
                 }
                 break;
             }
