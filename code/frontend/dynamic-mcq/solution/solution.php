@@ -6,8 +6,10 @@ if (!isset($_SESSION["user_id"])) {
     header("Location: ../../reg-form/login-form.php");
 } else {
 
+    $questionIDs = $_SESSION['questionIDs'];
+
     $setQuestions = $_SESSION['setQuestions'];
-    $score = $_SESSION['userScore']?$_SESSION['userScore']:0;
+    $score = $_SESSION['userScore'] ? $_SESSION['userScore'] : 0;
     $userAnswers = $_SESSION['userAnswers'];
     $setTopicName = $_SESSION['userTopicChoice'];
     $setTopicID = $_SESSION['setTopicID'];
@@ -53,11 +55,11 @@ if (!isset($_SESSION["user_id"])) {
     <?php
 
     $questionNumber = 1;
-    $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID='$setTopicID'";
+    
     $sqlForTopicName = "SELECT TopicName FROM topics WHERE TopicID='$setTopicID'";
-    $result = $conn->query($sql);
     $resultForTopicName = $conn->query($sqlForTopicName);
     $topicName = $resultForTopicName->fetch_assoc();
+
     ?>
 
     <div class="container mb-5">
@@ -72,15 +74,25 @@ if (!isset($_SESSION["user_id"])) {
         <!--insert topic name here-->
         <h1 id="topic-name"><?php echo $topicName['TopicName'] ?></h1>
         <!--GET THE SCORE-->
-        <h6 id="total-score">Obtained Score: <?php echo  $score?>&nbsp;/&nbsp;<?php echo  $setQuestions?></h6>
+        <h6 id="total-score">Obtained Score: <?php echo  $score ?>&nbsp;/&nbsp;<?php echo  $setQuestions ?></h6>
         <hr>
 
         <form method="post" id="" action="">
-
             <?php
-            if ($result->num_rows > 0) {
-                while ($questionNumber <= $setQuestions) {
+           
+            //echo $i;
 
+            while ($questionNumber<=$setQuestions) {
+                $i = $setQuestions - $questionNumber; 
+
+
+                $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID='$setTopicID' AND QuestionID = '$questionIDs[$i]'";
+                $result = $conn->query($sql);
+                $s=0;
+
+                if ($result->num_rows > 0) {
+
+                    
                     $row = $result->fetch_assoc();
             ?>
 
@@ -121,14 +133,15 @@ if (!isset($_SESSION["user_id"])) {
                             <input type="text" name="answer<?php echo "{$questionNumber}"; ?>" class="answer d-none"
                                 value="<?php echo $row['AnswerText']; ?>" />
 
-                            <?php $i = $setQuestions - $questionNumber; ?>
+
 
                             <!--HIDDEN BUTTON FOR COLORING-->
                             <button type="button" class="d-none" id="greenButton"
                                 onclick="colorThisGreen(<?php echo $questionNumber ?>)">CLICK ME!!!!!</button>
-                            <button type="button" class="d-none" id="redButton"
-                                onclick="colorThisRed(<?php echo $userAnswers[$i] ?>, <?php echo $questionNumber ?>)">CLICK
-                                ME RED!!!!!</button>
+                            <button type="button" id="redButton"
+                                onclick="colorThisRed('<?php echo $userAnswers[$i] ?>', <?php echo $questionNumber ?>)">
+                                CLICK ME RED!!!! <?php echo $userAnswers[$i] ?>
+                            </button>
 
                             <!------------add incorrectBox to the class list
                                         to the label 
@@ -202,9 +215,12 @@ if (!isset($_SESSION["user_id"])) {
             </div>
 
             <?php
-                    $questionNumber += 1;
+                    
                 }
-            } ?>
+
+                $questionNumber += 1;
+            }
+            ?>
 
             <!-- <div class="col-12">
                 <div class="d-flex justify-content-center">
@@ -218,7 +234,8 @@ if (!isset($_SESSION["user_id"])) {
 
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
     <script src="solution.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 
 </body>
 
