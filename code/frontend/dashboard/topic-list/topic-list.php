@@ -134,7 +134,7 @@ if (!isset($_SESSION["user_id"])) {
                                         <a class="nav-link" href="../profile/profile.php"><i class="fa fa-user"></i> My
                                             Profile</a>
 
-                                        <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                                        <a class="nav-link" href="../settings/settings.php"><i class="fa fa-cog"></i> Settings</a>
 
                                         <a class="nav-link" href="../../reg-form/backend/logout.php"><i
                                                 class="fa fa-power-off"></i>

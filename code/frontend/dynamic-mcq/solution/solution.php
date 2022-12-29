@@ -138,9 +138,9 @@ if (!isset($_SESSION["user_id"])) {
                             <!--HIDDEN BUTTON FOR COLORING-->
                             <button type="button" class="d-none" id="greenButton"
                                 onclick="colorThisGreen(<?php echo $questionNumber ?>)">CLICK ME!!!!!</button>
-                            <button type="button" id="redButton"
+                            <button type="button" id="redButton" class="d-none"
                                 onclick="colorThisRed('<?php echo $userAnswers[$i] ?>', <?php echo $questionNumber ?>)">
-                                CLICK ME RED!!!! <?php echo $userAnswers[$i] ?>
+                                CLICK ME RED!!!! 
                             </button>
 
                             <!------------add incorrectBox to the class list
