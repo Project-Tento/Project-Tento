@@ -14,7 +14,7 @@ if (isset($_GET["token"])) {
     
     $showUserId = mysqli_fetch_assoc(mysqli_query($conn, "SELECT UserID FROM students WHERE Code='{$_GET["token"]}'"));
     $_SESSION["user_id"] = $showUserId['UserID'];
-    header("Location: http://localhost/test/frontend/reg-form/login-form.php");
+    header("Location: http://localhost/code/frontend/reg-form/login-form.php");
 } else {
     $_SESSION['error'] = 'notVerified';
     //header("Location: http://localhost/test/reg-form/register-form.php");
