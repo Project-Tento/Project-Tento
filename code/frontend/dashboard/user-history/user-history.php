@@ -65,6 +65,12 @@ if (!isset($_SESSION["user_id"])) {
                         <a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
                     </li> -->
                     <li>
+<<<<<<< Updated upstream
+=======
+                        <a href="../ranking/ranking.php"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
+                    </li>
+                    <li>
+>>>>>>> Stashed changes
                         <a href="../topic-list/topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i></span> Exam Topics</a>
                     </li>
                     <p class="account-setting-header">Account setting</p>
