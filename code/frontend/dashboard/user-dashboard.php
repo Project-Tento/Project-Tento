@@ -157,7 +157,7 @@ if (!isset($_SESSION["user_id"])) {
                                                         <p class="text-sm mb-0 text-capitalize font-weight-bold">Summary
                                                         </p>
                                                         <h5 class="font-weight-bolder mb-0">
-                                                            Total Quizes Attended
+                                                            Total Quizzes Attended
                                                             <!-------=================================================================
 								  ============---insert total number of quizzes---==========================
 								  ==============================================================----------->
