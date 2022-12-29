@@ -66,9 +66,9 @@ if (!isset($_SESSION["user_id"])) {
                         <a href="../user-history/user-history.php"><span class="fa fa-history mr-3"></span> User
                             History</a>
                     </li>
-                    <!-- <li>
-                        <a href="#"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
-                    </li> -->
+                    <li>
+                        <a href="../ranking/ranking.php"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
+                    </li>
                     <li class="active">
                         <a href="topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i>
                             </span> Exam Topics</a>
