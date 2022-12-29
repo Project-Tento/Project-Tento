@@ -356,6 +356,10 @@ label.box:hover {
 }
 
 
+label.box{
+    max-width: fit-content !important;
+    min-width: 200px !important;
+}
 
 
 /*the box*/

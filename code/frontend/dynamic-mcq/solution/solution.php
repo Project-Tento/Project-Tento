@@ -105,9 +105,9 @@ if (!isset($_SESSION["user_id"])) {
                             <span class="tick-mark fa-solid fa-circle-check ml-2 d-none"></span>
                             <span class="cross-mark fa-solid fa-circle-xmark ml-2 d-none"></span>
                         </p>
-                        <p>
+                        <!-- <p>
                             <img id="question-1-img" class="question-image" id="question-1-image">
-                        </p>
+                        </p> -->
 
 
 
@@ -155,7 +155,7 @@ if (!isset($_SESSION["user_id"])) {
                                     <span class="circle"></span>
                                     <span class="subject">
                                         <?php echo $row['ChoiceAText']; ?>
-                                        <img id="question-1-img-option-a" alt="">
+                                        <!-- <img id="question-1-img-option-a" alt=""> -->
                                     </span>
                                 </div>
                             </label>
@@ -166,7 +166,7 @@ if (!isset($_SESSION["user_id"])) {
                                     <span class="circle"></span>
                                     <span class="subject">
                                         <?php echo $row['ChoiceBText']; ?>
-                                        <img id="question-1-img-option-b" alt="">
+                                        <!-- <img id="question-1-img-option-b" alt=""> -->
                                     </span>
                                 </div>
                             </label>
@@ -177,7 +177,7 @@ if (!isset($_SESSION["user_id"])) {
                                     <span class="circle"></span>
                                     <span class="subject">
                                         <?php echo $row['ChoiceCText']; ?>
-                                        <img id="question-1-img-option-c" alt="">
+                                        <!-- <img id="question-1-img-option-c" alt=""> -->
                                     </span>
                                 </div>
                             </label>
@@ -189,7 +189,7 @@ if (!isset($_SESSION["user_id"])) {
                                     <span class="subject">
                                         <?php echo $row['ChoiceDText']; ?>
                                     </span>
-                                    <img id="question-1-img-option-d" alt="">
+                                    <!-- <img id="question-1-img-option-d" alt=""> -->
                                 </div>
                             </label>
 
@@ -203,15 +203,15 @@ if (!isset($_SESSION["user_id"])) {
 
             <div class="solution mt-2">
 
-                <div class="solution-text-section p-2">
+                <div class="solution-text-section p-2 mt-4">
                     Solution:&nbsp;
                     <?php echo $row['SolutionText']; ?>
                 </div>
                 <br>
-                <div class="solution-image-section">
+                <!-- <div class="solution-image-section"> -->
                     <!--SOLUTION IMAGE GOES HERE, ADD SRC---------------------->
-                    <img id="solution-image">
-                </div>
+                    <!-- <img id="solution-image">
+                </div> -->
             </div>
 
             <?php

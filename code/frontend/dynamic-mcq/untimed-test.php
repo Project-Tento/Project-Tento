@@ -29,6 +29,7 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="untimed-test.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="shortcut icon" href="../favicon.ico">
 </head>
@@ -63,23 +64,23 @@ if (!isset($_SESSION["user_id"])) {
                     $row = $result->fetch_assoc();
             ?>
 
-                    <div class="row">
+                    <div class="row mt-3">
                         <!--question1-->
                         <div class="question<?php echo "{$questionNumber}"; ?>">
                             <div class="col-12">
-                                <p class="fw-bold each-question-text" id="question-1-text">
+                                <p class="fw-bold each-question-text" id="question-1-text mb-3">
                                     <?php echo "{$questionNumber}. {$row['QuestionText']}"; ?>
                                     <!----------------------THE HINT BUTTON------------------->
                                     <span class="float-end">
-                                        <button class="hintButton ml-5 float-end" type="button" onclick="showHint(<?php echo $questionNumber ?>)">
+                                        <button class="hintButton ml-3 float-end" type="button" onclick="showHint(<?php echo $questionNumber ?>)">
                                             Show Hint
                                             <iconify-icon class="hintIcon ml-2" icon="mdi:lightbulb-on-outline"></iconify-icon>
                                         </button>
                                     </span>
                                 </p>
-                                <p>
+                                <!-- <p>
                                     <img id="question-1-img" class="question-image" id="question-1-image">
-                                </p>
+                                </p> -->
 
 
 
@@ -104,7 +105,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="circle"></span>
                                             <span class="subject">
                                                 <?php echo $row['ChoiceAText']; ?>
-                                                <img id="question-1-img-option-a" alt="">
+                                                <!-- <img id="question-1-img-option-a" alt=""> -->
                                             </span>
                                         </div>
                                     </label>
@@ -114,7 +115,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="circle"></span>
                                             <span class="subject">
                                                 <?php echo $row['ChoiceBText']; ?>
-                                                <img id="question-1-img-option-b" alt="">
+                                                <!-- <img id="question-1-img-option-b" alt=""> -->
                                             </span>
                                         </div>
                                     </label>
@@ -124,7 +125,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="circle"></span>
                                             <span class="subject">
                                                 <?php echo $row['ChoiceCText']; ?>
-                                                <img id="question-1-img-option-c" alt="">
+                                                <!-- <img id="question-1-img-option-c" alt=""> -->
                                             </span>
                                         </div>
                                     </label>
@@ -135,7 +136,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="subject">
                                                 <?php echo $row['ChoiceDText']; ?>
                                             </span>
-                                            <img id="question-1-img-option-d" alt="">
+                                            <!-- <img id="question-1-img-option-d" alt=""> -->
                                         </div>
                                     </label>
 
