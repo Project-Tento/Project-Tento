@@ -34,7 +34,8 @@ if (!isset($_SESSION["user_id"])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <link rel="shortcut icon" href="../favicon.ico">
@@ -51,7 +52,8 @@ if (!isset($_SESSION["user_id"])) {
         </div>-->
 
             <div class="p-4">
-                <h1><img class="logoImg" src="../favicon.png"><a href="../user-dashboard.php" class="logo logoHistory"> TENTO</a>
+                <h1><img class="logoImg" src="../favicon.png"><a href="../user-dashboard.php" class="logo logoHistory">
+                        TENTO</a>
                 </h1>
                 <hr>
                 <ul class="list-unstyled components mb-5">
@@ -59,13 +61,16 @@ if (!isset($_SESSION["user_id"])) {
                         <a href="../user-dashboard.php"><span class="fa fa-desktop mr-3"></span> Dashboard</a>
                     </li>
                     <li>
-                        <a href="../user-history/user-history.php"><span class="fa fa-history mr-3"></span> User History</a>
+                        <a href="../user-history/user-history.php"><span class="fa fa-history mr-3"></span> User
+                            History</a>
                     </li>
                     <li class="active">
-                        <a href="ranking.php"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
+                        <a href="ranking.php"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span>
+                            Ranking</a>
                     </li>
                     <li>
-                        <a href="../topic-list/topic-list.php"><span class="mr-3"><i class="fa-solid fa-lines-leaning"></i></span> Exam Topics</a>
+                        <a href="../topic-list/topic-list.php"><span class="mr-3"><i
+                                    class="fa-solid fa-lines-leaning"></i></span> Exam Topics</a>
                     </li>
                     <p class="account-setting-header">Account setting</p>
                     <li>
@@ -108,36 +113,37 @@ if (!isset($_SESSION["user_id"])) {
                     $rowTopic = $resultTopic->fetch_assoc();
 
                     while ($rowTopic = $resultTopic->fetch_assoc()) { ?>
-                        <?php $topicID = $rowTopic['TopicID']; ?>
-                        <!--START OF LOOP FOR ONE TOPIC_____________________________-->
-                        <div class="col-12 mt-3">
-                            <span>
-                                <h3><?php echo $rowTopic['TopicName']; ?></h3>
-                            </span>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div id="bootstrap-data-table_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
+                    <?php $topicID = $rowTopic['TopicID']; ?>
+                    <!--START OF LOOP FOR ONE TOPIC_____________________________-->
+                    <div class="col-12 mt-3">
+                        <span>
+                            <h3 class="ml-3 mt-4"><?php echo $rowTopic['TopicName']; ?></h3>
+                        </span>
+                        <div class="card">
+                            <div class="card-body">
+                                <div id="bootstrap-data-table_wrapper"
+                                    class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
 
 
-                                            <div class="row">
-                                                <div class="col-md-12 col-lg-12 col-sm-12">
-                                                    <div class="white-box">
-                                                        <div class="table-responsive">
-                                                            <table class="table no-wrap">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <!--the table headings-->
-                                                                        <th class="border-top-0">Rank</th>
-                                                                        <th class="border-top-0">User Name</th>
-                                                                        <th class="border-top-0">Score (%)</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-12 col-sm-12">
+                                                <div class="white-box">
+                                                    <div class="table-responsive">
+                                                        <table class="table no-wrap">
+                                                            <thead>
+                                                                <tr>
+                                                                    <!--the table headings-->
+                                                                    <th class="border-top-0">Rank</th>
+                                                                    <th class="border-top-0">User Name</th>
+                                                                    <th class="border-top-0">Score (%)</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
 
-                                                                    <?php
+                                                                <?php
                                                                     $sqlLoop = "SELECT Name, ROUND(AVG(Percent), 2) as Avg_Rank  
                                                                     FROM students NATURAL JOIN testsessions
                                                                     WHERE TopicID = '$topicID'
@@ -156,30 +162,32 @@ if (!isset($_SESSION["user_id"])) {
                                                                             $userName = $rowL['Name'];
                                                                             $scorePercent = $rowL['Avg_Rank']; ?>
 
-                                                                            <!--ONE ROW!!!!!-->
-                                                                            <tr class="mt-2 mb-2 rank-row<?php echo $count ?>">
-                                                                                <td><?php echo $count ?></td>
-                                                                                <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                                <td class="txt-oflo"><?php echo $userName; ?></td>
-                                                                                <td><span class="text-success"><?php echo $scorePercent; ?></span></td>
-                                                                            </tr>
-                                                                            <!--end of row-->
-                                                                        <?php $count++;
+                                                                <!--ONE ROW!!!!!-->
+                                                                <tr class="mt-2 mb-2 rank-row<?php echo $count ?>">
+                                                                    <td><?php echo $count ?></td>
+                                                                    <!--INCREASE THIS BY 1 EACH TIME-->
+                                                                    <td class="txt-oflo"><?php echo $userName; ?></td>
+                                                                    <td><span
+                                                                            class="text-success"><?php echo $scorePercent; ?></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <!--end of row-->
+                                                                <?php $count++;
                                                                         }
                                                                     } else { ?>
-                                                                        <tr class="mt-2 mb-2">
-                                                                            <td> <?php echo "No user have participated in any quiz under this topic yet."; ?> </td>
-                                                                        </tr>
-                                                                    <?php }
+                                                                <tr class="mt-4 mb-4">
+                                                                    <td> <?php echo "No user have participated in any quiz under this topic yet."; ?>
+                                                                    </td>
+                                                                </tr>
+                                                                <?php }
                                                                     ?>
 
-                                                                    <!--test loop begins-->
+                                                                <!--test loop begins-->
 
-                                                                    <!--end of test loop-->
+                                                                <!--end of test loop-->
 
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
                                             </div>
@@ -188,12 +196,13 @@ if (!isset($_SESSION["user_id"])) {
                                 </div>
                             </div>
                         </div>
-                </div>
-                <!--END OF TOPIC LOOP----------------------------------------->
-            <?php
+                    </div>
+                    <!--END OF TOPIC LOOP----------------------------------------->
+                    <?php
                     } ?>
 
 
+                </div>
             </div>
 
             <footer class="footer pt-3  ">
@@ -224,13 +233,17 @@ if (!isset($_SESSION["user_id"])) {
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
