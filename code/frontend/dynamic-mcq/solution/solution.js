@@ -3,7 +3,7 @@ function colorAll(x) {
     const redButton = document.querySelectorAll('#redButton');
     for (let i = 0; i < x; i++) {
         greenButton[i].click();
-        redButton[i].click();
+        redButton[i].click(); 
     }
 }
 
@@ -77,13 +77,12 @@ function colorThisGreen(x) {
 //x is userAnswerValue
 //y is index
 function colorThisRed(userValue, y) {
-
     y = y - 1; //questionNumber - 1
 
     var userIdx = -1; //user input index of radio button
 
     //user answer is null
-    if (userValue == null) {
+    if (userValue == 'null') {
         makeQuestionTextRed(y);
         crossMarkAppears(y);
     }
