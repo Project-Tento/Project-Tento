@@ -32,10 +32,14 @@ if (!isset($_SESSION["user_id"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="take-quiz.css">
@@ -62,6 +66,17 @@ if (!isset($_SESSION["user_id"])) {
 
 
     <div class="container mb-5">
+
+
+        <span class="float-end">
+            <button class="backToDashboardButton" type="button"
+                onclick="window.location.href='../../dashboard/user-dashboard.php';">
+                <div class="icon fa fa-desktop"></div>
+                <span></span>
+            </button>
+        </span> <br><br><br>
+
+
         <span id="header">
             <h1 class="dark-blue"><strong><?php echo $_SESSION['userTopicChoice'] ?></strong></h1>
             <h4>Choose <strong class="dark-blue">Default</strong> settings or <strong
@@ -92,8 +107,10 @@ if (!isset($_SESSION["user_id"])) {
 
 
                         <!--the label shows description about the selected settings-->
-                        <label id="default-setting-label" class="dark-blue text-justify">Default setting includes <strong>10
-                            questions</strong> in timed mode with a duration of <strong>20 minutes</strong>. </label>
+                        <label id="default-setting-label" class="dark-blue text-justify">Default setting includes
+                            <strong>10
+                                questions</strong> in timed mode with a duration of <strong>20 minutes</strong>.
+                        </label>
                         <label id="customized-setting-label" class="dark-blue text-justify d-none">Customized setting
                             allows choosing number of questions and the time duration. </label>
                     </div>
@@ -102,7 +119,7 @@ if (!isset($_SESSION["user_id"])) {
 
 
 
-                
+
                 <div class="change-at-default-mode">
 
                     <!--NUMBER OF QUESTION---------------------->
@@ -115,7 +132,8 @@ if (!isset($_SESSION["user_id"])) {
                         <div class="col-md-8">
 
                             <div class="dropdown question-count-dropdown">
-                                <select name="get-question-count" id="get-question-count" disabled onchange="javascript:dynamicdropdown(this.options[this.selectedIndex].value);">
+                                <select name="get-question-count" id="get-question-count" disabled
+                                    onchange="javascript:dynamicdropdown(this.options[this.selectedIndex].value);">
                                     <option value="5">5</option>
                                     <option value="10" selected="selected">10</option>
                                     <option value="15">15</option>
@@ -135,10 +153,12 @@ if (!isset($_SESSION["user_id"])) {
 
                         <div class="col-md-8 time-mode-selection-radio grey">
                             <label>
-                                <input type="radio" name="quiz-mode" id="untimed" value="Untimed" disabled onclick="disableTimeSelection()">Untimed
+                                <input type="radio" name="quiz-mode" id="untimed" value="Untimed" disabled
+                                    onclick="disableTimeSelection()">Untimed
                             </label>
                             <label>
-                                <input type="radio" name="quiz-mode" id="timed" value="Timed" checked="checked" disabled onclick="enableTimeSelection()">Timed
+                                <input type="radio" name="quiz-mode" id="timed" value="Timed" checked="checked" disabled
+                                    onclick="enableTimeSelection()">Timed
 
                             </label>
                         </div>
@@ -147,13 +167,15 @@ if (!isset($_SESSION["user_id"])) {
                     <!--TOTAL TIME of the quiz----------------------->
                     <div class="row mt-1">
                         <div class="col-4 text-center">
-                            <label class="labels ml-3 total-time-label grey">Total time (in minutes): </label> &nbsp; &nbsp;
+                            <label class="labels ml-3 total-time-label grey">Total time (in minutes): </label> &nbsp;
+                            &nbsp;
                         </div>
 
                         <div class="col-md-8">
 
                             <div class="dropdown time-dropdown">
-                                <select name="get-time" id="get-time" disabled onchange="javascript:changeRecommndedLabel(this.options[this.selectedIndex].value);">
+                                <select name="get-time" id="get-time" disabled
+                                    onchange="javascript:changeRecommndedLabel(this.options[this.selectedIndex].value);">
                                     <option value="0.1">(demo)</option>
                                     <option value="10">10</option>
                                     <option value="20" selected="selected">20</option>
@@ -177,7 +199,8 @@ if (!isset($_SESSION["user_id"])) {
             <div class="col-12">
                 <div class="d-flex justify-content-center">
                     <!--Cannot add window.location.href because of type=submit, maybe redirect in php-->
-                    <button type="submit" class="submit-button" name="submit-settings" id="submit-settings">Continue</button>
+                    <button type="submit" class="submit-button" name="submit-settings"
+                        id="submit-settings">Continue</button>
                 </div>
             </div>
 
