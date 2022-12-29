@@ -68,3 +68,8 @@ a {
     font-family: "Poppins", Arial, sans-serif !important;
     line-height: 1.8 !important;
 } 
+
+.rank-row1{
+    font-weight:bold;
+    font-size: 25px;
+}

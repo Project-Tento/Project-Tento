@@ -96,7 +96,7 @@ if (!isset($_SESSION["user_id"])) {
                 </h4>
 
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="submit-button">View Solution</button>
+                    <button type="submit" class="submit-button" onclick="window.location.href='../solution/solution.php' ;">View Solution</button>
                 </div>
             </div>
 

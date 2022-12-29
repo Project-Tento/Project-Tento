@@ -131,7 +131,6 @@ if (!isset($_SESSION["user_id"])) {
                                                                 <tbody>
 
                                                                 <?php
-
                                                                     $sqlLoop = "SELECT * FROM students NATURAL JOIN testsessions ORDER BY Percent DESC";
                                                                     $resultLoop = $conn->query($sqlLoop);
 
@@ -148,7 +147,7 @@ if (!isset($_SESSION["user_id"])) {
                                                                             $topicName = $rowTN['TopicName']; 
 
                                                                             $scorePercent = $rowL['Percent']; ?>
-                                                                            
+ 
                                                                         <!--ONE ROW!!!!!-->
                                                                         <tr class="mt-2 mb-2 rank-row<?php echo $count ?>">
                                                                             <td><?php echo $count ?></td>
