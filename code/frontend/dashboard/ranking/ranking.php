@@ -110,7 +110,6 @@ if (!isset($_SESSION["user_id"])) {
                     <?php
                     $sqlTopic = "SELECT * FROM topics";
                     $resultTopic = $conn->query($sqlTopic);
-                    $rowTopic = $resultTopic->fetch_assoc();
 
                     while ($rowTopic = $resultTopic->fetch_assoc()) { ?>
                     <?php $topicID = $rowTopic['TopicID']; ?>
