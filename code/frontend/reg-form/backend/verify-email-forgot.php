@@ -13,10 +13,10 @@ if (isset($_GET["token"])) {
     mysqli_query($conn, $sql);
     
     $showUserId = mysqli_fetch_assoc(mysqli_query($conn, "SELECT UserID FROM students WHERE Code='{$_GET["token"]}'"));
-    header("Location: http://localhost/test/frontend/reg-form/forgot-password/reset-password.php");
+    header("Location: http://localhost/code/frontend/reg-form/forgot-password/reset-password.php");
 } else {
     $_SESSION['error'] = 'notVerified';
-    header("Location: http://localhost/test/frontend/reg-form/forgot-password/forgot-password-email-verification.php");
+    header("Location: http://localhost/code/frontend/reg-form/forgot-password/forgot-password-email-verification.php");
 }
 
 ?>
