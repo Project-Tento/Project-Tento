@@ -102,7 +102,7 @@ if (!isset($_SESSION["user_id"])) {
 
                     </div>
 
-                    <?php 
+                    <?php
                     $sqlTopic = "SELECT * FROM topics";
                     $resultTopic = $conn->query($sqlTopic);
                     $rowTopic = $resultTopic->fetch_assoc();
@@ -145,24 +145,32 @@ if (!isset($_SESSION["user_id"])) {
                                                                     ORDER BY Avg_Rank DESC";
 
                                                                     $resultLoop = $conn->query($sqlLoop);
+                                                                    $row_count = $resultLoop->num_rows;
 
                                                                     $count = 1;
 
+                                                                    if ($row_count > 0) {
 
-                                                                    while ($rowL = $resultLoop->fetch_assoc()) {
-                                                                        $userName = $rowL['Name'];
-                                                                        $scorePercent = $rowL['Avg_Rank']; ?>
 
-                                                                        <!--ONE ROW!!!!!-->
-                                                                        <tr class="mt-2 mb-2 rank-row<?php echo $count ?>">
-                                                                            <td><?php echo $count ?></td>
-                                                                            <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                            <td class="txt-oflo"><?php echo $userName; ?></td>
-                                                                            <td><span class="text-success"><?php echo $scorePercent; ?></span></td>
+                                                                        while ($rowL = $resultLoop->fetch_assoc()) {
+                                                                            $userName = $rowL['Name'];
+                                                                            $scorePercent = $rowL['Avg_Rank']; ?>
+
+                                                                            <!--ONE ROW!!!!!-->
+                                                                            <tr class="mt-2 mb-2 rank-row<?php echo $count ?>">
+                                                                                <td><?php echo $count ?></td>
+                                                                                <!--INCREASE THIS BY 1 EACH TIME-->
+                                                                                <td class="txt-oflo"><?php echo $userName; ?></td>
+                                                                                <td><span class="text-success"><?php echo $scorePercent; ?></span></td>
+                                                                            </tr>
+                                                                            <!--end of row-->
+                                                                        <?php $count++;
+                                                                        }
+                                                                    } else { ?>
+                                                                        <tr class="mt-2 mb-2">
+                                                                            <td> <?php echo "No user have participated in any quiz under this topic yet."; ?> </td>
                                                                         </tr>
-                                                                        <!--end of row-->
-                                                                    <?php $count++;
-                                                                    }
+                                                                    <?php }
                                                                     ?>
 
                                                                     <!--test loop begins-->
