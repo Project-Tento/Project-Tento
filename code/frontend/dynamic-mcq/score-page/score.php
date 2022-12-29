@@ -22,9 +22,12 @@ if (!isset($_SESSION["user_id"])) {
     $sql = "SELECT * FROM motivationalquotes WHERE QuoteID='$searchID'";
     $result = $conn->query($sql);
 
+    //Storing in test sessions
+
+    $percentageScore = number_format((($score/$numberOfQuestions)*100),1);
     $storeScore = $score . '/' . $numberOfQuestions;
 
-    $sqlTestSession = "INSERT INTO testsessions (SessionID, Score, DateTime, UserID, TopicID) values (default, '$storeScore', now(), '$id', '$setTopicID')";
+    $sqlTestSession = "INSERT INTO testsessions (SessionID, Score, DateTime, UserID, TopicID, Percent) values (default, '$storeScore', now(), '$id', '$setTopicID', '$percentageScore')";
     $insert = $conn->query($sqlTestSession);
 
     // for($i=0; $i<count($_SESSION['userAnswers']); $i++)

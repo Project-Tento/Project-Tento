@@ -131,28 +131,30 @@ if (!isset($_SESSION["user_id"])) {
                                                                 <tbody>
 
                                                                 <?php
-
-                                                                    $sqlLoop = "SELECT * FROM testsessions WHERE UserID = '$id'";
+                                                                    $sqlLoop = "SELECT * FROM students NATURAL JOIN testsessions ORDER BY Percent DESC";
                                                                     $resultLoop = $conn->query($sqlLoop);
-                                                                    $count = 1;
 
-                                                                    //echo $count;
+                                                                    $count=1;
 
                                                                   
-                                                                        while ($rowL = $resultLoop->fetch_assoc()) { 
+                                                                        while ($rowL = $resultLoop->fetch_assoc()) {
+                                                                            $userName = $rowL['Name'];
                                                                             $topicID = $rowL['TopicID']; 
+
                                                                             $sqlTopicName = "SELECT TopicName from topics WHERE TopicID = '$topicID'";
                                                                             $resultTN = $conn->query($sqlTopicName);
                                                                             $rowTN = $resultTN->fetch_assoc();
-                                                                            $topicName = $rowTN['TopicName']; ?>
-                                                                            
+                                                                            $topicName = $rowTN['TopicName']; 
+
+                                                                            $scorePercent = $rowL['Percent']; ?>
+ 
                                                                         <!--ONE ROW!!!!!-->
                                                                         <tr class="mt-2 mb-2 rank-row<?php echo $count ?>">
                                                                             <td><?php echo $count ?></td>
                                                                             <!--INCREASE THIS BY 1 EACH TIME-->
-                                                                            <td class="txt-oflo"><?php echo $topicName ?></td>
-                                                                            <td class="txt-oflo"><?php echo $rowL['DateTime']; ?></td>
-                                                                            <td><span class="text-success"><?php echo $rowL['Score']; ?></span></td>
+                                                                            <td class="txt-oflo"><?php echo $userName; ?></td>
+                                                                            <td class="txt-oflo"><?php echo $topicName; ?></td>
+                                                                            <td><span class="text-success"><?php echo $scorePercent; ?></span></td>
                                                                         </tr>
                                                                         <!--end of row-->
                                                                     <?php $count++;

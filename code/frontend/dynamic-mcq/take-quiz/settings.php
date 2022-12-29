@@ -13,6 +13,7 @@ if(isset($_POST['submit-settings']))
         //echo "default";
         $_SESSION['setQuestions'] = 10;
         $_SESSION['setTime'] = 20;
+        header('Location: ../mcq-test.php');
     }
     else
     {
