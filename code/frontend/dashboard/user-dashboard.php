@@ -161,7 +161,21 @@ if (!isset($_SESSION["user_id"])) {
                                                             <!-------=================================================================
 								  ============---insert total number of quizzes---==========================
 								  ==============================================================----------->
-                                                            <div class="text-success text-md font-weight-bolder">17
+                                                            <?php
+
+                                                            $sqlNoQuiz = "SELECT COUNT(*) AS count FROM testsessions WHERE UserID = '$id'";
+                                                            $resultNoQuiz = $conn->query($sqlNoQuiz);
+                                                            $rowNoQuiz = $resultNoQuiz->fetch_assoc();
+                                                            $totalQuiz = $rowNoQuiz['count'];
+
+                                                            $sqlScore = "SELECT * FROM testsessions WHERE UserID = '$id' ORDER BY SessionID DESC LIMIT 1";
+                                                            $resultScore = $conn->query($sqlScore);
+                                                            $rowScore = $resultScore->fetch_assoc();
+                                                            $recentScore = $rowScore['Score'];
+
+                                                            ?>
+
+                                                            <div class="text-success text-md font-weight-bolder"><?php echo $totalQuiz; ?>
                                                             </div>
                                                         </h5>
                                                     </div>
@@ -214,7 +228,7 @@ if (!isset($_SESSION["user_id"])) {
 								  ==============================================================----------->
                                                             <div class="text-success text-md font-weight-bolder"
                                                                 id="recent-score">
-                                                                10/15
+                                                                <?php echo $recentScore; ?>
                                                             </div>
                                                         </h5>
                                                     </div>
