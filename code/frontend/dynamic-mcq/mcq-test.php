@@ -53,7 +53,7 @@ if (!isset($_SESSION["user_id"])) {
 
     $questionNumber = 1;
     
-    $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID=$setTopicID";
+    $sql = "SELECT * FROM questions natural join choices natural join solutions WHERE TopicID=$setTopicID ORDER BY RAND()";
     $result = $conn->query($sql);
     ?>
 
@@ -95,6 +95,8 @@ if (!isset($_SESSION["user_id"])) {
 
                                     <!--THE ANSWER FOR POSTING-->
                                     <input type=text name="answer<?php echo "{$questionNumber}"; ?>" class="d-none" value="<?php echo $row['AnswerText']; ?>" />
+
+                                    <input type=text name="questionID<?php echo "{$questionNumber}"; ?>" class="d-none" value="<?php echo $row['QuestionID']; ?>" />
 
 
                                     <label for="one<?php echo "{$questionNumber}"; ?>" class="box one<?php echo "{$questionNumber}"; ?>">
