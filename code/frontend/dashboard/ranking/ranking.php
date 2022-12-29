@@ -59,10 +59,10 @@ if (!isset($_SESSION["user_id"])) {
                     <li>
                         <a href="../user-dashboard.php"><span class="fa fa-desktop mr-3"></span> Dashboard</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="../user-history/user-history.php"><span class="fa fa-history mr-3"></span> User History</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="ranking.php"><span class=" mr-3"><i class="fa-solid fa-chart-simple"></i></span> Ranking</a>
                     </li>
                     <li>
