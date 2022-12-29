@@ -270,7 +270,10 @@ label.box:hover {
     background: #d5bbf7
 }
 
-
+label.box{
+    max-width: fit-content !important;
+    min-width: 200px !important;
+}
 
 /*the box*/
 label.box .course {

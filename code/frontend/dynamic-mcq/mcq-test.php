@@ -74,15 +74,15 @@ if (!isset($_SESSION["user_id"])) {
                     $row = $result->fetch_assoc();
             ?>
 
-                    <div class="row">
+                    <div class="row mt-3">
                         <!--question1-->
                         <div class="question<?php echo "{$questionNumber}"; ?>">
                             <div class="col-12">
-                                <p class="fw-bold" id="question-1-text">
+                                <p class="fw-bold" id="question-1-text mb-3">
                                     <?php echo "{$questionNumber}. {$row['QuestionText']}"; ?>
-                                <p>
+                                <!-- <p>
                                     <img id="question-1-img" class="question-image" id="question-1-image" src="" alt="">
-                                </p>
+                                </p> -->
                                 </p>
                                 <div>
                                     <input type="radio" name="box<?php echo "{$questionNumber}"; ?>" id="one<?php echo "{$questionNumber}"; ?>" value="<?php echo $row['ChoiceAText']; ?>">
@@ -104,7 +104,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="circle"></span>
                                             <span class="subject">
                                                 <?php echo $row['ChoiceAText']; ?>
-                                                <img id="question-1-img-option-a" alt="">
+                                                <!-- <img id="question-1-img-option-a" alt=""> -->
                                             </span>
                                         </div>
                                     </label>
@@ -114,7 +114,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="circle"></span>
                                             <span class="subject">
                                                 <?php echo $row['ChoiceBText']; ?>
-                                                <img id="question-1-img-option-b" alt="">
+                                                <!-- <img id="question-1-img-option-b" alt=""> -->
                                             </span>
                                         </div>
                                     </label>
@@ -124,7 +124,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="circle"></span>
                                             <span class="subject">
                                                 <?php echo $row['ChoiceCText']; ?>
-                                                <img id="question-1-img-option-c" alt="">
+                                                <!-- <img id="question-1-img-option-c" alt=""> -->
                                             </span>
                                         </div>
                                     </label>
@@ -135,7 +135,7 @@ if (!isset($_SESSION["user_id"])) {
                                             <span class="subject">
                                                 <?php echo $row['ChoiceDText']; ?>
                                             </span>
-                                            <img id="question-1-img-option-d" alt="">
+                                            <!-- <img id="question-1-img-option-d" alt=""> -->
                                         </div>
                                     </label>
 
