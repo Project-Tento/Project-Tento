@@ -6,3 +6,4 @@ INSERT INTO `tentodatabase`.`topics` (`TopicID`, `TopicName`, `SubjectCode`) VAL
 INSERT INTO `tentodatabase`.`topics` (`TopicID`, `TopicName`, `SubjectCode`) VALUES ('402406', 'Trigonometry', '4024');
 INSERT INTO `tentodatabase`.`topics` (`TopicID`, `TopicName`, `SubjectCode`) VALUES ('402407', 'Matrices and Transformations', '4024');
 INSERT INTO `tentodatabase`.`topics` (`TopicID`, `TopicName`, `SubjectCode`) VALUES ('402408', 'Probability and Statistics', '4024');
+INSERT INTO `topics` (`TopicID`, `TopicName`, `SubjectCode`) VALUES ('403701', 'Quadratics', '4037'), ('403702', 'Functions', '4037');
