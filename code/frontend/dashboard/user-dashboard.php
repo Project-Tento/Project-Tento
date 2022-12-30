@@ -70,7 +70,7 @@ if (!isset($_SESSION["user_id"])) {
                         <a href="settings/settings.php"><span class="fa fa-cog mr-3"></span> Settings</a>
                     </li>
                     <li>
-                        <a href="../../reg-form/backend/logout.php"><span class="fa fa-sign-out mr-3"></span> Log out</a>
+                        <a href="../../frontend/reg-form/backend/logout.php"><span class="fa fa-sign-out mr-3"></span> Log out</a>
                     </li>
 
                 </ul>
