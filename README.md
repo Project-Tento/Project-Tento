@@ -1,4 +1,4 @@
-# SPL-1
+# Project Tento
 
 This .readme contains information about how to use Tento
 
