@@ -114,11 +114,11 @@ These are the list things you need to use the software and how to install them.
 
 6. Create a database naming “tentodatabase” and then click on the import tab
 
-7. Click on browse file and select “tentodatabase.sql” file which is in "code/landingPage/landingPage.html"
+7. Click on browse file and select “tentodatabase.sql” file which is in "code/frontend/landingPage/landingPage.html"
 
 8. Click on go
 
-9. After creating the database, open a browser and go to the URL “http://localhost/code/landingPage.html”
+9. After creating the database, open a browser and go to the URL “http://localhost/code/frontend/landingPage/landingPage.html”
 
 
 
