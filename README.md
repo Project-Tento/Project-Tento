@@ -44,6 +44,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+(This project was created for the academic course SWE4304 - Software Project Lab I).
+
 This website allows you to prepare for exams at the comfort of your own home and free of any cost. Practice materials and timed exams for each topic with solutions are available to help you understand better and prepare for any upcoming exams.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
