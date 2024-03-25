@@ -1,7 +1,5 @@
 # Project Tento
 
-This .readme contains information about how to use Tento
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -13,13 +11,6 @@ This .readme contains information about how to use Tento
 
   <p align="center">
     A free online evaluation platform for Cambridge students
-    <br />
-    <a href="https://github.com/Project-Tento/SPL-1"><strong>Explore the repo »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Project-Tento/SPL-1/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Project-Tento/SPL-1/issues">Request Feature</a>
   </p>
 </div>
 
@@ -41,7 +32,6 @@ This .readme contains information about how to use Tento
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -80,47 +70,29 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-These are the list things you need to use the software and how to install them.
-
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+ - Download `XAMPP` software from [here](https://www.apachefriends.org/download.html) as it is required to run an Apache HTTP Server.
+ - Need to install PHP 5.3 or upper version. We can download PHP from [here](https://www.php.net/downloads.php)
+ - Download the MySQL database from [here](https://dev.mysql.com/downloads/file/?id=486088)
+ - Download the latest version of phpMyAdmin software tool from [here](https://www.phpmyadmin.net/) 
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   https://github.com/Xer0Bytes/Project-Tento.git
    ```
-2. Install NPM packages
+2. Start the Apache HTTP server
+3. Go to:
    ```sh
-   npm install
+   http://localhost/phpmyadmin/`
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Setting Up
-
-1. Extract the file (the entire repository .zip)
-
-2. Copy the code folder only
-
-3. Paste it in xampp/htdocs
-
-4. Open a browser and go to the URL "http://localhost/phpmyadmin/";
-
-5. Then, click on the databases tab
-
-6. Create a database naming “tentodatabase” and then click on the import tab
-
-7. Click on browse file and select “tentodatabase.sql” file which is in "code/frontend/landingPage/landingPage.html"
-
-8. Click on go
-
-9. After creating the database, open a browser and go to the URL “http://localhost/code/frontend/landingPage/landingPage.html”
-
-
+4. Click on the `databases` tab and create a database named `tentodatabase`
+5. Import the `tentodatabase.sql` from `database/` folder
+6. From the cloned repo, copy the folder named `code` and paste it in the `htdocs` folder of where you installed `XAMPP`
+7. Go to the following link to browse the locally hosted project:
+   ```sh
+   http://localhost/code/frontend/landingPage/landingPage.html
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -147,8 +119,6 @@ The project can be used in the following ways:
 
 
 
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -166,11 +136,10 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,11 +154,14 @@ Nafisa Maliyat - [github-profile](https://github.com/NafisaMaliyat-iut)
 
 Kazi Jawadul Islam Jishan - [github-profile](https://github.com/Jobaduwul)
 
-**Project Link:** [https://github.com/Project-Tento/SPL-1](https://github.com/Project-Tento/SPL-1)
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Img Shields](https://shields.io)
+* [GitHub ReadMe Template](https://github.com/othneildrew/Best-README-Template/tree/master)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
