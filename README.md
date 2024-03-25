@@ -79,7 +79,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   https://github.com/Xer0Bytes/Project-Tento.git
+   git clone https://github.com/Xer0Bytes/Project-Tento.git
    ```
 2. Start the Apache HTTP server
 3. Go to:
